@@ -1,5 +1,5 @@
 # CSE 110 Team 4 Kickoff Meeting
-*April 17, 2023*
+*April 17, 2023* | 6:15pm - 7:15pm  | Zoom
 
 ## Attendance
 ___
