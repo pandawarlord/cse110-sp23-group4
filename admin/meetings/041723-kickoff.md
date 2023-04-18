@@ -11,6 +11,12 @@ ___
 ___
 - Plan bonding event
 
+## Goals of Today's Meeting
+___
+1. Establish our team identity
+2. Establish our team roles
+3. Solidify our team contract
+
 ## Future Deadlines
 ____
 - [ ] 4/21/23 - Team Brand, Page, and Intro Video
@@ -35,11 +41,15 @@ ___
    - Khanh
    - Michi
    - Samuel
-3. Schedules
+3. Team Roles
+   - Team Leads: Brandon and Nakul
+   - Developers:
+   - Planners:
+4. Schedules
    - Overall [availability](https://www.when2meet.com/?19763441-FfDjx)
    - When do we want to meet to do a Magic 8 Ball Sprint?
    - When do we want to meet to have our bonding event?
-4. [Group Contract](https://ohiostate.pressbooks.pub/feptechcomm/chapter/7-project-communications/)
+5. [Group Contract](https://ohiostate.pressbooks.pub/feptechcomm/chapter/7-project-communications/)
    - What does it mean to be on a team?
    - Primary Means of Communication/Expectations
    - Schedule Meetings
