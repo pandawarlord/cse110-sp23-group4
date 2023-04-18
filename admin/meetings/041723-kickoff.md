@@ -3,9 +3,9 @@
 
 ## Attendance
 ___
-**Present:**
+**Present:** Brandon Imai, Nakul Nandhakumar, Abijit Jayachandran, Christian Lee, Helen Lin, Ezgi Bayraktaroglu, Michi Wada, Samuel Au, Joshua Tan
 
-**Missing:**
+**Missing:** Khanh
 
 ## Recap
 ___
@@ -28,19 +28,26 @@ ____
 ## Agenda
 ___
 1. Team Brand/Introduction Video
-   -  Brand
-   -  Page
+   -  Name: Powell Rangers
+   -  Brand:
+   -  Page:
+      -  Samuel!
    -  Video Idea
+      -  Strike a pose with caption
+      -  CGI explosion of all of us in the background
+      -  Editor: Christian!!
+      -  **Task:** Send Christian clips and fun facts
 2. Our Strengths/Weaknesses
-   - Brandon
-   - Nakul
-   - Abijit
-   - Joshua
-   - Christian
-   - Ezgi
-   - Khanh
-   - Michi
-   - Samuel
+   - Brandon - Strengths: Optimism, Organization | Weak: Web Dev, Github, design
+   - Nakul - Strengths: Github, backend | Weak: design
+   - Abijit - Strengths: Github, quick learner | Weak: design
+   - Joshua - Strengths: HTML/CSS/JS, previous webpage experience, server infrastructure | Weak: UI/UX
+   - Christian - Strengths: JS | Weak: design/CSS styling
+   - Ezgi - Strengths: Github | Weak: design
+   - Helen - Strengths: JS/TypeScript, frontend, Github | Weak: CSS/styling
+   - Khanh -
+   - Michi - Strengths: Github | Weak: Web Dev
+   - Samuel - Strenghts: Team cooperation, Github | Okay: CSS/styling | Weak: Web Dev backend
 3. Team Roles
    - Team Leads: Brandon and Nakul
    - Developers:
@@ -51,14 +58,48 @@ ___
    - When do we want to meet to have our bonding event?
 5. [Group Contract](https://ohiostate.pressbooks.pub/feptechcomm/chapter/7-project-communications/)
    - What does it mean to be on a team?
+     - Collaborate with others, being able to work with them
+     - Having a common goal
+     - Comfortable asking for help
+     - Respecting everyone and establishing psychological safety
+     - Accountability
+     - Being there for our teammates
    - Primary Means of Communication/Expectations
+     - Slack
+     - Please ask questions
+     - Make an effort to check Slack once a day
    - Schedule Meetings
+     - Will try to give 24 hour notice
+     - Please be flexible!
    - General Responsibilities of All Team Members
+     - Be mindful of everyone's backgrounds
+     - Be on time!
+     - Be responsible/accountable of your task and do it to the best of your ability
+       - If you're not able, please reach out and ask questions
    - Specific Team Member Responsibilities/Deadlines
      - Team Leads
+       - Keep the ship afloat and steered in the right direction
+       - Create our team culture and a fun working environment
+       - Establish the psychological safety
+       - Organize/handle when everyone is free for meetings/socials
      - Developers
-     - Planners
+       - Voice problems/concerns when they happen
+       - Be on top of deadlines
+       - Don't take on too much!
+     - Planner
+       - Mapping out the design process/timeline of our project
+       - Ensures deadlines are hit
+       - Create user stories/features
+     - Designer
+       - Figure out how our website looks
+       - In charge of branding and how our team looks
    - Conflict Resolution
+     - If we have a problem, be respectful and talk it out or come to a team lead and we can have a group meeting regarding the issue
+     - Make it clear of your position and where you stand
+     - Agree to compromise and meet in the middle
+     - Try not to let irreconciable issues affect your work and the team
+     - Let things settle and wait a little to come back to it, give some time to let steam off
+     - If you notice the star to an argument, try to "nip it in the bud"
 
 
 ## Immediate Actions
@@ -66,4 +107,5 @@ ___
 - Join Github if you haven't already
 - Fill out When2Meet for general weekly availability
 - Film segment for team intro video
+- Don't forget to do Lab 3!
 - Send general contact info in Slack channel (will add later)
