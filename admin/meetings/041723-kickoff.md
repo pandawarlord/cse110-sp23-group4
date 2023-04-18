@@ -41,10 +41,19 @@ ___
    - When do we want to meet to have our bonding event?
 4. [Group Contract](https://ohiostate.pressbooks.pub/feptechcomm/chapter/7-project-communications/)
    - What does it mean to be on a team?
-   - How to address situations when group "rules" aren't being followed
+   - Primary Means of Communication/Expectations
+   - Schedule Meetings
+   - General Responsibilities of All Team Members
+   - Specific Team Member Responsibilities/Deadlines
+     - Team Leads
+     - Developers
+     - Planners
+   - Conflict Resolution
+
 
 ## Immediate Actions
 ___
 - Join Github if you haven't already
 - Fill out When2Meet for general weekly availability
 - Film segment for team intro video
+- Send general contact info in Slack channel (will add later)
