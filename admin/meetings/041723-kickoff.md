@@ -5,7 +5,7 @@
 ___
 **Present:** Brandon Imai, Nakul Nandhakumar, Abijit Jayachandran, Christian Lee, Helen Lin, Ezgi Bayraktaroglu, Michi Wada, Samuel Au, Joshua Tan
 
-**Missing:** Khanh
+**Missing:** Khanh Le
 
 ## Recap
 ___
