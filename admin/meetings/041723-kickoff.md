@@ -109,3 +109,7 @@ ___
 - Film segment for team intro video
 - Don't forget to do Lab 3!
 - Send general contact info in Slack channel (will add later)
+- **When2Meets**
+  - [General Weekly Availability](https://www.when2meet.com/?19763441-FfDjx)
+  - [Group Bonding Event](https://www.when2meet.com/?19766511-kNcY5)
+  - [8-Ball Group Coding Session](https://www.when2meet.com/?19766503-HhWGT)
