@@ -38,9 +38,9 @@ ___
       -  Editor: Christian!!
       -  **Task:** Send Christian clips and fun facts
 2. Our Strengths/Weaknesses
-   - Brandon - Strengths: Optimism, Organization | Weak: Web Dev, Github, design
+   - Brandon - Strengths: Optimism, Organization, quick learner | Weak: Web Dev, Github, design
    - Nakul - Strengths: Github, backend | Weak: design
-   - Abijit - Strengths: Github, quick learner | Weak: design
+   - Abijit - Strengths: Github, quick learner, organization | Weak: design
    - Joshua - Strengths: HTML/CSS/JS, previous webpage experience, server infrastructure | Weak: UI/UX
    - Christian - Strengths: JS | Weak: design/CSS styling
    - Ezgi - Strengths: Github | Weak: design
