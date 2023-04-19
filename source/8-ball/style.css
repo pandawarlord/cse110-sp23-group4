@@ -1,0 +1,38 @@
+/* Make html take up 100% of the page */
+body, html {
+  height: 100%;
+  width: 100%;
+}
+
+/* Black part of the ball */
+.ball {
+  height: 500px;
+  width: 500px;
+  background-color: #000000;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+/* White part of the ball */
+.display {
+  top: 25%;
+  left: 25%;
+  position: relative;
+
+  height: 50%;
+  width: 50%;
+  background-color: #ffffff;
+  border-radius: 50%;
+  display: flex;
+}
+
+/* Text for result */
+#result {
+  color: #000000;
+  font-family: 'Courier New', monospace;
+
+  margin: auto auto auto auto;
+  display: block;
+  text-align: center;
+  position: relative;
+}
