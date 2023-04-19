@@ -3,9 +3,9 @@
 
 ## Attendance
 ___
-**Present:**
+**Present:** Nakul, Brandon, Joshua, Abijit, Helen, Christian, Ezgi
 
-**Missing:**
+**Missing:** Khanh, Sam, Michi
 
 ## Recap
 ___
@@ -34,8 +34,15 @@ ___
 1. Assign more people to Samuel's GitHub Page team and Christian's Intro Video team
 2. General 8 Ball Brainstorming
    - Basic Specs:
+     - Create a button that returns a random 8-ball response
+     - Back-end Team: Joshua, Christian
+     - Front-end/Design Team:
+       - Exploratory LLM Team:
+       - Design Team:
    - Future Features:
 3. Assigning 8 Ball Tasks
+   - 8 Ball Team
+   - AI Research Team
 4. Yes/No Board Design
 
 
