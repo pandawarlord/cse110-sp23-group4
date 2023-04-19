@@ -45,7 +45,7 @@ ___
    - Christian - Strengths: JS | Weak: design/CSS styling
    - Ezgi - Strengths: Github | Weak: design
    - Helen - Strengths: JS/TypeScript, frontend, Github | Weak: CSS/styling
-   - Khanh -
+   - Khanh - Strengths: Design/Web Dev
    - Michi - Strengths: Github | Weak: Web Dev
    - Samuel - Strenghts: Team cooperation, Github | Okay: CSS/styling | Weak: Web Dev backend
 3. Team Roles
