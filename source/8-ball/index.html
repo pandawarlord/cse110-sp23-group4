@@ -4,9 +4,19 @@
     <title>MAGIC 8 BALL</title>
   </head>
   <body>
-    <h1>Press me for a prompt</h1>
-    <input type="button" id="predict" class="predict" value="answer" onclick="predict()">
-    <p id="result"></p>
-    <script src="script.js"></script>
+    <h2> What is your question? </h2>
+      <div>
+        <label for="question_tb">Type in your question:</label>
+        <input id="question_tb" type="text">
+      </div>
+
+      <input type="button" id="predict" class="predict" value="answer" onclick="predict()">
+      <script src="script.js"></script>
+
+      <div>
+        <img src="8ball-placeholder.jpg" alt="placeholder" width="350" height="350">
+      </div>
+
+      <p id="result"></p>
   </body>
 </html>
