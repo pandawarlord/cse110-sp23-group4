@@ -36,6 +36,7 @@ ___
    - Basic Specs:
    - Future Features:
 3. Assigning 8 Ball Tasks
+4. Yes/No Board Design
 
 
 ## Immediate Actions
