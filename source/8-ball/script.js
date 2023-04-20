@@ -1,7 +1,7 @@
 let responses = [
   "It is certain",
   "Reply hazy, try again",
-  "Don’t count on it",
+  "Don't count on it",
   "It is decidedly so",
   "Ask again later",
   "My reply is no",
@@ -24,6 +24,6 @@ let responses = [
 function predict()
 {
     var idx = Math.floor(Math.random() * 20);
-    document.getElementById("result").innerHTML = responses[idx];
+    document.getElementById("ball").innerHTML = "<p class=\"answer\">" + responses[idx] + "</p>";
 }
 
