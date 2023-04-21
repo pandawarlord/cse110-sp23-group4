@@ -21,7 +21,7 @@ brainstorm 04-19-23
 
 <br>
 
-### Visual Assets (Samuel, Christian, Abijit, Brandon)
+### Visual Assets (Samuel, Christian, Abijit, Brandon, Khanh)
 ---
 - title of project should have stylish font in accordance with color scheme of background
 - 8-Ball should be "mystical" and styled to fit the background image
@@ -39,7 +39,7 @@ brainstorm 04-19-23
 
 <br>
 
-### Animations (Joshua, Helen, Ezgi, Nakul)
+### Animations (Joshua, Helen, Ezgi, Nakul, Michi)
 ---
 - have clouds of smoke float across the screen endlessly
 - when the 8-Ball button is pressed, 8-ball should glow (start with one color for simplicity) and produce 'mystical' sounds for a period of time before displaying answer (Coordinate with 8-Ball asset designer)
