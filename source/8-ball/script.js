@@ -24,6 +24,27 @@ let responses = [
 function predict()
 {
     var idx = Math.floor(Math.random() * 20);
-    document.getElementById("result").innerHTML = responses[idx];
+    typeResponse(responses[idx]);
 }
 
+/*
+  Takes in the predict answer and types out the answer
+  by updating the html content one character at a time
+*/
+function typeResponse(response) {
+  const chars = response.split("");
+  let charIndex = 0;
+  const result = document.getElementById("result");
+  result.textContent = "";
+
+  //Interval function used to type out on char at a time
+  const interval = setInterval(()=> { 
+    result.textContent +=chars[charIndex];
+    charIndex++;
+
+    //Finished Typing
+    if (charIndex === chars.length) {
+      clearInterval(interval)
+    }
+  }, 50)
+}
