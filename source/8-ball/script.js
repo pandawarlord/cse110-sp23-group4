@@ -21,9 +21,20 @@ let responses = [
   "Signs point to yes"
 ];
 
+const synth = window.speechSynthesis;
+
 function predict()
 {
     var idx = Math.floor(Math.random() * 20);
     document.getElementById("ball").innerHTML = "<p class=\"answer\">" + responses[idx] + "</p>";
+
+    const text = responses[idx];
+    const voices = synth.getVoices();
+
+    const utterance = new SpeechSynthesisUtterance(text);
+    utterance.voice = voices[10];
+    utterance.rate = 0.8;
+
+    synth.speak(utterance);
 }
 
