@@ -23,11 +23,12 @@ brainstorm 04-19-23
 
 ### Visual Assets (Samuel, Christian, Abijit, Brandon, Khanh)
 ---
-- title of project should have stylish font in accordance with color scheme of background
-- 8-Ball should be "mystical" and styled to fit the background image
-- output answer box should be styled according to 8-Ball and should look relatively natural on the 8-Ball
-- input answer box should also be styled according to 8-Ball design
-- "button" should be either the 8-Ball itself or invisible button overlayed on top of 8-Ball, change 8-ball appearance slightly when hovered over
+- Theme: light background, contrast with 8-Ball, floating in air, clouds, sky, stars, floating palace background
+- title of project should have stylish font in accordance with color scheme of background (Samuel)
+- 8-Ball should be "mystical" and styled to fit the background image (Nakul/Samuel)
+- output answer box should be styled according to 8-Ball and should look relatively natural on the 8-Ball (Abijit)
+- input question box should also be styled according to 8-Ball design (Khanh)
+- "button" should be either the 8-Ball itself or invisible button overlayed on top of 8-Ball, change 8-ball appearance slightly when hovered over, EXTRA: adding hover effects (Nakul)
 
 <br>
 
