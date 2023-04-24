@@ -26,7 +26,6 @@ const synth = window.speechSynthesis;
 
 const response = document.getElementById("response"); // Output response
 const eight = document.getElementById("eight");     // eight image
-const flame = document.getElementById("flame");       // flame animation
 const ball = document.getElementById("ball");         // eight ball
 
 let ballDisplayOffset = [ball.offsetLeft, ball.offsetTop]; // position of display
@@ -42,7 +41,6 @@ let isDown        = false;  // check if mouse clicked
 ball.addEventListener('mousedown', (e) => {
 
     eight.style.visibility = 'hidden';
-    flame.style.visibility = 'hidden';
     ball.style.backgroundColor = "black";
 
     isDown = true;
@@ -76,8 +74,7 @@ document.addEventListener('mousemove', (event) => {
  * Mouse up - stop shaking
  */
 ball.addEventListener('mouseup', () => {
-    ball.style.backgroundColor = "white"; // show result
-    flame.style.visibility = 'visible';
+    ball.style.backgroundColor = "#6c540b"; // show result
 
     isDown   = false; // no longer moving
     // put ball at original position
