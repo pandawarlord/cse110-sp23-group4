@@ -96,21 +96,43 @@ ball.addEventListener('mouseup', () => {
 function predict()
 {
     eight.style.visibility = 'hidden';
+    var text;
+    const voices = synth.getVoices();
+
     if (document.getElementById("question_tb").value == "") {
-      response.innerHTML = "Please ask a question";
+      text = "Please ask a question";
     }
     else {
       var idx = Math.floor(Math.random() * 20);
-      response.innerHTML = responses[idx];
-
-      const text = responses[idx];
-      const voices = synth.getVoices();
-
-      const utterance = new SpeechSynthesisUtterance(text);
-      utterance.voice = voices[10];
-      utterance.rate = 0.8;
-
-      synth.speak(utterance);
+      text = responses[idx];
     }
+
+    const utterance = new SpeechSynthesisUtterance(text);
+    utterance.voice = voices[10];
+    utterance.rate = 0.8;
+
+    synth.speak(utterance);
+    typeResponse(text);
 }
 
+/*
+  Takes in the predict answer and types out the answer
+  by updating the html content one character at a time
+*/
+function typeResponse(response) {
+  const chars = response.split("");
+  let charIndex = 0;
+  const result = document.getElementById("response");
+  result.textContent = "";
+
+  //Interval function used to type out on char at a time
+  const interval = setInterval(()=> { 
+    result.textContent +=chars[charIndex];
+    charIndex++;
+
+    //Finished Typing
+    if (charIndex === chars.length) {
+      clearInterval(interval)
+    }
+  }, 50)
+}
