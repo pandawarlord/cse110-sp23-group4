@@ -63,7 +63,7 @@ document.addEventListener('mousemove', (event) => {
         ball.style.top  = (event.clientY + ballOffset[1]) + 'px';
         // update display position
         // check if ball shaken hard enough
-        if (Math.pow((ballOffset[0] - event.clientX)**2 + (ballOffset[1] - event.clientY)**2, 0.5) >= 100.0) { 
+        if (Math.pow((ballOffset[0] - event.clientX)**2 + (ballOffset[1] - event.clientY)**2, 0.5) >= 1200.0) { 
           isMoving = true;
         }
         else {
