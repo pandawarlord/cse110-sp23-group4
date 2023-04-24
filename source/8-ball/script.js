@@ -29,8 +29,10 @@ const eight = document.getElementById("eight");     // eight image
 const flame = document.getElementById("flame");       // flame animation
 const ball = document.getElementById("ball");         // eight ball
 
-let displayOffset = [ball.offsetLeft, ball.offsetTop]; // position of display
+let ballDisplayOffset = [ball.offsetLeft, ball.offsetTop]; // position of display
+
 let ballOffset    = [0, 0]; // position of ball
+
 let isMoving      = false;  // check if ball has been shaken
 let isDown        = false;  // check if mouse clicked
 
@@ -38,9 +40,11 @@ let isDown        = false;  // check if mouse clicked
  * Mouse down function
  */
 ball.addEventListener('mousedown', (e) => {
-    ball.style.backgroundColor = "black";
+
     eight.style.visibility = 'hidden';
     flame.style.visibility = 'hidden';
+    ball.style.backgroundColor = "black";
+
     isDown = true;
     // Position of ball relative to mouse
     ballOffset = [
@@ -59,8 +63,11 @@ document.addEventListener('mousemove', (event) => {
         ball.style.top  = (event.clientY + ballOffset[1]) + 'px';
         // update display position
         // check if ball shaken hard enough
-        if (Math.pow((ballOffset[0] - event.clientX)**2 + (ballOffset[1] - event.clientY)**2, 0.5) >= 10.0) { 
+        if (Math.pow((ballOffset[0] - event.clientX)**2 + (ballOffset[1] - event.clientY)**2, 0.5) >= 100.0) { 
           isMoving = true;
+        }
+        else {
+          isMoving = false;
         }
     }
 });
@@ -70,12 +77,13 @@ document.addEventListener('mousemove', (event) => {
  */
 ball.addEventListener('mouseup', () => {
     ball.style.backgroundColor = "white"; // show result
-    flame.style.visibility = 'visible';   // show flames
+    flame.style.visibility = 'visible';
 
     isDown   = false; // no longer moving
     // put ball at original position
-    ball.style.left = displayOffset[0] + 'px'; 
-    ball.style.top  = displayOffset[1] + 'px';
+    ball.style.left = ballDisplayOffset[0] + 'px'; 
+    ball.style.top  = ballDisplayOffset[1] + 'px';
+
     // Show response or not
     if (isMoving) { predict(); }
     else { response.innerHTML = "Shake the ball!"; }
