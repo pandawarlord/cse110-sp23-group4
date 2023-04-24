@@ -6,12 +6,13 @@ body,html {
 
 /* The 8-ball */
 .ballwrapper{
-    top: 250px;
-    height: 500px;
-    width: 500px;
-    position: relative;
+  top: 250px;
+  height: 500px;
+  width: 500px;
+  position: relative;
 }
 
+/* The black and white ball */
 #ball {
   height: 100%;
   width: 100%;
