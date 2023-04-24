@@ -68,7 +68,7 @@ document.addEventListener('mousemove', (event) => {
 /*
  * Mouse up - stop shaking
  */
-document.addEventListener('mouseup', () => {
+ball.addEventListener('mouseup', () => {
     ball.style.backgroundColor = "white"; // show result
     flame.style.visibility = 'visible';   // show flames
 
@@ -87,6 +87,7 @@ document.addEventListener('mouseup', () => {
  */
 function predict()
 {
+    eight.style.visibility = 'hidden';
     if (document.getElementById("question_tb").value == "") {
       response.innerHTML = "Please ask a question";
     }
