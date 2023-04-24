@@ -1,19 +1,37 @@
-/* Make html take up 100% of the page */
-body,html {
-  height: 100%;
-  width: 100%;
+@import url('https://fonts.googleapis.com/css2?family=MedievalSharp&family=Source+Sans+Pro:wght@200;400&family=Yatra+One&display=swap');
+/* main body*/
+body {
   background-image: url(assets/8-ball-background.jpg);
   background-repeat: no-repeat;
   background-size: cover;
 }
 
+/* title of page*/
+h1 {
+  text-align: center;
+  font-size: 4em;
+  color: white;
+  font-family: 'Yatra One', cursive;
+}
+
+/* title of page cont.*/
+.title {
+  background-color: red;
+  background-image: linear-gradient(45deg, #cb2453,#f3ec78);
+  background-size: 100%;
+  background-repeat: repeat;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+
+}
 h2, label, .instructions {
   color: #ffffff;
 }
 
 /* The 8-ball */
 .ballwrapper{
-  top: 200px;
   height: 300px;
   width: 300px;
   position: relative;
@@ -69,7 +87,10 @@ h2, label, .instructions {
 }
 
 .instructions {
-  margin-left: 50%;
-  margin-right: 50%;
   width: 100%;
+  margin-bottom: 10%;
+}
+
+.instructions p {
+  text-align: center;
 }
