@@ -7,7 +7,7 @@ body,html {
   background-size: cover;
 }
 
-h2, label {
+h2, label, .instructions {
   color: #ffffff;
 }
 
@@ -65,4 +65,10 @@ h2, label {
   transform: translate(-50%, -50%);
   position: absolute;
   z-index: 2;
+}
+
+.instructions {
+  margin-left: 50%;
+  margin-right: 50%;
+  width: 100%;
 }
