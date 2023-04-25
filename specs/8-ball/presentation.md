@@ -9,4 +9,4 @@ The presentation link is here. If you worked on a feature of our 8-ball, please 
 ## Documentation
 The folder to our documentation is here. Please put your Google Docs or whatever you used so all our documentation for the 8 Ball project is in one spot
 
-[8-Ball Documentation](https://drive.google.com/drive/folders/1ckgy8qQgAyPJACoIiJcShevX8gflcto6?usp=sharing)
+[8-Ball Documentation](docs.md)
