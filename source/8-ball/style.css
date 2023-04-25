@@ -4,6 +4,7 @@ body {
   background-image: url(assets/8-ball-background.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+  overflow-x: hidden;
 }
 
 /* title of page*/
@@ -125,4 +126,42 @@ h2, label, .instructions {
 
 .instructions p {
   text-align: center;
+}
+
+
+
+
+@keyframes move-clouds1 {
+	/* Start the clouds off screen on the left edge of the screen */
+	from { 
+		left: 0;
+		transform: translateX(-100%);
+	 }
+	/* Move the clouds off screen on the right edge of the screen */
+	to { 
+		left: 100%;
+		transform: translateX(0%); 
+	}
+}
+
+@keyframes move-clouds2 {
+	/* Start the clouds off screen on the the right edge of the screen */
+	from { 
+		left: 100%;
+		transform: translateX(0%);
+	}
+	/* Move the clouds off screen on the right edge of the screen */
+	to {
+		left: 0;
+		transform: translateX(-100%);
+	}
+}
+
+.cloud {
+	/* Position the clouds absolutely so they can be placed anywhere on the page */
+	position: absolute;
+	/* maximum height of clouds is 400 pixels */
+	max-height: 400px;
+	/* make clouds opaque to look like real clouds */
+	opacity: 0.4;
 }
