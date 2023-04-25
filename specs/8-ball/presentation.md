@@ -7,6 +7,6 @@ The presentation link is here. If you worked on a feature of our 8-ball, please 
 [8-Ball Presentation](https://docs.google.com/presentation/d/1HV8OOOxzg4ZWBmC0c4ejjRaqOrck8wn_rFc5QikSA8k/edit?usp=sharing)
 
 ## Documentation
-The folder to our documentation is here. Please put your Google Docs or whatever you used so all our documentation for the 8 Ball project is in one spot
+The path to our documentation is here. Please update docs.md accordingly to what you have done.
 
 [8-Ball Documentation](docs.md)
