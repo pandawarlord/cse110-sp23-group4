@@ -26,8 +26,10 @@ h1 {
   -moz-text-fill-color: transparent;
 
 }
+
 h2, label, .instructions {
   color: #ffffff;
+  text-align: center;
 }
 
 /* The 8-ball */
@@ -65,15 +67,44 @@ h2, label, .instructions {
   z-index: 1;
 }
 
-/* Text for result */
+
+/*To center the question and input answer text in the middle of the page*/
+.input-text-div {
+  display: block; 
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+@font-face {
+  font-family: 'mysticalFont';
+  src: url("assets/AlmendraSC-Regular.ttf");
+  font-weight: normal;
+}
+
+/* Styling for the output/answer text box */
 .answer {
-  color: #000000;
-  font-family: 'Courier New', monospace;
-  top: 50%;
+  color: #FFA500; /* sets text color to orange */
+  font-family: 'mysticalFont', cursive; 
+  font-weight: bold; 
+  font-size: 12px; 
+  line-height: 1.5; 
+  text-align: center; 
+  background-color: #1C1C1E; 
+  padding: 20px; 
+  border-radius: 50%; /* makes the border circular */
+  width: 25%;
+  height: 25%; 
+  display: flex; 
+  justify-content: center;
+  align-items: center; 
+  text-shadow: 0px 0px 10px 0px #FFA500; 
+  box-shadow: 0px 0px 10px 0px #FFA500; 
   margin: 0;
   position: relative;
   z-index: 2;
-  font-size: 10px;
+  top: 30%; 
+  left: 30%
 }
 
 /* Graphic area for the ball */
