@@ -63,18 +63,6 @@ h2, label, .instructions {
   z-index: 2;
 }
 
-/* The 8-ball background */
-.ballbackground {
-  width: 100%;
-  height: 100%;
-  left: 0px;
-  top: 0px;
-  transform: translate(0, -150%);
-  position: relative;
-  z-index: 1;
-}
-
-
 /*To center the question and input answer text in the middle of the page*/
 .input-text-div {
   display: flex;
@@ -128,17 +116,7 @@ h2, label, .instructions {
   left: 30%
 }
 
-/* Graphic area for the ball */
-.graphic {
-  width: 25%;
-  height: 25%;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  position: absolute;
-  z-index: 2;
-}
-
+/* Styling for the instructions for user on how to use the 8-ball to get their answer */
 .instructions {
   width: 100%;
   margin-bottom: 10%;
