@@ -108,7 +108,7 @@ h2, label, .instructions {
   color: #FFA500; /* sets text color to orange */
   font-family: 'mysticalFont', cursive; 
   font-weight: bold; 
-  font-size: 12px; 
+  font-size: 20px; 
   line-height: 1.5; 
   text-align: center; 
   background-color: #1C1C1E; 
@@ -133,8 +133,6 @@ h2, label, .instructions {
   margin-bottom: 3%;
   text-align: center;
 }
-
-
 
 /* Animation to move a cloud to the right */
 @keyframes move-clouds1 {
