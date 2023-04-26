@@ -1,4 +1,6 @@
-// All stock responses
+/*
+ * These are a list of generic 8-ball responsese to be returned
+ */
 let responses = [
   "It is certain",
   "Reply hazy, try again",
@@ -87,7 +89,7 @@ document.addEventListener('mouseup', () =>
 });
 
 /*
- * Get random prediction
+ * Function which gets the prediction and presents it
  */
 function predict()
 {
@@ -111,9 +113,9 @@ function predict()
 }
 
 /*
-  Takes in the predict answer and types out the answer
-  by updating the html content one character at a time
-*/
+ * Takes in the predict answer and types out the answer
+ * by updating the html content one character at a time
+ */
 function typeResponse(response) {
   const chars = response.split("");
   let charIndex = 0;
