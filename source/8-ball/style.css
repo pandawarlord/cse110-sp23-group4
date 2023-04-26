@@ -159,7 +159,6 @@ h2, label, .instructions {
 }
 /* A class for clouds moving across the screen */
 .cloud {
-  z-index: -50;
 	/* Position the clouds absolutely so they can be placed anywhere on the page */
 	position: absolute;
 	/* Maximum height of clouds is 400 pixels */
