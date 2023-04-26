@@ -1,9 +1,10 @@
 # Magic 8-Ball Project
 
-## Intro:
-
-
 ## How to Use:
+Welcome to the Magic 8-Ball Project of the Powell Rangers! This webpage simulates the
+operation of a Magic 8-Ball, a fortune telling device that gives a person answers to their
+questions. To use, simply type the question you have into the text box. Then grab and shake
+the 8-Ball with your mouse before releasing to get your answer!
 
 
 ## Code Docs:
