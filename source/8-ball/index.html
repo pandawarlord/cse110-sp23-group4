@@ -6,14 +6,15 @@
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <embed src="assets/background_music.mp3" loop="true" autostart="true" width ="2" height ="0">
+    <audio id="music" loop>
+      <source src="/source/8-ball/assets/music.mp3" type="audio/mpeg">
+    </audio>
     <h1 class="title"> MYSTICAL 8 BALL</h1>
     <h2> What is your question? </h2>
       <div class="input-text-div">
         <label class="predict" for="question_tb">Type in your question:</label>
         <input class="predict" id="question_tb" type="text">
       </div>
-
       <br>
       <div class="instructions" id="instructions">
         <p>Shake the ball to get your answer!</p>

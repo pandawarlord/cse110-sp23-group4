@@ -133,3 +133,7 @@ function typeResponse(response) {
     }
   }, 50)
 }
+document.addEventListener("click", function() {
+  var backgroundMusic = document.getElementById("music");
+  backgroundMusic.play();
+});
