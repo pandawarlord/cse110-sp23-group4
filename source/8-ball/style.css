@@ -25,7 +25,6 @@ h1 {
   -webkit-text-fill-color: transparent;
   -moz-background-clip: text;
   -moz-text-fill-color: transparent;
-
 }
 
 h2, label, .instructions {
@@ -82,8 +81,8 @@ h2, label, .instructions {
   background-color: #1C1C1E; 
   padding: 20px; 
   border-radius: 50%; /* makes the border circular */
-  width: 33%;
-  height: 33%; 
+  width: 20vh;
+  height: 20vh; 
   display: flex; 
   justify-content: center;
   align-items: center; 
@@ -138,4 +137,6 @@ h2, label, .instructions {
 	max-height: 400px;
 	/* Make clouds translucent to look like real clouds */
 	opacity: 0.4;
+    /* Ensure user can still click the textbox with clouds */
+    z-index: -1;
 }
