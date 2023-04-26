@@ -36,8 +36,8 @@ h2, label, .instructions {
 
 /* The 8-ball */
 .ballwrapper{
-  height: 300px;
-  width: 300px;
+  height: 50vh;
+  width: 50vh;
   position: relative;
   margin-left: auto;
   margin-right: auto;
@@ -82,37 +82,23 @@ h2, label, .instructions {
   background-color: #1C1C1E; 
   padding: 20px; 
   border-radius: 50%; /* makes the border circular */
-  width: 25%;
-  height: 25%; 
+  width: 33%;
+  height: 33%; 
   display: flex; 
   justify-content: center;
   align-items: center; 
   text-shadow: 0px 0px 10px 0px #FFA500; 
   box-shadow: 0px 0px 10px 0px #FFA500; 
   margin: 0;
-  position: relative;
-  z-index: 2;
-  top: 30%; 
-  left: 30%
-}
-
-/* Graphic area for the ball */
-.graphic {
-  width: 25%;
-  height: 25%;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   position: absolute;
-  z-index: 2;
 }
 
 .instructions {
   width: 100%;
   margin-bottom: 10%;
-}
-
-.instructions p {
   text-align: center;
 }
 
