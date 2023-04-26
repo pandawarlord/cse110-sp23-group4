@@ -33,9 +33,12 @@ h2, label, .instructions {
   color: #ffffff;
   text-align: center;
   font-family: 'Yatra One', cursive;
-  font-size: 1.5em;
+  font-size: 1.2em;
 }
 
+.question {
+  font-size: 1.7em;
+}
 /* The 8-ball */
 .ballwrapper{
   height: 300px;
@@ -88,7 +91,7 @@ h2, label, .instructions {
 	padding: 12px 8px;
 	margin: 8px 7px;
 	border-radius: 7%;
-	font-size: 20px;
+	font-size: 16px;
   font-family: 'Yatra One', cursive;
 	background-color: rgb(213, 158, 56);
 }
