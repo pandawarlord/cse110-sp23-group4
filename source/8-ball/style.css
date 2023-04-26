@@ -157,10 +157,7 @@ input[type=text] {
 
 .instructions {
   width: 100%;
-  margin-bottom: 10%;
-}
-
-.instructions p {
+  margin-bottom: 3%;
   text-align: center;
 }
 
