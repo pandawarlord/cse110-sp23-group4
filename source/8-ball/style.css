@@ -96,6 +96,20 @@ h2, label, .instructions {
   align-items: center;
   text-align: center;
 }
+/*styling input box*/
+input[type=text] {
+	padding: 12px 20px;
+	margin: 8px 0;
+	box-sizing: border-box;
+	border: 2px solid #000000;
+	border-radius: 4px;
+	font-size: 16px;
+  font-family: 'mysticalFont', cursive;
+	background-color: orange;
+  width: 150px;
+  height: 25px;
+}
+
 
 @font-face {
   font-family: 'mysticalFont';
@@ -127,6 +141,7 @@ h2, label, .instructions {
   top: 30%; 
   left: 30%
 }
+/*styling for input text box*/
 
 /* Graphic area for the ball */
 .graphic {
@@ -185,3 +200,4 @@ h2, label, .instructions {
 	/* Make clouds translucent to look like real clouds */
 	opacity: 0.4;
 }
+

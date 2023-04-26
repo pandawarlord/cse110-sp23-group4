@@ -25,8 +25,7 @@ let responses = [
 const synth = window.speechSynthesis;
 
 const response = document.getElementById("response"); // Output response
-const eight = document.getElementById("eight");     // eight image
-const ball = document.getElementById("ball");         // eight ball
+const ball     = document.getElementById("ball");     // eight ball
 
 let ballDisplayOffset = [ball.offsetLeft, ball.offsetTop]; // position of display
 
@@ -38,34 +37,35 @@ let isDown        = false;  // check if mouse clicked
 /*
  * Mouse down function
  */
-ball.addEventListener('mousedown', (e) => {
+ball.addEventListener('mousedown', (e) => 
+{
+    e.preventDefault(); // disallow highlighting while shaking
+    // Only allow shaking if done speaking
+    if (!synth.speaking) {
+        response.innerHTML = ""; // hide response while shaking
+        isDown = true;
 
-    eight.style.visibility = 'hidden';
-    ball.style.backgroundColor = "black";
-
-    isDown = true;
-    // Position of ball relative to mouse
-    ballOffset = [
-        ball.offsetLeft - e.clientX,
-        ball.offsetTop  - e.clientY
-    ];
+        // Position of ball relative to mouse
+        ballOffset = [
+            ball.offsetLeft - e.clientX,
+            ball.offsetTop  - e.clientY
+        ];
+    }
 });
 
 /*
  * Update 8-ball while mouse is down
  */
-document.addEventListener('mousemove', (event) => {
+document.addEventListener('mousemove', (event) => 
+{
     if (isDown) {
         // update ball position
         ball.style.left = (event.clientX + ballOffset[0]) + 'px';
         ball.style.top  = (event.clientY + ballOffset[1]) + 'px';
         // update display position
         // check if ball shaken hard enough
-        if (Math.pow((ballOffset[0] - event.clientX)**2 + (ballOffset[1] - event.clientY)**2, 0.5) >= 1200.0) { 
+        if (Math.pow((ballDisplayOffset[0] - ball.offsetLeft)**2 + (ballDisplayOffset[1] - ball.offsetTop)**2, 0.5) >= 300.0) { 
           isMoving = true;
-        }
-        else {
-          isMoving = false;
         }
     }
 });
@@ -73,18 +73,17 @@ document.addEventListener('mousemove', (event) => {
 /*
  * Mouse up - stop shaking
  */
-ball.addEventListener('mouseup', () => {
-    ball.style.backgroundColor = "#6c540b"; // show result
-
-    isDown   = false; // no longer moving
+document.addEventListener('mouseup', () => 
+{
     // put ball at original position
     ball.style.left = ballDisplayOffset[0] + 'px'; 
     ball.style.top  = ballDisplayOffset[1] + 'px';
 
     // Show response or not
     if (isMoving) { predict(); }
-    else { response.innerHTML = "Shake the ball!"; }
+    else if(!synth.speaking) { response.innerHTML = "Shake the ball!"; }
     isMoving = false;
+    isDown   = false; // no longer moving
 });
 
 /*
@@ -92,7 +91,6 @@ ball.addEventListener('mouseup', () => {
  */
 function predict()
 {
-    eight.style.visibility = 'hidden';
     var text;
     const voices = synth.getVoices();
 
