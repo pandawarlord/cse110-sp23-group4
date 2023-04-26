@@ -37,6 +37,7 @@
   - predict()
   
   - typeResponse()
+    The function takes in as input the string to animate the typing out the given string, which in the context of the project is the prediction result. The function uses an interval to update the content in the html page that holds the response (in this case the element with id="response") one character of the input string at a time until the end of the string.
 
   - ball/document EventListeners
     
