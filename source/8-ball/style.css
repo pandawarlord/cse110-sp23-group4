@@ -93,6 +93,7 @@ h2, label, .instructions {
 	background-color: rgb(213, 158, 56);
 }
 
+/* Imports a new font to use in .answer */
 @font-face {
   font-family: 'mysticalFont';
   src: url("assets/AlmendraSC-Regular.ttf");
@@ -174,6 +175,9 @@ h2, label, .instructions {
 }
 /* A class for clouds moving across the screen */
 .cloud {
+  /* Places the clouds behind everything so it doesn't interfere
+     with the input text box or shaking the 8-ball" */ 
+  z-index:-50;
 	/* Position the clouds absolutely so they can be placed anywhere on the page */
 	position: absolute;
 	/* Maximum height of clouds is 400 pixels */
