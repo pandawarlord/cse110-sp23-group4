@@ -39,7 +39,7 @@ let isDown        = false;  // check if mouse clicked
 /*
  * Mouse down function
  */
-ball.addEventListener('mousedown', (e) => 
+ball.addEventListener('mousedown', (e) =>
 {
     e.preventDefault(); // disallow highlighting while shaking
     // Only allow shaking if done speaking
@@ -58,7 +58,7 @@ ball.addEventListener('mousedown', (e) =>
 /*
  * Update 8-ball while mouse is down
  */
-document.addEventListener('mousemove', (event) => 
+document.addEventListener('mousemove', (event) =>
 {
     if (isDown) {
         // update ball position
@@ -66,7 +66,7 @@ document.addEventListener('mousemove', (event) =>
         ball.style.top  = (event.clientY + ballOffset[1]) + 'px';
         // update display position
         // check if ball shaken hard enough
-        if (Math.pow((ballDisplayOffset[0] - ball.offsetLeft)**2 + (ballDisplayOffset[1] - ball.offsetTop)**2, 0.5) >= 300.0) { 
+        if (Math.pow((ballDisplayOffset[0] - ball.offsetLeft)**2 + (ballDisplayOffset[1] - ball.offsetTop)**2, 0.5) >= 300.0) {
           isMoving = true;
         }
     }
@@ -75,10 +75,10 @@ document.addEventListener('mousemove', (event) =>
 /*
  * Mouse up - stop shaking
  */
-document.addEventListener('mouseup', () => 
+document.addEventListener('mouseup', () =>
 {
     // put ball at original position
-    ball.style.left = ballDisplayOffset[0] + 'px'; 
+    ball.style.left = ballDisplayOffset[0] + 'px';
     ball.style.top  = ballDisplayOffset[1] + 'px';
 
     // Show response or not
@@ -123,7 +123,7 @@ function typeResponse(response) {
   result.textContent = "";
 
   //Interval function used to type out on char at a time
-  const interval = setInterval(()=> { 
+  const interval = setInterval(()=> {
     result.textContent +=chars[charIndex];
     charIndex++;
 
@@ -133,6 +133,11 @@ function typeResponse(response) {
     }
   }, 50)
 }
+
+/**
+ * Function which detects the first click on the page
+ * and automatically begins playing the background track
+ */
 document.addEventListener("click", function() {
   var backgroundMusic = document.getElementById("music");
   backgroundMusic.play();

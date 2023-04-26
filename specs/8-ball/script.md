@@ -25,6 +25,10 @@ We also check to ensure that user's type in a question before they shake the 8-b
 
 *Do a demo with an empty question field*
 
-From a visual aspect, you will notice that we went for a mystical or Delphic aesthetic. We used AI to generate the warm ethereal background and modeled our UI choices from the text to the 8-ball around the AI-generated image. Animated clouds also endlessly float around our page, adding to the mysticism our 8-ball app is centered around.
+We also made the input box adjustable.
+
+*Demonstrate how the input box can be adjusted*
+
+From a visual aspect, you will notice that we went for a mystical or Delphic aesthetic. We used AI to generate the warm ethereal background and modeled our UI choices from the text to the 8-ball around the AI-generated image. Animated clouds also endlessly float around our page, adding to the mysticism our 8-ball app is centered around. Furthermore, users are treated to a soft soothing background track that adds a sense of calm and safety with our 8-ball.
 
 Overall, our team accomplished almost all the features proposed in our original brainstorm. Thank you for watching this demo!
