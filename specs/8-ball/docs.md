@@ -8,8 +8,10 @@
 
 ## Code Docs:
 - index.html  
+  This contains all of the HTML and structure of the 8-Ball webpage
   
 - style.css  
+  This contains all of the styling and visual design of the 8-ball page
 
   - .ballwrapper  
     This is styling for the element containing the ball itself. It is used for placing
@@ -41,7 +43,9 @@
   - .cloud
     A class for a cloud object that the 'move-clouds1' or 'move-clouds2' animation should be used on. Has an opacity value of 0.4 to simulate the translucent nature of real clouds. It's position is set to absolute, and it has a z-index of -1 so it travels behind other elements and doesn't interfere with their function. The cloud class should be used on a img element with an image of a cloud, and the position from the top should be specified in inline CSS for each element of class cloud. The inline CSS should also have 'move-clouds1 Xs linear infinite' or 'move-clouds2 Xs linear infinite' in it, where X is a positive integer.
     
-- script.js  
+- script.js
+  
+  This contains all of the scripting and functions necessary for the functionality of the 8-Ball
     
   - responses[] 
     This contains an array of canned responses for the 8-ball. There are 20 total and they
