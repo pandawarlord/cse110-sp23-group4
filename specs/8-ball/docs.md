@@ -57,6 +57,12 @@ the 8-Ball with your mouse before releasing to get your answer!
     reveal to the user from the responses array
   
   - typeResponse()
+    The function takes in as input the string to animate the typing out the given string, which in 
+    the context of the project is the prediction result. The function uses an interval to update the 
+    content in the html page that holds the response (in this case the element with id="response") 
+    one character of the input string at a time until the end of the string.
+
+  - ball/document EventListeners
     Function to print 8-Ball answer one character at a time as if it is being typed. We separate
     the characters and then print them individually one after the other with a predetermined rate
 
@@ -82,4 +88,4 @@ the 8-Ball with your mouse before releasing to get your answer!
     *ballOffset[]* - array of 2 floats with updated position of 8-ball
     *isMoving* - boolean indicating whether 8-ball has been shaken hard enough
     *isDown* - boolean indicating whether 8-ball is being pressed
-    
+
