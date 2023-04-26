@@ -17,11 +17,11 @@ Instead of hitting a submit button, we decided to simulate "shaking" a magic 8-b
 
 *Shake the 8-ball*
 
- In addition to outputting an answer in our 8-ball design, that is also inspired from the look of traditional 8-balls, the answer is displayed in a typed out fashion similar to ChatGPT. Furthermore, the answer is vocalized in a voice message. Let's do a full run through to see all these features working together.
+ In addition to outputting an answer in our 8-ball design, which was inspired from the look of traditional 8-balls, the answer is displayed in a typed out fashion similar to ChatGPT. Furthermore, the answer is vocalized in a voice message. Let's do a full run through to see all these features working together.
 
  *Do a full demo of the 8-ball by typing in the question Will the Powell Rangers succeed in CSE 110?*
 
-We also check to ensure that user's type in a question before they shake the 8-ball. If  a user were not to input a question, this is what will happen.
+We also check to ensure that user types in a question before they shake the 8-ball. If  a user were not to input a question, this is what will happen.
 
 *Do a demo with an empty question field*
 
@@ -29,6 +29,8 @@ We also made the input box adjustable.
 
 *Demonstrate how the input box can be adjusted*
 
-From a visual aspect, you will notice that we went for a mystical or Delphic aesthetic. We used AI to generate the warm ethereal background and modeled our UI choices from the text to the 8-ball around the AI-generated image. Animated clouds also endlessly float around our page, adding to the mysticism our 8-ball app is centered around. Furthermore, users are treated to a soft soothing background track that adds a sense of calm and safety with our 8-ball.
+From a visual aspect, you will notice that we went for a mystical or Delphic aesthetic. We used AI to generate the warm ethereal background and modeled our UI choices from the text to the 8-ball around the AI-generated image. Animated clouds also endlessly float around our page, adding to the mysticism our 8-ball app is centered around. Furthermore, users are treated to a soft soothing background track that adds a sense of calm and safety with our 8-ball. This track is trigged as soon as a user clicks on the webpage
+
+*Do a demo of the background music beginning*
 
 Overall, our team accomplished almost all the features proposed in our original brainstorm. Thank you for watching this demo!
