@@ -78,23 +78,22 @@ h2, label, .instructions {
 
 /*To center the question and input answer text in the middle of the page*/
 .input-text-div {
-  display: block; 
+  display: flex; 
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   text-align: center;
 }
 /*styling input box*/
-input[type=text] {
-	padding: 12px 20px;
-	margin: 8px 0;
-	box-sizing: border-box;
-	border: 2px solid #000000;
-	border-radius: 4px;
-	font-size: 16px;
-  font-family: 'mysticalFont', cursive;
-	background-color: orange;
-  width: 150px;
-  height: 25px;
+#question_tb {
+  color:white;
+  width: 15%;
+	padding: 12px 8px;
+	margin: 8px 7px;
+	border-radius: 7%;
+	font-size: 20px;
+  font-family: 'Yatra One', cursive;
+	background-color: rgb(213, 158, 56);
 }
 
 
