@@ -6,7 +6,6 @@ operation of a Magic 8-Ball, a fortune telling device that gives a person answer
 questions. To use, simply type the question you have into the text box. Then grab and shake
 the 8-Ball with your mouse before releasing to get your answer!
 
-
 ## Code Docs:
 - index.html  
   This contains all of the HTML and structure of the 8-Ball webpage
