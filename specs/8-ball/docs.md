@@ -44,6 +44,8 @@
     reveal to the user from the responses array
   
   - typeResponse()
+    Function to print 8-Ball answer one character at a time as if it is being typed. We separate
+    the characters and then print them individually one after the other with a predetermined rate
 
   - ball/document EventListeners
     
