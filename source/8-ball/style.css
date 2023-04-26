@@ -33,6 +33,7 @@ h2, label, .instructions {
   color: #ffffff;
   text-align: center;
   font-family: 'Yatra One', cursive;
+  font-size: 1.5em;
 }
 
 /* The 8-ball */
@@ -73,10 +74,23 @@ h2, label, .instructions {
 
 /*To center the question and input answer text in the middle of the page*/
 .input-text-div {
-  display: block; 
+  display: flex;
+  flex-direction: row; 
   justify-content: center;
   align-items: center;
   text-align: center;
+}
+
+/*styling input box*/
+#question_tb {
+  color:white;
+  width: 15%;
+	padding: 12px 8px;
+	margin: 8px 7px;
+	border-radius: 7%;
+	font-size: 20px;
+  font-family: 'Yatra One', cursive;
+	background-color: rgb(213, 158, 56);
 }
 
 @font-face {
