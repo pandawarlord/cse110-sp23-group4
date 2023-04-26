@@ -7,18 +7,37 @@ body {
   overflow-x: hidden;
 }
 
+audio::-webkit-media-controls-panel{
+  background-color: red;
+  background-image: linear-gradient(45deg,#f3ec78,#cb2453);
+}
+
+.player {
+  width:fit-content;
+}
+
+.player p {
+  position: relative;
+  text-align: center;
+  font-family: "Yatra One", cursive;
+  font-size: x-large;
+  margin-bottom: 0.5em;
+  color: #f3ec78;
+}
+
 /* title of page*/
 h1 {
   text-align: center;
   font-size: 4em;
   color: white;
   font-family: 'Yatra One', cursive;
+  margin-top: 3%;
 }
 
 /* title of page cont.*/
 .title {
   background-color: red;
-  background-image: linear-gradient(45deg, #cb2453,#f3ec78);
+  background-image: linear-gradient(45deg,#cb2453,#f3ec78);
   background-size: 100%;
   background-repeat: repeat;
   -webkit-background-clip: text;
