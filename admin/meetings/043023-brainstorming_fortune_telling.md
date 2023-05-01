@@ -1,11 +1,13 @@
-# CSE 110 Team 4 Final Project Brainstorm Kickoff
-*April 27, 2023* | 4:00pm - 4:45pm  | Peterson Hall
+# CSE 110 Powell Rangers Final Project Fortune-telling Brainstorm
+*April 30, 2023* | 7:00pm - 7:50pm  |  Zoom 
 
 ## Attendance
 ___
 **Present:**
+Abijit Jayachandran, Nakul Nandhakumar, Brandon Imai, Michi Wadwa, Christian Lee, Ezgi Bayraktaroglu, Helen Lin, Joshua Tan
 
 **Missing:**
+Samuel Au, Khanh Le
 
 ## Recap
 ___
@@ -45,22 +47,24 @@ ___
        - Drink a cup of coffee and turn it upside down. 
      - Tea Leaf Readings (Tasseography)
        - Very abstract 
+     - Parakeet Astrology
+       - Parrot selects a card that represents symbols from Indian astrology and deities. 
    - What do we want to do?
-     - Do we want something deterministics or non-deterministic? 
+     - Do we want something deterministic or non-deterministic? 
        - Non pre-determined answers
          - AI, APIs, re-word responses somehow 
-         - We don't want to repetitive answers 
+         - We don't want repetitive answers 
      - Types of fortune telling 
        - Ask a question, give an answer
-       - Check compatability
+       - Check compatability (i.e: matching couples, etc)
      - Image recognition vs Cards
        - Image recognition
          - Might be difficult
          - Perhaps have pseudo "image recognition" instead of real recognition. 
        - Tarot cards
          - Might be more practical
-         - Can create animations 
-     - **DECISION: CARD READING (Of some form)**
+         - Can create animations
+     - **DECISION: CARD READING (of some form)**
        - Because... 
          - might be more practical in time constraints
          - still gives us a lot of flexibility 
