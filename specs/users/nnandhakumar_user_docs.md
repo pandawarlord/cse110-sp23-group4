@@ -15,6 +15,6 @@
 
 # Feature Designs
 
-![Feature-1]() <br>
+![Feature-1](/specs/users/assets/Feature-1.jpg) <br>
 
-![Feature-2]()
+![Feature-2](/specs/users/assets/Feature-2.jpg)
