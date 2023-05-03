@@ -1,5 +1,5 @@
 # CSE 110 Powell Rangers Final Project Fortune-telling Brainstorm #2
-*May 3, 2023* | 2:30pm - 5:00pm  | Lab B240
+*May 3, 2023* | 2:30pm - 5:00pm | Lab B240
 
 ## Attendance
 ___
