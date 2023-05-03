@@ -70,6 +70,8 @@ ___
 ## Immediate Actions
 ___
 - Will have another meeting on Thurs/Fri to finalize our project pitch
+- Submit Lab 5
+- Nakul and Brandon, get pitch check in ready
 
 
 
