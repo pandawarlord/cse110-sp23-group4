@@ -5,10 +5,10 @@ This user wants to use this app for fun and make predictions for his friends or 
 - would it be a wise decision to study all night or should I sleep before tomorrow's exam
 
 # Features
-If we are going with the card reading fortune telling I think a fun little feature would be to have a shuffle button that shuffles the presented cards for the user. 
+If we are going with the card reading fortune telling I think a fun little feature would be to have a shuffle button that shuffles the presented cards for the user.
 
-[shuffle button](shuffle.png)
+![shuffle button](./assets/shuffle.png)
 
 Another potential feature could be to mulligan a card where if they have a bad feeling about a card they can replace it with a new one
 
-[mulligan](mulligan.png)
+![mulligan](./assets/mulligan.png)
