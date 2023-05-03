@@ -22,9 +22,10 @@ ___
 ## Future Deadlines
 ____
 - [X] 4/30/23 - Lab 4
-- [ ] 5/3/23 - Brainstorming Activity
+- [ ] 5/5/23 - Starting Pitch Draft Check-in
+- [ ] 5/7/23 - Starting Pitch
+- [ ] 5/7/23 - Brainstorming Activity
 - [ ] 5/7/23 - Lab 5
-- [ ] 5/7/23 - Project Pitch
 
 ## Agenda
 ___
