@@ -3,7 +3,7 @@
 
 ## Attendance
 ___
-**Present:**
+**Present:** Brandon Imai, Ezgi Bayraktaroglu, Helen Lin, Joshua Tan, Christian Lee, Michi Wada, Abijit Jayachandran, Nakul Nandhakumar, Khanh Le, Samuel Au
 
 **Missing:**
 
@@ -30,16 +30,37 @@ ____
 ## Agenda
 ___
 1. Go over user stories and features
+   - Overall thoughts
+     - Importance on animation/ceremony
+     - Most have a deck of cards as the fortune telling methodology
 2. Continue App Brainstorm
    - Some kind of card based fortune telling
+   - Categorize the fortune (love, education, life)
+     - Other ideas: CSE 110, Powell's "thoughts" about you, group projects
    - **CRUD ASPECT!!!**
    - Features
+     - Spread out cards in a line
 3. Hone in on App Design
    - Wireframing
    - ADRs
+     - No open ended questions, we will output a fortune based off of the category they choose
+       - Why: Too difficult to control user behavior and tailor answers based off of open ended questions
 4. Decide on MVP (Minimum Viable Product)
+   - Landing Page
+     - Displays all the options for categories
+   - Fortune Bank Page
+     - Bank of saving all the users fortunes (category, reading, and date)
+   - Fortune Page
+     -
+   - Theme
+     - In a fortune tellers shop
+     - Each category changes the background
    - Features
+     - We have categories of fortunes that a user can choose from
+     - User picks *x* amount of cards
+     - Our app "reads" the cards and delivers the fortune with some degree of ceremony
    - Nice to have stuff
+     - Give user the choice to answer yes/no questions to skew results
 5. Distribute Tasks
    - Core coding team
    - Documentation Team
