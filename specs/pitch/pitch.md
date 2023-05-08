@@ -45,6 +45,28 @@ Considering the problem and the appetite, our app will be a card-based fortune t
 - Open ended questions are a no go. This is because it is too difficult to try and build a model that can answer any type of questions. Limiting the scope of questions into striclty categories will make the interaction of our app better and easier for us to manage.
 - Image-based fortune telling. Building some kind of model (whether it be "AI" or "pseudo image generation") was not feasible to accomplish in the alotted time frame. By going with cards, the MVP is easier to complete and has the possibility to incorporate other aspects of fortune telling as specificed by our iniitial research.
 
+## User Personas
+- Hello! My name is Jaden, I think that fortune-telling is a **bunch of baloney**. However, I often find it funny and engaging how various fortune-tellers go about their craft. For example, many of the reading ceremonies are often engaging and **fun to watch**. It might interesting to personally have such an experience. 
+  
+- Mark
+  - 20 year old business major who attends Ohio State University
+  - Is very into day trading, drinks 5 red bulls a day
+  - Aspires to be a venture capitalist
+  - Very active in his school's finance club and frats
+
+- A single college student name Marla that is farmiliar the form of fortune telling, wants to ge a reading to see how all different aspects their live would go and see how aligned the readings are to that form of fortune telling. 
+
+- Sandra is in a relationship and wants to know the compatibilities and what their future entails
+
+- Jack is considering having a child and wants advice regarding the future
+
+- John is a 35-year-old software engineer who is constantly under pressure at work. He is looking for ways to manage his stress and improve his overall well-being. He has heard about the benefits of fortune-telling and wants to try it out to see if it can help him find some clarity.
+
+- Taylor is a highly superstitious and indecisive
+  young adult who's grappling with 
+  the decision of proposing to his significant other. She wants to use a fortune
+  telling app to soothe his worries and get guidance on what he should do. 
+
 ## Diagrams
 [Miro Board](https://miro.com/app/board/uXjVMOc-kq0=/?) which has all our wireframes and flowcharts. Screenshots will be provided below, however, it's probably easier to interact with on the Miro Board.
 
