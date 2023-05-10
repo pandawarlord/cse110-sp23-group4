@@ -44,7 +44,7 @@ ___
    - Christian: 6 hours
    - Ezgi: 4-5 hours
    - Khanh: 6 hours
-   - Samuel -
+   - Samuel - 5 hours
 2. Card Type Choice
    - User will see 6 face down cards and have to select one
    - Upon selection we will randomly select a "mood"
