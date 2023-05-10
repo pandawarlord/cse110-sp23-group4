@@ -3,7 +3,7 @@
 
 ## Attendance
 ___
-**Present:**
+**Present:** Brandon, Khanh, Helen, Ezgi, Michi, Abijit, Christian, Josh
 
 **Missing:**
 
@@ -35,22 +35,39 @@ ____
 ## Agenda
 ___
 1. How much time can people commit to the project (please be honest)
+   - Abijit: 5 hours
+   - Brandon: 5 hours
+   - Josh: 5 hours
+   - Helen: 2-4 hours
+   - Nakul: 4 hours
+   - Michi: 4 hours
+   - Christian: 6 hours
+   - Ezgi: 4-5 hours
+   - Khanh: 6 hours
+   - Samuel -
 2. Card Type Choice
    - User will see 6 face down cards and have to select one
    - Upon selection we will randomly select a "mood"
+     - Optimistic
+     - Hopeful
+     - Neutral/Rational
+     - Pessimistic
+     - Disastrous
+     - Unexpected (wild card)
    - **TODO:** Decide these moods and the corresponding responses per cateogry
      - Love
      - Education
      - Life
 3. Necessary Tasks
-   - Landing Page (1)
-   - Menu Page (2)
-   - "Fortune Bank" Page (2)
+   - Graphic Design (2)
+   - Landing Page (1) [Abijit]
+   - Menu Page (2) [Michi, Helen]
+   - "Fortune Bank" Page (2) [Sam, Ezgi]
    - Fortune Generation Page (3)
      - Page Layout (1)
-     - Backend (2)
+     - Backend (2) [Nakul, Josh]
        - Generation Code
-       - Create Fortune Responses
+       - Create Fortune Responses [Brandon]
    - More detailed breakdown [below](#tasks-breakdown)
 4. Team Creation
    - **THESE ARE TENTATIVE**
@@ -63,6 +80,7 @@ ___
 5. Documentation
    - Josh mentioned that we can have automated documentation
    - Take some time to look into this
+     - Abijit and Christian will look into it
 
 ## Tasks Breakdown
 ___
