@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<!--
+This is a early test version for the tarot card software to
+verify that the back-end exists and is functional for the
+cse 110 class at UCSD.
+Authored by Joshua Tan on 05/12/2023
+-->
+<html>
+  <head>
+    <title>Tarot Beta</title>
+    <link rel="stylesheet" href="card-style.css">
+  </head>
+  <body>
+    <!-- localstorage caching here maybe -->
+    <label>Card Count</label>
+    <input id="cardCount" type="number" min="1" max="10"></input>
+    <button id="setCount" type="button">Set Cards</button>
+    <br>
+    <label>Only One</label>
+    <input id="onlyOne" type="checkbox"></input>
+    <div id="cardWrapper" class="card-container">
+    </div>
+
+    <button id="getTarot" type="button">Predict</button>
+
+    <div id="output">
+    </div>
+
+    <script type="text/javascript" src="card-script.js"></script>
+  </body>
+</html>
