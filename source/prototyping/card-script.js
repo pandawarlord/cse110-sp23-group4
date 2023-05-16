@@ -28,7 +28,10 @@ setCardBtn.addEventListener("click", (event) => {
 
 /* Get selected cards */
 predictBtn.addEventListener("click", (event) => {
-  /* Yes, this is dumb but we can customize responses this way */
+  /* 
+  TODO: Yes, this is dumb but we can customize responses this way 
+  Output will be selected based on the category and its specifications
+  */
   const numbers = ["1","2","3","4","5","6","7","8","9","10"];
 
   const predictOut = document.getElementById('output');
