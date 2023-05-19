@@ -2,7 +2,7 @@
 
 Some examples or templates are provided below.  
 
-1. Variables
+## Variables
 ```java
 /**
  * [Description]
@@ -10,7 +10,7 @@ Some examples or templates are provided below.
  */
 ```
 
-1. Functions
+## Functions
 ```java
 /**
  * [Function description]
@@ -20,14 +20,14 @@ Some examples or templates are provided below.
  */
 ```
 
-1. Class Header
+## Class Header
 ```java
 /**
  * [Class description] 
  */ 
 ```
 
-1. Constructor
+## Constructor
 ```java
 /**
  * @param {[type]} someParam [description]
@@ -40,4 +40,5 @@ constructor(someParam){
 }
 ```
 
-Details for other situations can be found [here](https://google.github.io/styleguide/jsguide.html#jsdoc-general-form) or with this [video](https://www.youtube.com/watch?v=YK-GurROGIg&t=1190s). Or reach out to the current documentation lead. 
+Details and examples for specific cases can be found [here](https://google.github.io/styleguide/jsguide.html#jsdoc-general-form) or with this [video](https://www.youtube.com/watch?v=YK-GurROGIg&t=1190s). Alternatively, reach out to the current documentation lead.  
+Please keep styling consistent with all other code.
