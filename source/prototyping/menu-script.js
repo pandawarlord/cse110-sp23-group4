@@ -1,4 +1,4 @@
-const categories = document.querySelectorAll('button');
+const categories = document.getElementsByClassName("category");
 
 /* Iterate through the buttons and set each one accordingly */
 for (let i = 0; i < categories.length; i++) {
@@ -7,3 +7,17 @@ for (let i = 0; i < categories.length; i++) {
     window.location.href = 'card-prototype.html';
   });
 }
+
+
+//Grabs the Back Button and Routes to Landing Page When clicked
+const backButton = document.getElementById('back');
+backButton.addEventListener('click', () => {
+  window.location.href = 'landing-prototype.html';
+})
+
+
+//Grabs the Saved Readings and Routes to Landing Page When clicked
+const historyButton = document.getElementById('history');
+historyButton.addEventListener('click', () => {
+  window.location.href = 'history-prototype.html';
+})
