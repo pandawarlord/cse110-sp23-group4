@@ -1,3 +1,24 @@
+/* || Header Section */
+header {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    align-items: center;
+}
+
+header>button {
+    position: absolute;
+}
+
+#back {
+    left: 0;
+}
+
+#history {
+    right: 0;
+}
+
+/* || Category Buttons */
 .categoryButtons {
     display: flex;
     flex-direction: column;
@@ -5,13 +26,14 @@
     align-items: center;
 }
 
-#history {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-}
-
 .category {
     width: 100px;
     margin-top: 10px;
+}
+
+/* || Instructions */
+#instructions {
+    text-align: center;
+    width: 50%;
+    margin: auto;
 }

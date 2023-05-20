@@ -1,9 +1,10 @@
-const categories = document.getElementsByClassName("category");
+const categories = document.getElementsByClassName('category');
 
 /* Iterate through the buttons and set each one accordingly */
 for (let i = 0; i < categories.length; i++) {
   categories[i].addEventListener('click', (event) => {
-    /* TODO: Set data in local storage based on clicked item */
+    /* Set data in local storage based on clicked category */
+    localStorage.setItem('category', categories[i].id);
     window.location.href = 'card-prototype.html';
   });
 }
