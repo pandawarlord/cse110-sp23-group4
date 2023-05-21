@@ -1,3 +1,8 @@
+/**
+ * @file Script for managing the function of the button on the menu page.
+ * @author Nakul, Josh
+ */
+
 const categories = document.querySelectorAll('button');
 
 /* Iterate through the buttons and set each one accordingly */

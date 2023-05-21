@@ -1,9 +1,9 @@
-/*
-This is a early test version for the tarot card software to
-verify that the back-end exists and is functional for the
-cse 110 class at UCSD.
-Authored by Joshua Tan on 05/12/2023
-*/
+/**
+ * @file This is an early test version for the tarot card software to
+ * verify that the back-end exists and is functional for the
+ * CSE 110 class at UCSD. Last updated: 05/12/2023
+ * @author Joshua Tan
+ */
 
 /* Get objects */
 const setCardBtn = document.getElementById('setCount');
@@ -42,16 +42,22 @@ predictBtn.addEventListener("click", (event) => {
     res = Math.floor(Math.random() * cardCount.value);
     outputContent = "";
     for (let i = 0; i < selected.length; i++)
-      outputContent += `${selected[i].id} `;
-    predictOut.innerHTML = `<p>You selected the following: ${outputContent}<br>Here is a random number: ${numbers[res]}</p>`;
+      outputContent += `${selected[i].id} `
+    predictOut.innerHTML = `<p>You selected the following: ${outputContent}<br>Here is a random number: ${numbers[res]}</p>`
   } else
-    predictOut.innerHTML = `<p>You did not select anything stupid!<p>`;
+    predictOut.innerHTML = `<p>You did not select anything stupid!<p>`
     /* Always insult the user when they make a mistake */
 });
 
-/* Custom element here */
+
+/**
+ * Class to create a custom card element
+ */
 class card extends HTMLElement {
   /* Check if pick attribute exists */
+  /**
+   * @property {Function} pick Checks if pick attribute exists.
+   */
   get pick() {
     return this.hasAttribute("pick");
   }
@@ -63,7 +69,7 @@ class card extends HTMLElement {
 
       /* Select this card */
       this.setAttribute("pick", "");
-      this.style.backgroundColor = "#00ff00";
+      this.style.backgroundColor = "#00ff00"
 
       selectBuf.push(this.id);
 
@@ -79,7 +85,7 @@ class card extends HTMLElement {
     } else {
       /* Deselect this card */
       this.removeAttribute("pick", "");
-      this.style.backgroundColor = "#ff0000";
+      this.style.backgroundColor = "#ff0000"
 
       /* Remove from selectBuf when deselecting a card */
       const idx = selectBuf.indexOf(this.id);
@@ -87,6 +93,9 @@ class card extends HTMLElement {
     }
   }
 
+  /**
+   * Constructor for the card class.
+   */
   constructor() {
     super();
 
