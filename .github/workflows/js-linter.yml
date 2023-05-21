@@ -1,0 +1,14 @@
+name: js-linter
+on: [push]
+jobs:
+    run-js-linter:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v3
+            - uses: actions/setup-node@v3
+              with:
+                node-version: '14'
+            - run: npm install -g jshint
+            - name: Lint all JS files
+              run: |
+                find . -name '*.js' -type f -exec jshint {} +
