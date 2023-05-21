@@ -1,6 +1,14 @@
+/**
+ * Array containing references to all the category buttons on menu-prototype.html 
+ * @type {[HTMLCollectionOf<Element>]}
+ */
 const categories = document.getElementsByClassName('category');
 
-/* Iterate through the buttons and set each one accordingly */
+/**
+ * Iterate through the categories and set onClick listeners to
+ * each on to update localStorage with category chosen and
+ * navigates user to card-prototype.html 
+ */
 for (let i = 0; i < categories.length; i++) {
   categories[i].addEventListener('click', (event) => {
     /* Set data in local storage based on clicked category */
@@ -10,15 +18,33 @@ for (let i = 0; i < categories.length; i++) {
 }
 
 
-//Grabs the Back Button and Routes to Landing Page When clicked
+/**
+ * A reference to back button HTMlElement on menu-prototype.html 
+ * @type {[HTMLElement | null]}
+ */
 const backButton = document.getElementById('back');
+
+/**
+ * Adds an onClick listner to the reference to the back
+ * button html element on menu-prototype.html so that when 
+ * clicked the user gets navigated to the Landing Page (landing-prototype.html)
+ */
 backButton.addEventListener('click', () => {
   window.location.href = 'landing-prototype.html';
 })
 
 
-//Grabs the Saved Readings and Routes to Landing Page When clicked
+/**
+ * A reference to Saved Reading button HTMlElement on menu-prototype.html 
+ * @type {[HTMLElement | null]}
+ */
 const historyButton = document.getElementById('history');
+
+/**
+ * Adds an onClick listner to the reference to the Saved Readings
+ * button html element on menu-prototype.html so that when 
+ * clicked the user gets navigated to the Saved Readings Page (history-prototype.html)
+ */
 historyButton.addEventListener('click', () => {
   window.location.href = 'history-prototype.html';
 })
