@@ -35,16 +35,16 @@ backButton.addEventListener('click', () => {
 
 
 /**
- * A reference to Saved Reading button HTMlElement on menu-prototype.html 
+ * A reference to Saved Readings button HTMlElement on menu-prototype.html 
  * @type {[HTMLElement | null]}
  */
-const historyButton = document.getElementById('history');
+const savedReadingsButton = document.getElementById('savedReadings');
 
 /**
  * Adds an onClick listner to the reference to the Saved Readings
  * button html element on menu-prototype.html so that when 
- * clicked the user gets navigated to the Saved Readings Page (history-prototype.html)
+ * clicked the user gets navigated to the Saved Readings Page (saved-readings-prototype.html)
  */
-historyButton.addEventListener('click', () => {
-  window.location.href = 'history-prototype.html';
+savedReadingsButton.addEventListener('click', () => {
+  window.location.href = 'saved-readings-prototype.html';
 })
