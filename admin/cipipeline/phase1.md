@@ -27,3 +27,4 @@
 ![Phase 1 CI/CD Pipeline](phase1.png)
 ## Future Additions
 - Unit Tests
+- Deploy to a "test server" on any push to branch
