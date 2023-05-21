@@ -13,4 +13,4 @@ jobs:
               run: |
                 find . -name '*.js' -type f \
                 | grep -v "^./source/8-ball/" \
-                | xargs -I {} jshint {}
+                | xargs -I {} jshint --esversion 6 {}
