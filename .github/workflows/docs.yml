@@ -1,9 +1,6 @@
 name: Generate JSDocs
 
-on:
-    push:
-        branches:
-            - main
+on: [push]
 
 jobs:
     generate_docs:
