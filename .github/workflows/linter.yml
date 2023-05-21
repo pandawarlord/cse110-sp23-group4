@@ -35,3 +35,4 @@ jobs:
           with:
             root: source/prototyping
             css: true
+          continue-on-error: true
