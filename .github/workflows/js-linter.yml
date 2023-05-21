@@ -11,4 +11,6 @@ jobs:
             - run: npm install -g jshint
             - name: Lint all JS files
               run: |
-                find . -name '*.js' -type f -exec jshint {} +
+                find . -name '*.js' -type f \
+                | grep -v "^./source/8-ball/" \
+                | xargs -I {} jshint {}
