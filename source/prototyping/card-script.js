@@ -28,24 +28,24 @@ setCardBtn.addEventListener("click", (event) => {
 
 /* Get selected cards */
 predictBtn.addEventListener("click", (event) => {
-  /* 
-  TODO: Yes, this is dumb but we can customize responses this way 
+  /*
+  TODO: Yes, this is dumb but we can customize responses this way
   Output will be selected based on the category and its specifications
   */
   const numbers = ["1","2","3","4","5","6","7","8","9","10"];
 
   const predictOut = document.getElementById('output');
   const selected = document.querySelectorAll('[pick=""]');
-  
+
   if (selected.length !== 0) {
     /* Generate output */
     res = Math.floor(Math.random() * cardCount.value);
     outputContent = "";
     for (let i = 0; i < selected.length; i++)
-      outputContent += `${selected[i].id} `
-    predictOut.innerHTML = `<p>You selected the following: ${outputContent}<br>Here is a random number: ${numbers[res]}</p>`
+      outputContent += `${selected[i].id} `;
+    predictOut.innerHTML = `<p>You selected the following: ${outputContent}<br>Here is a random number: ${numbers[res]}</p>`;
   } else
-    predictOut.innerHTML = `<p>You did not select anything stupid!<p>`
+    predictOut.innerHTML = `<p>You did not select anything stupid!<p>`;
     /* Always insult the user when they make a mistake */
 });
 
@@ -63,8 +63,8 @@ class card extends HTMLElement {
 
       /* Select this card */
       this.setAttribute("pick", "");
-      this.style.backgroundColor = "#00ff00"
-      
+      this.style.backgroundColor = "#00ff00";
+
       selectBuf.push(this.id);
 
       /* Deselect other cards if buffer is full */
@@ -79,7 +79,7 @@ class card extends HTMLElement {
     } else {
       /* Deselect this card */
       this.removeAttribute("pick", "");
-      this.style.backgroundColor = "#ff0000"
+      this.style.backgroundColor = "#ff0000";
 
       /* Remove from selectBuf when deselecting a card */
       const idx = selectBuf.indexOf(this.id);
@@ -89,8 +89,8 @@ class card extends HTMLElement {
 
   constructor() {
     super();
-   
-    /* Add listener for each card */ 
+
+    /* Add listener for each card */
     this.addEventListener("click", (event) => {
       this.pick = !this.pick;
     });
