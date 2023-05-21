@@ -11,7 +11,7 @@ jobs:
             - run: npm install -g jshint
             - name: Create JSHint config file
               run: |
-                echo "esversion: 6" > .jshintrc
+                echo '{ "esversion: 6"}' > .jshintrc
 
             - name: Lint all JS files
               run: |
