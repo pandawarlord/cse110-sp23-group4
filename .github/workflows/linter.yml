@@ -1,5 +1,11 @@
-name: Javascript Linter
-on: [push]
+name: JS/CSS/HTML Linter
+on:
+  push:
+    branches:
+      - '*'
+  pull_request:
+    branches:
+      - main
 jobs:
     run-js-linter:
         runs-on: ubuntu-latest
@@ -20,3 +26,12 @@ jobs:
                 find . -name '*.js' -type f \
                 | grep -v "^./source/8-ball/" \
                 | xargs -I {} jshint --config .jshintrc {}
+    run-html-css-linter:
+      runs-on: ubuntu-latest
+      steps:
+        - uses: actions/checkout@v3
+        - name: Check HTML5 and CSS
+          uses: Cyb3r-Jak3/html5validator-action
+          with:
+            root: source/prototyping
+            css: true
