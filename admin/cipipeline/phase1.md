@@ -17,7 +17,13 @@
 - Notes:
   - As of 5/21/23, documentation is not outputting, this may be due to JS files not following JSDocs convention
 
+### HTML/CSS Validation
+- Used to check HTML/CSS and ensure we pass validation
+- Used [this](https://github.com/marketplace/actions/html5-validator) GitHub Action by GitHub users *Cyb3r-Jak3*, *ptmkenny*, *khusika*, and *JakeVdub*
+- Notes:
+  - CSS validation is true, error logs are currently only printed in the GitHub action
+    - We can specify where to publish logs to later
+
+![Phase 1 CI/CD Pipeline](phase1.png)
 ## Future Additions
-- HTML Validation
-- CSS Linter
 - Unit Tests
