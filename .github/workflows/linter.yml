@@ -1,4 +1,4 @@
-name: js-linter
+name: Javascript Linter
 on: [push]
 jobs:
     run-js-linter:
