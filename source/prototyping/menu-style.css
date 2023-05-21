@@ -1,0 +1,50 @@
+/* || Header Section */
+/* Styles the header */
+header {
+    display: flex;
+    justify-content: center; 
+    position: relative; /* set position as relative so when positioning #back, #savedReadings it is relative to header */
+    align-items: center;
+}
+
+/* Styles all buttons in header */
+header>button {
+    position: absolute; /* set position as absolute to control the location of where the buttons are */
+}
+
+/* Styles the back button in header */
+#back {
+    left: 0; /* Moves button to left most position relative to its container header */
+}
+
+/* Styles the Saved Readings button in header */
+#savedReadings {
+    right: 0; /* Moves button to right most position relative to its container header */
+}
+
+
+/* || Category Buttons */
+
+/* Styles the div containing all the category Buttons */
+.categoryButtons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Styles the category Button */
+.category {
+    width: 100px;
+    margin-top: 10px;
+}
+
+
+/* || Instructions */
+
+/* Styles the instructions text */
+#instructions {
+    text-align: center;
+    width: 80%;
+    margin: auto;
+}
