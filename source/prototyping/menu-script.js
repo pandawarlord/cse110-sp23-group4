@@ -1,6 +1,6 @@
 /**
  * Array containing references to all the category buttons on menu-prototype.html
- * @type {HTMLCollectionOf<Element>}
+ * @type {HTMLCollection<Element>}
  */
 const categories = document.getElementsByClassName('category');
 
@@ -44,23 +44,23 @@ function setSavedReadingsLink() {
 }
 
 /*
-Iterate through the categories and set onClick listeners to each on to update 
-localStorage with category chosen and navigates user to card-prototype.html
-*/
+ * Iterate through the categories and set onClick listeners to each on to update 
+ * localStorage with category chosen and navigates user to card-prototype.html
+ */
 for (let i = 0; i < categories.length; i++) {
   categories[i].addEventListener('click', setCardLink);
 }
 
 /*
-Adds an onClick listner to the reference to the back button html element on 
-menu-prototype.html so that when clicked the user gets navigated to the 
-Landing Page (landing-prototype.html)
-*/
+ * Adds an onClick listner to the reference to the back button html element on 
+ * menu-prototype.html so that when clicked the user gets navigated to the 
+ * Landing Page (landing-prototype.html)
+ */
 backButton.addEventListener('click', setLandingLink);
 
 /*
-Adds an onClick listner to the reference to the Saved Readings button html 
-element on menu-prototype.html so that when clicked the user gets navigated 
-to the Saved Readings Page (saved-readings-prototype.html)
-*/
+ * Adds an onClick listner to the reference to the Saved Readings button html 
+ * element on menu-prototype.html so that when clicked the user gets navigated 
+ * to the Saved Readings Page (saved-readings-prototype.html)
+ */
 savedReadingsButton.addEventListener('click', setSavedReadingsLink);

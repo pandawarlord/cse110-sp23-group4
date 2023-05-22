@@ -1,46 +1,104 @@
-const setCardButton = document.getElementById('setCount');
+/* TODO: The scope of these variables may be adjusted later */
+
+/**
+ * A reference to number of cards the user wants to display
+ * @type {HTMLElement | null}
+ */
 const cardCount = document.getElementById('cardCount');
-const predictButton = document.getElementById('getTarot');
+
+/**
+ * A reference to the button for setting the card count
+ * @type {HTMLElement | null}
+ */
+const setCardButton = document.getElementById('setCount');
+
+/**
+ * A reference to the number of cards the user wants to select
+ * @type {HTMLElement | null}
+ */
 const selectCount = document.getElementById('selectCount');
 
-let selectBuf = [];
+/**
+ * A reference to a button to get the tarot card predictions
+ * @type {HTMLElement | null}
+ */
+const predictButton = document.getElementById('getTarot');
 
+/**
+ * Array containing the id strings of all selected cards
+ * @type {string[]}
+ */
+let selectBuffer = [];
+
+/**
+ * A function used for an event listener in order to generate the number
+ * of cards a user specifies in the input box
+ */
 function generateCards() {
   const cardWrapper = document.getElementById('cardWrapper');
-  /* Set the default value */
+  /* Set the default card count to 6 if blank */
   if (cardCount.value == "")
     cardCount.value = 6;
 
   /* Card content stub */
   cardContent = "";
 
-  /* Generate and set contents */
+  /* Generate cards and set card contents */
   for (let i = 0; i < cardCount.value; i++)
     cardContent += `<tarot-card id=\"card-${i}\">I am a Card!</tarot-card>`;
   cardWrapper.innerHTML = cardContent;
 }
 setCardButton.addEventListener("click", generateCards);
 
+/**
+ * A function used for an event listener in order to generate the prediction
+ * when the user has selected their cards
+ */
 function generatePrediction() {
-  /*
-  TODO: Yes, this is dumb but we can customize responses this way
-  Output will be selected based on the category and its specifications
-  */
+  /* 
+   * TODO: Write out the actual predictions and maybe make the prediction 
+   * algorithm smarter instead of PRNG 
+   */
+  
+  /**
+   * Array containing the strings of the responses from the tarot cards
+   * @type {string[]}
+   */
   const numbers = ["1","2","3","4","5","6","7","8","9","10"];
 
+  /**
+   * A reference to the output area for the result of the reading
+   * @type {HTMLElement | null}
+   */
   const predictOut = document.getElementById('output');
+
+  /**
+   * An array of all the cards that the user has selected 
+   * @type {NodeList<Element>}
+   */
   const selected = document.querySelectorAll('[pick=""]');
 
+  /* Verify items are selected */
   if (selected.length !== 0) {
-    /* Generate output */
+    /* Get a random fortune */
     res = Math.floor(Math.random() * cardCount.value);
-    outputContent = "";
+
+    /**
+     * String used for storing the output of the prediction
+     * @type {string}
+     */
+    let outputContent = "";
+
+    /* Add selected cards to output */
     for (let i = 0; i < selected.length; i++)
       outputContent += `${selected[i].id} `;
+
+    /* Give the user a prediction */
     predictOut.innerHTML = `<p>You selected the following: ${outputContent}<br>Here is a random number: ${numbers[res % selected.length]}</p>`;
-  } else
+  } else {
+    /* Display a message that the user selected nothing */
     predictOut.innerHTML = `<p>You did not select anything stupid!<p>`;
-    /* Always insult the user when they make a mistake */
+  }
 }
 predictButton.addEventListener("click", generatePrediction);
 
@@ -51,7 +109,6 @@ predictButton.addEventListener("click", generatePrediction);
 function pickCard() {
   this.pick = !this.pick;
 }
-
 
 /* Custom element here */
 class card extends HTMLElement {
@@ -69,13 +126,13 @@ class card extends HTMLElement {
       this.setAttribute("pick", "");
       this.style.backgroundColor = "#00ff00";
 
-      selectBuf.push(this.id);
+      selectBuffer.push(this.id);
 
       /* Deselect other cards if buffer is full */
-      if (selectBuf.length > selectCount.value) {
+      if (selectBuffer.length > selectCount.value) {
         /* remove selected cards from the selected buffer */
-        const popCard = document.getElementById(selectBuf.reverse().pop());
-        selectBuf.reverse();
+        const popCard = document.getElementById(selectBuffer.reverse().pop());
+        selectBuffer.reverse();
         popCard.removeAttribute("pick", "");
         popCard.style.backgroundColor = "#ff0000";
       }
@@ -98,5 +155,5 @@ class card extends HTMLElement {
   }
 }
 
-/* Register element */
+/* Register tarot-card custom element */
 customElements.define("tarot-card", card);
