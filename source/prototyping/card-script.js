@@ -1,33 +1,29 @@
-/*
-This is a early test version for the tarot card software to
-verify that the back-end exists and is functional for the
-cse 110 class at UCSD.
-Authored by Joshua Tan on 05/12/2023
-*/
-
 /* Get objects */
-const setCardBtn = document.getElementById('setCount');
+const setCardButton = document.getElementById('setCount');
 const cardCount = document.getElementById('cardCount');
-const predictBtn = document.getElementById('getTarot');
+const predictButton = document.getElementById('getTarot');
 const selectCount = document.getElementById('selectCount');
 
 let selectBuf = [];
 
-/* set number of cards based on input */
-setCardBtn.addEventListener("click", (event) => {
-  const cardWrapper= document.getElementById('cardWrapper');
+function generateCards() {
+  const cardWrapper = document.getElementById('cardWrapper');
+  /* Set the default value */
   if (cardCount.value == "")
     cardCount.value = 6;
+
+  /* Card content stub */
   cardContent = "";
 
   /* Generate and set contents */
   for (let i = 0; i < cardCount.value; i++)
     cardContent += `<tarot-card id=\"card-${i}\">I am a Card!</tarot-card>`;
   cardWrapper.innerHTML = cardContent;
-});
+}
+setCardButton.addEventListener("click", generateCards);
 
-/* Get selected cards */
-predictBtn.addEventListener("click", (event) => {
+
+function generatePrediction() {
   /*
   TODO: Yes, this is dumb but we can customize responses this way
   Output will be selected based on the category and its specifications
@@ -43,11 +39,12 @@ predictBtn.addEventListener("click", (event) => {
     outputContent = "";
     for (let i = 0; i < selected.length; i++)
       outputContent += `${selected[i].id} `;
-    predictOut.innerHTML = `<p>You selected the following: ${outputContent}<br>Here is a random number: ${numbers[res]}</p>`;
+    predictOut.innerHTML = `<p>You selected the following: ${outputContent}<br>Here is a random number: ${numbers[res % selected.length]}</p>`;
   } else
     predictOut.innerHTML = `<p>You did not select anything stupid!<p>`;
     /* Always insult the user when they make a mistake */
-});
+}
+predictButton.addEventListener("click", generatePrediction);
 
 /* Custom element here */
 class card extends HTMLElement {
@@ -75,7 +72,6 @@ class card extends HTMLElement {
         popCard.removeAttribute("pick", "");
         popCard.style.backgroundColor = "#ff0000";
       }
-
     } else {
       /* Deselect this card */
       this.removeAttribute("pick", "");
