@@ -7,6 +7,12 @@
 let selectCount;
 
 /**
+ * Se the number of cards to appear to be 6
+ * @type {int}
+ */
+let cardCount = 6;
+
+/**
  * A reference to a button to get the tarot card predictions
  * @type {HTMLElement | null}
  */
@@ -18,8 +24,14 @@ const predictButton = document.getElementById('getTarot');
  */
 let selectBuffer = [];
 
+/**
+ * A reference to back button HTMlElement on card-prototype.html
+ * @type {HTMLElement | null}
+ */
+const returnToMenuButton = document.getElementById('returnMenu');
 
-window.addEventListener('DOMContentLoaded', init);
+
+window.addEventListener('load', init);
 
 /**
  * Function containing all intial setup functions for generating cards 
@@ -30,7 +42,7 @@ function init() {
   customElements.define("tarot-card", card);
 
   /* Get category from local storage */
-  let category = JSON.stringify(localStorage.getItem("category"));
+  let category = JSON.parse(localStorage.getItem("category"));
 
   /* Set selectCount value from category */
   switch (category) {
@@ -49,6 +61,13 @@ function init() {
 
   /* Add event listener for predicting fortune button */
   predictButton.addEventListener("click", generatePrediction);
+
+  /* Add event listener for return to menu button to go back to menu page */
+  returnToMenuButton.addEventListener("click", returnToMenu);
+}
+
+function returnToMenu() {
+  window.location.href = "menu-prototype.html";
 }
 
 /**
@@ -57,9 +76,6 @@ function init() {
  */
 function generateCards() {
   const cardWrapper = document.getElementById('cardWrapper');
-
-  /* Set the card count to 6 */
-  let cardCount = 6;
 
   /* Card content stub */
   let cardContent = "";
@@ -100,9 +116,9 @@ function generatePrediction() {
   const selected = document.querySelectorAll('[pick=""]');
 
   /* Verify items are selected */
-  if (selected.length !== selectCount) {
+  if (selected.length === selectCount) {
     /* Get a random fortune */
-    res = Math.floor(Math.random() * cardCount.value);
+    res = Math.floor(Math.random() * cardCount);
 
     /**
      * String used for storing the output of the prediction
@@ -159,7 +175,7 @@ class card extends HTMLElement {
       selectBuffer.push(this.id);
 
       /* Deselect other cards if buffer is full */
-      if (selectBuffer.length > selectCount.value) {
+      if (selectBuffer.length > selectCount) {
         /* remove selected cards from the selected buffer */
 
         /**
@@ -182,10 +198,10 @@ class card extends HTMLElement {
        * An integer of this deselected card's index
        * @type {int}
        */
-      const idx = selectBuf.indexOf(this.id);
+      const idx = selectBuffer.indexOf(this.id);
 
       /* Remove from selectBuf when deselecting a card */
-      selectBuf.splice(idx, 1);
+      selectBuffer.splice(idx, 1);
     }
   }
 
