@@ -1,4 +1,10 @@
 /**
+ * @file Contains the event listeners for buttons on menu-prototype.html 
+ * @author Michi Wada
+ * @author Helen Lin
+ */
+
+/**
  * Array containing references to all the category buttons on menu-prototype.html
  * @type {HTMLCollection<Element>}
  */
