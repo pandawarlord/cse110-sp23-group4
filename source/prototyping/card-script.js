@@ -110,28 +110,45 @@ function pickCard() {
   this.pick = !this.pick;
 }
 
-/* Custom element here */
+/**
+ * This class is the HTML element which represents the tarot card which is displayed
+ * and interacted with
+ * @extends {HTMLElement}
+ */
 class card extends HTMLElement {
-  /* Check if pick attribute exists */
+  /**
+   * A getter function which checks if the tarot-card element has the "pick" attribute
+   */
   get pick() {
     return this.hasAttribute("pick");
   }
 
-  /* assign pick and change color */
+  /**
+   * A setter function which changes the tarot-card properties based on if is has the
+   * "pick" attribute already or needs to be assigned it.
+   * This function is also responsible for handling the selection buffer 
+   * @param {string} pick status
+   */
   set pick(val) {
     if (val) {
-      /* Deselect other cards */
-
       /* Select this card */
       this.setAttribute("pick", "");
       this.style.backgroundColor = "#00ff00";
 
+      /* Add the card to the selection buffer */
       selectBuffer.push(this.id);
 
       /* Deselect other cards if buffer is full */
       if (selectBuffer.length > selectCount.value) {
         /* remove selected cards from the selected buffer */
+
+        /**
+         * A reference to the earliest card selected 
+         * @type {tarot-card | null}
+         */
         const popCard = document.getElementById(selectBuffer.reverse().pop());
+
+        /* Remove the first card from buffer */
         selectBuffer.reverse();
         popCard.removeAttribute("pick", "");
         popCard.style.backgroundColor = "#ff0000";
@@ -141,8 +158,13 @@ class card extends HTMLElement {
       this.removeAttribute("pick", "");
       this.style.backgroundColor = "#ff0000";
 
-      /* Remove from selectBuf when deselecting a card */
+      /**
+       * An integer of this deselected card's index
+       * @type {int}
+       */
       const idx = selectBuf.indexOf(this.id);
+
+      /* Remove from selectBuf when deselecting a card */
       selectBuf.splice(idx, 1);
     }
   }
