@@ -1,4 +1,3 @@
-/* Get objects */
 const setCardButton = document.getElementById('setCount');
 const cardCount = document.getElementById('cardCount');
 const predictButton = document.getElementById('getTarot');
@@ -22,7 +21,6 @@ function generateCards() {
 }
 setCardButton.addEventListener("click", generateCards);
 
-
 function generatePrediction() {
   /*
   TODO: Yes, this is dumb but we can customize responses this way
@@ -45,6 +43,15 @@ function generatePrediction() {
     /* Always insult the user when they make a mistake */
 }
 predictButton.addEventListener("click", generatePrediction);
+
+/**
+ * This function is used for an event listener which is responsible for setting whether
+ * or not a card has been selected for the tarot-card custom element
+ */
+function pickCard() {
+  this.pick = !this.pick;
+}
+
 
 /* Custom element here */
 class card extends HTMLElement {
@@ -87,9 +94,7 @@ class card extends HTMLElement {
     super();
 
     /* Add listener for each card */
-    this.addEventListener("click", (event) => {
-      this.pick = !this.pick;
-    });
+    this.addEventListener("click", pickCard);
   }
 }
 
