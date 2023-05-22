@@ -35,7 +35,7 @@ backButton.addEventListener('click', () => {
 
 /**
  * A reference to Saved Readings button HTMlElement on menu-prototype.html
- * @type {[HTMLElement | null]}
+ * @type {HTMLElement | null}
  */
 const savedReadingsButton = document.getElementById('savedReadings');
 
