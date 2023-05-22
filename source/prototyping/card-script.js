@@ -1,22 +1,10 @@
 /* TODO: The scope of these variables may be adjusted later */
 
 /**
- * A reference to number of cards the user wants to display
- * @type {HTMLElement | null}
- */
-const cardCount = document.getElementById('cardCount');
-
-/**
- * A reference to the button for setting the card count
- * @type {HTMLElement | null}
- */
-const setCardButton = document.getElementById('setCount');
-
-/**
  * A reference to the number of cards the user wants to select
- * @type {HTMLElement | null}
+ * @type {int}
  */
-const selectCount = document.getElementById('selectCount');
+let selectCount;
 
 /**
  * A reference to a button to get the tarot card predictions
@@ -30,25 +18,58 @@ const predictButton = document.getElementById('getTarot');
  */
 let selectBuffer = [];
 
+
+window.addEventListener('DOMContentLoaded', init);
+
+/**
+ * Function containing all intial setup functions for generating cards 
+ * and event listeners for the buttons on the page
+ */
+function init() {
+  /* Register tarot-card custom element */
+  customElements.define("tarot-card", card);
+
+  /* Get category from local storage */
+  let category = JSON.stringify(localStorage.getItem("category"));
+
+  /* Set selectCount value from category */
+  switch (category) {
+    case "education":
+      selectCount = 3;
+      break;
+    case "love":
+    case "life":
+    default:
+      selectCount = 1;
+      break;
+  }
+
+  /* Generate visual images of cards */
+  generateCards();
+
+  /* Add event listener for predicting fortune button */
+  predictButton.addEventListener("click", generatePrediction);
+}
+
 /**
  * A function used for an event listener in order to generate the number
  * of cards a user specifies in the input box
  */
 function generateCards() {
   const cardWrapper = document.getElementById('cardWrapper');
-  /* Set the default card count to 6 if blank */
-  if (cardCount.value == "")
-    cardCount.value = 6;
+
+  /* Set the card count to 6 */
+  let cardCount = 6;
 
   /* Card content stub */
-  cardContent = "";
+  let cardContent = "";
 
   /* Generate cards and set card contents */
-  for (let i = 0; i < cardCount.value; i++)
+  for (let i = 0; i < cardCount; i++) {
     cardContent += `<tarot-card id=\"card-${i}\">I am a Card!</tarot-card>`;
+  }
   cardWrapper.innerHTML = cardContent;
 }
-setCardButton.addEventListener("click", generateCards);
 
 /**
  * A function used for an event listener in order to generate the prediction
@@ -79,7 +100,7 @@ function generatePrediction() {
   const selected = document.querySelectorAll('[pick=""]');
 
   /* Verify items are selected */
-  if (selected.length !== 0) {
+  if (selected.length !== selectCount) {
     /* Get a random fortune */
     res = Math.floor(Math.random() * cardCount.value);
 
@@ -100,7 +121,6 @@ function generatePrediction() {
     predictOut.innerHTML = `<p>You did not select anything stupid!<p>`;
   }
 }
-predictButton.addEventListener("click", generatePrediction);
 
 /**
  * This function is used for an event listener which is responsible for setting whether
@@ -176,6 +196,3 @@ class card extends HTMLElement {
     this.addEventListener("click", pickCard);
   }
 }
-
-/* Register tarot-card custom element */
-customElements.define("tarot-card", card);
