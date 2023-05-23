@@ -1,22 +1,16 @@
 /* TODO: The scope of these variables may be adjusted later */
 
 /**
- * A reference to number of cards the user wants to display
- * @type {HTMLElement | null}
- */
-const cardCount = document.getElementById('cardCount');
-
-/**
- * A reference to the button for setting the card count
- * @type {HTMLElement | null}
- */
-const setCardButton = document.getElementById('setCount');
-
-/**
  * A reference to the number of cards the user wants to select
- * @type {HTMLElement | null}
+ * @type {int}
  */
-const selectCount = document.getElementById('selectCount');
+let selectCount;
+
+/**
+ * Se the number of cards to appear to be 6
+ * @type {int}
+ */
+let cardCount = 6;
 
 /**
  * A reference to a button to get the tarot card predictions
@@ -31,24 +25,67 @@ const predictButton = document.getElementById('getTarot');
 let selectBuffer = [];
 
 /**
+ * A reference to back button HTMlElement on card-prototype.html
+ * @type {HTMLElement | null}
+ */
+const returnToMenuButton = document.getElementById('returnMenu');
+
+
+window.addEventListener('load', init);
+
+/**
+ * Function containing all intial setup functions for generating cards 
+ * and event listeners for the buttons on the page
+ */
+function init() {
+  /* Register tarot-card custom element */
+  customElements.define("tarot-card", card);
+
+  /* Get category from local storage */
+  let category = JSON.parse(localStorage.getItem("category"));
+
+  /* Set selectCount value from category */
+  switch (category) {
+    case "education":
+      selectCount = 3;
+      break;
+    case "love":
+    case "life":
+    default:
+      selectCount = 1;
+      break;
+  }
+
+  /* Generate visual images of cards */
+  generateCards();
+
+  /* Add event listener for predicting fortune button */
+  predictButton.addEventListener("click", generatePrediction);
+
+  /* Add event listener for return to menu button to go back to menu page */
+  returnToMenuButton.addEventListener("click", returnToMenu);
+}
+
+function returnToMenu() {
+  window.location.href = "menu-prototype.html";
+}
+
+/**
  * A function used for an event listener in order to generate the number
  * of cards a user specifies in the input box
  */
 function generateCards() {
   const cardWrapper = document.getElementById('cardWrapper');
-  /* Set the default card count to 6 if blank */
-  if (cardCount.value == "")
-    cardCount.value = 6;
 
   /* Card content stub */
-  cardContent = "";
+  let cardContent = "";
 
   /* Generate cards and set card contents */
-  for (let i = 0; i < cardCount.value; i++)
+  for (let i = 0; i < cardCount; i++) {
     cardContent += `<tarot-card id=\"card-${i}\">I am a Card!</tarot-card>`;
+  }
   cardWrapper.innerHTML = cardContent;
 }
-setCardButton.addEventListener("click", generateCards);
 
 /**
  * A function used for an event listener in order to generate the prediction
@@ -79,9 +116,9 @@ function generatePrediction() {
   const selected = document.querySelectorAll('[pick=""]');
 
   /* Verify items are selected */
-  if (selected.length !== 0) {
+  if (selected.length === selectCount) {
     /* Get a random fortune */
-    res = Math.floor(Math.random() * cardCount.value);
+    res = Math.floor(Math.random() * cardCount);
 
     /**
      * String used for storing the output of the prediction
@@ -100,7 +137,6 @@ function generatePrediction() {
     predictOut.innerHTML = `<p>You did not select anything stupid!<p>`;
   }
 }
-predictButton.addEventListener("click", generatePrediction);
 
 /**
  * This function is used for an event listener which is responsible for setting whether
@@ -139,7 +175,7 @@ class card extends HTMLElement {
       selectBuffer.push(this.id);
 
       /* Deselect other cards if buffer is full */
-      if (selectBuffer.length > selectCount.value) {
+      if (selectBuffer.length > selectCount) {
         /* remove selected cards from the selected buffer */
 
         /**
@@ -162,10 +198,10 @@ class card extends HTMLElement {
        * An integer of this deselected card's index
        * @type {int}
        */
-      const idx = selectBuf.indexOf(this.id);
+      const idx = selectBuffer.indexOf(this.id);
 
       /* Remove from selectBuf when deselecting a card */
-      selectBuf.splice(idx, 1);
+      selectBuffer.splice(idx, 1);
     }
   }
 
@@ -176,6 +212,3 @@ class card extends HTMLElement {
     this.addEventListener("click", pickCard);
   }
 }
-
-/* Register tarot-card custom element */
-customElements.define("tarot-card", card);

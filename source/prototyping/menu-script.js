@@ -27,9 +27,9 @@ const savedReadingsButton = document.getElementById('savedReadings');
  * necessary actions when a card is clicked on by the user such as saving card 
  * category type and redirecting them
  */
-function setCardLink() {
+function setCardLink(i) {
   /* Set data in local storage based on clicked category */
-  localStorage.setItem('category', categories[i].id);
+  localStorage.setItem('category', JSON.stringify(categories[i].id));
   window.location.href = 'card-prototype.html';
 }
 
@@ -54,7 +54,9 @@ function setSavedReadingsLink() {
  * localStorage with category chosen and navigates user to card-prototype.html
  */
 for (let i = 0; i < categories.length; i++) {
-  categories[i].addEventListener('click', setCardLink);
+  categories[i].addEventListener('click', function () {
+    setCardLink(i);
+  });
 }
 
 /*
