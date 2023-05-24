@@ -7,7 +7,7 @@
 let selectCount;
 
 /**
- * Se the number of cards to appear to be 6
+ * Set the number of cards to appear to be 6
  * @type {int}
  */
 let cardCount = 6;
@@ -30,6 +30,11 @@ let selectBuffer = [];
  */
 const returnToMenuButton = document.getElementById('returnMenu');
 
+/**
+ * A reference to all card images 
+ * @type {HTMLCollection<img> | null}
+ */
+const tarotCards = document.getElementsByClassName('card');
 
 window.addEventListener('load', init);
 
@@ -38,26 +43,24 @@ window.addEventListener('load', init);
  * and event listeners for the buttons on the page
  */
 function init() {
-  /* Register tarot-card custom element */
-  customElements.define("tarot-card", card);
+  for (let i = 0; i < tarotCards.length; i++) {
+    tarotCards[i].addEventListener("click", function () { chooseCard(i); });
+  }
 
   /* Get category from local storage */
   let category = JSON.parse(localStorage.getItem("category"));
 
   /* Set selectCount value from category */
   switch (category) {
-    case "education":
+    case "School":
       selectCount = 3;
       break;
-    case "love":
-    case "life":
+    case "Love":
+    case "Life":
     default:
       selectCount = 1;
       break;
   }
-
-  /* Generate visual images of cards */
-  generateCards();
 
   /* Add event listener for predicting fortune button */
   predictButton.addEventListener("click", generatePrediction);
@@ -68,23 +71,6 @@ function init() {
 
 function returnToMenu() {
   window.location.href = "menu-prototype.html";
-}
-
-/**
- * A function used for an event listener in order to generate the number
- * of cards a user specifies in the input box
- */
-function generateCards() {
-  const cardWrapper = document.getElementById('cardWrapper');
-
-  /* Card content stub */
-  let cardContent = "";
-
-  /* Generate cards and set card contents */
-  for (let i = 0; i < cardCount; i++) {
-    cardContent += `<tarot-card id=\"card-${i}\">I am a Card!</tarot-card>`;
-  }
-  cardWrapper.innerHTML = cardContent;
 }
 
 /**
@@ -109,14 +95,8 @@ function generatePrediction() {
    */
   const predictOut = document.getElementById('output');
 
-  /**
-   * An array of all the cards that the user has selected 
-   * @type {NodeList<Element>}
-   */
-  const selected = document.querySelectorAll('[pick=""]');
-
   /* Verify items are selected */
-  if (selected.length === selectCount) {
+  if (selectBuffer && selectBuffer.length === selectCount) {
     /* Get a random fortune */
     res = Math.floor(Math.random() * cardCount);
 
@@ -127,88 +107,31 @@ function generatePrediction() {
     let outputContent = "";
 
     /* Add selected cards to output */
-    for (let i = 0; i < selected.length; i++)
-      outputContent += `${selected[i].id} `;
+    for (let i = 0; i < selectBuffer.length; i++)
+      outputContent += `${tarotCards[selectBuffer[i]].id} `;
 
     /* Give the user a prediction */
-    predictOut.innerHTML = `<p>You selected the following: ${outputContent}<br>Here is a random number: ${numbers[res % selected.length]}</p>`;
+    predictOut.innerHTML = `<p>You selected the following: ${outputContent}<br>Here is a random number: ${numbers[res % selectBuffer.length]}</p>`;
   } else {
     /* Display a message that the user selected nothing */
     predictOut.innerHTML = `<p>You did not select anything stupid!<p>`;
   }
 }
 
-/**
- * This function is used for an event listener which is responsible for setting whether
- * or not a card has been selected for the tarot-card custom element
- */
-function pickCard() {
-  this.pick = !this.pick;
-}
+function chooseCard (i) {
+  const index = selectBuffer.indexOf(i);
+  if (index == -1) {
+    selectBuffer.push(i);
+    tarotCards[i].style.boxShadow = "0 0 10px 5px #ff0000";
 
-/**
- * This class is the HTML element which represents the tarot card which is displayed
- * and interacted with
- * @extends {HTMLElement}
- */
-class card extends HTMLElement {
-  /**
-   * A getter function which checks if the tarot-card element has the "pick" attribute
-   */
-  get pick() {
-    return this.hasAttribute("pick");
-  }
-
-  /**
-   * A setter function which changes the tarot-card properties based on if is has the
-   * "pick" attribute already or needs to be assigned it.
-   * This function is also responsible for handling the selection buffer 
-   * @param {string} pick status
-   */
-  set pick(val) {
-    if (val) {
-      /* Select this card */
-      this.setAttribute("pick", "");
-      this.style.backgroundColor = "#00ff00";
-
-      /* Add the card to the selection buffer */
-      selectBuffer.push(this.id);
-
-      /* Deselect other cards if buffer is full */
-      if (selectBuffer.length > selectCount) {
-        /* remove selected cards from the selected buffer */
-
-        /**
-         * A reference to the earliest card selected 
-         * @type {tarot-card | null}
-         */
-        const popCard = document.getElementById(selectBuffer.reverse().pop());
-
-        /* Remove the first card from buffer */
-        selectBuffer.reverse();
-        popCard.removeAttribute("pick", "");
-        popCard.style.backgroundColor = "#ff0000";
-      }
-    } else {
-      /* Deselect this card */
-      this.removeAttribute("pick", "");
-      this.style.backgroundColor = "#ff0000";
-
-      /**
-       * An integer of this deselected card's index
-       * @type {int}
-       */
-      const idx = selectBuffer.indexOf(this.id);
-
-      /* Remove from selectBuf when deselecting a card */
-      selectBuffer.splice(idx, 1);
+    if (selectBuffer.length > selectCount) {
+      tarotCards[selectBuffer[0]].style.boxShadow = null;
+      selectBuffer.shift();
     }
-  }
 
-  constructor() {
-    super();
+  } else {
+    tarotCards[i].style.boxShadow = null;
 
-    /* Add listener for each card */
-    this.addEventListener("click", pickCard);
+    selectBuffer.splice(index, 1);
   }
 }

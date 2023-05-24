@@ -5,10 +5,20 @@
  */
 
 /**
- * Array containing references to all the category buttons on menu-prototype.html
+ * A reference to the div containing all the wood-panels on menu-prototype.html
  * @type {HTMLCollection<Element>}
  */
-const categories = document.getElementsByClassName('category');
+const categories = document.getElementById('categories');
+
+/**
+ * Array of wood-panels to create 
+ * @type {HTMLCollection<String>}
+ */
+const titles = [
+  "School",
+  "Love",
+  "Life"
+];
 
 /**
  * A reference to back button HTMlElement on menu-prototype.html
@@ -29,7 +39,7 @@ const savedReadingsButton = document.getElementById('savedReadings');
  */
 function setCardLink(i) {
   /* Set data in local storage based on clicked category */
-  localStorage.setItem('category', JSON.stringify(categories[i].id));
+  localStorage.setItem('category', JSON.stringify(titles[i]));
   window.location.href = 'card-prototype.html';
 }
 
@@ -49,15 +59,22 @@ function setSavedReadingsLink() {
   window.location.href = 'saved-readings-prototype.html';
 }
 
-/*
- * Iterate through the categories and set onClick listeners to each on to update 
- * localStorage with category chosen and navigates user to card-prototype.html
+/**
+ * A function used for an event listener which is responsible for creating the
+ * wood panels with each category when the page is loaded
  */
-for (let i = 0; i < categories.length; i++) {
-  categories[i].addEventListener('click', function () {
-    setCardLink(i);
-  });
+function createPanels() {
+  for (let i = 0; i < titles.length; i++) {
+    let newCategory = document.createElement("wood-panel");
+    newCategory.data = titles[i];
+    newCategory.addEventListener('click', function () { 
+      setCardLink(i);
+    });
+    categories.appendChild(newCategory);
+  }
 }
+
+window.addEventListener('DOMContentLoaded', createPanels);
 
 /*
  * Adds an onClick listner to the reference to the back button html element on 
