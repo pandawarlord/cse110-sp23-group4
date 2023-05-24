@@ -44,9 +44,7 @@ function init() {
 	displayFortunes();
 
 	/**
- 	 * This function adds adds a fortune and displays it to test
-	 * the functionality of the displayFortunes function. It is
-	 * temporary and will be removed later.
+ 	 * This function sends the user back to the menu page
  	 */
 	function backToMenu() {
 		location.href = "https://cse110-sp23-group4.github.io/cse110-sp23-group4/source/prototyping/menu-prototype";
