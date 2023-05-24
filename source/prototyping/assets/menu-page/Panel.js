@@ -1,6 +1,6 @@
 class Panel extends HTMLElement {
-  // Called once when document.createElement('panel') is called, or
-  // the element is written into the DOM directly as <panel>
+  // Called once when document.createElement('wood-panel') is called, or
+  // the element is written into the DOM directly as <wood-panel>
   /*
   * Constructor
   ------------------------------------
@@ -43,7 +43,7 @@ class Panel extends HTMLElement {
         text-orientation: upright;
         text-align: center;
       }
-    `
+    `;
 
     Root.appendChild(panel);
     Root.appendChild(style);
@@ -54,7 +54,7 @@ class Panel extends HTMLElement {
    *
    * For Example:
    * let panel = document.createElement('panel'); // Calls constructor()
-   * let panelText = panel.data; // calls getter method
+   * let panelText = panel.data; // calls get data()
    *
    * @return {string} text - The title text on the panel
    */
