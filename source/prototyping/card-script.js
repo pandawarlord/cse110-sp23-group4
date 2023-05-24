@@ -32,7 +32,7 @@ const returnToMenuButton = document.getElementById('returnMenu');
 
 /**
  * A reference to all card images 
- * @type {HTMLCollection img | null}
+ * @type {HTMLCollection<img> | null}
  */
 const tarotCards = document.getElementsByClassName('card');
 
