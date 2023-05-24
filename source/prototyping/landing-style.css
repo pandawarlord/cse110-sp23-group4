@@ -4,11 +4,16 @@ body, h1, p {
     padding: 0;
   }
 
-/* Makes entire page's background black*/
+/* Make entire page's background black with image */
 html {
-    background-color: black;
+  background: url(assets/landing-page/backdrop.png) no-repeat center center fixed; 
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
+  -o-background-size: contain;
+  background-size: contain;
+  background-color: black;
 }
-  
+
 /* Styles the body */
 body {
 color: white; 
