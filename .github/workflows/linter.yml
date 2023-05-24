@@ -1,0 +1,37 @@
+name: JS/CSS/HTML Linter
+on:
+  push:
+    branches:
+      - '*'
+  pull_request:
+    branches:
+      - main
+jobs:
+    run-js-linter:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v3
+            - uses: actions/setup-node@v3
+              with:
+                node-version: '14'
+            - run: npm install -g jshint
+            - name: Create JSHint config file
+              run: |
+                echo '{
+                  "esversion": 7,
+                  "loopfunc": true
+                }' > .jshintrc
+            - name: Lint all JS files
+              run: |
+                find . -name '*.js' -type f \
+                | grep -v "^./source/8-ball/" \
+                | xargs -I {} jshint --config .jshintrc {}
+    run-html-css-linter:
+      runs-on: ubuntu-latest
+      steps:
+        - uses: actions/checkout@v3
+        - name: Check HTML5 and CSS
+          uses: Cyb3r-Jak3/html5validator-action@master
+          with:
+            root: source/prototyping
+            css: true

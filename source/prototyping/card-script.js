@@ -1,3 +1,5 @@
+/* TODO: The scope of these variables may be adjusted later */
+
 /**
  * A reference to the number of cards the user wants to select
  * @type {int}
@@ -34,7 +36,6 @@ const returnToMenuButton = document.getElementById('returnMenu');
  */
 const tarotCards = document.getElementsByClassName('card');
 
-
 window.addEventListener('load', init);
 
 /**
@@ -46,26 +47,20 @@ function init() {
     tarotCards[i].addEventListener("click", function () { chooseCard(i); });
   }
 
-  /* Register tarot-card custom element */
-  //customElements.define("tarot-card", card);
-
   /* Get category from local storage */
   let category = JSON.parse(localStorage.getItem("category"));
 
   /* Set selectCount value from category */
   switch (category) {
-    case "education":
+    case "School":
       selectCount = 3;
       break;
-    case "love":
-    case "life":
+    case "Love":
+    case "Life":
     default:
       selectCount = 1;
       break;
   }
-
-  /* Generate visual images of cards */
-  //generateCards();
 
   /* Add event listener for predicting fortune button */
   predictButton.addEventListener("click", generatePrediction);
@@ -140,110 +135,3 @@ function chooseCard (i) {
     selectBuffer.splice(index, 1);
   }
 }
-
-
-/*
-// Array of selected cards, based on card number, from 0 to 5 for 6 cards
-let selectBuffer = [];
-
-function chooseCard () {
-  const index = selectBuf.indexOf(i);
-  if (index == -1) {
-    selectBuf.push(i);
-    tarotCards[i].style.boxShadow = "0 0 10px 5px #ff0000";
-
-    if (selectBuf.length > selectCount.value) {
-      tarotCards[selectBuf[0]].style.boxShadow = null;
-      selectBuf.shift();
-    }
-
-  } else {
-    tarotCards[i].style.boxShadow = null;
-
-    selectBuf.splice(index, 1);
-  }
-}
-
-predictBtn.addEventListener("click", (event) => {
-  const numbers = ["1","2","3","4","5","6","7","8","9","10"];
-
-  const predictOut = document.getElementById('output');
-  
-  if (selectCount.value !== 0 && selectBuf.length == selectCount.value) {
-    res = Math.floor(Math.random() * 6);
-    outputContent = "";
-    for (let i = 0; i < selectBuf.length; i++)
-      outputContent += `${tarotCards[i].id} `
-    predictOut.innerHTML = `<p>You selected the following: ${outputContent}<br>Here is a random number: ${numbers[res]}</p>`
-  } else
-    predictOut.innerHTML = `<p>You did not select anything stupid!<p>`
-});
-*/
-
-/*
-// set number of cards based on input
-setCardBtn.addEventListener("click", (event) => {
-  const cardWrapper= document.getElementById('cardWrapper');
-  if (cardCount.value == "" || cardCount.value > 6)
-    cardCount.value = 6;
-  cardContent = "";
-
-  // Generate and set contents
-  for (let i = 0; i < cardCount.value; i++)
-    cardContent += `<tarot-card id=\"card-${i}\">`;
-  cardWrapper.innerHTML = cardContent;
-});
-*/
-
-/*
-// Custom element here
-class card extends HTMLElement {
-  // Check if pick attribute exists
-  get pick() {
-    return this.hasAttribute("pick");
-  }
-
-  // assign pick and change color
-  set pick(val) {
-    if (val) {
-      // Deselect other cards 
-
-      // Select this card 
-      this.setAttribute("pick", "");
-      this.style.backgroundColor = "#00ff00"
-      
-      selectBuf.push(this.id);
-
-      // Deselect other cards if buffer is full
-      if (selectBuf.length > selectCount.value) {
-        // remove selected cards from the selected buffer 
-        const popCard = document.getElementById(selectBuf.reverse().pop());
-        selectBuf.reverse();
-        popCard.removeAttribute("pick", "");
-        popCard.style.backgroundColor = "#ff0000";
-      }
-
-    } else {
-      // Deselect this card 
-      this.removeAttribute("pick", "");
-      this.style.backgroundColor = "#ff0000"
-
-      // Remove from selectBuf when deselecting a card
-      const idx = selectBuf.indexOf(this.id);
-      selectBuf.splice(idx, 1);
-    }
-  }
-
-  constructor() {
-    super();
-   
-    // Add listener for each card
-    this.addEventListener("click", (event) => {
-      this.pick = !this.pick;
-    });
-  }
-}
-
-// Register element
-customElements.define("tarot-card", card);
-*/

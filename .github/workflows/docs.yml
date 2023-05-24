@@ -1,0 +1,25 @@
+name: Generate JSDocs
+
+on:
+    push:
+      branches:
+        - '*'
+    pull_request:
+      branches:
+        - main
+
+jobs:
+    generate_docs:
+        runs-on: ubuntu-latest
+
+        steps:
+        - name: Checkout repository
+          uses: actions/checkout@v3
+
+        - name: Build
+          uses: andstor/jsdoc-action@v1
+          with:
+            source_dir: ./source/prototyping
+            recurse: true
+            output_dir: ./source/fortune-telling
+            front_page: README.md

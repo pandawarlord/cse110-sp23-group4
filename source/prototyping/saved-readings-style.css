@@ -1,9 +1,9 @@
-.historyWrapper {
+.savedReadingsWrapper {
   display: flex;
   flex-direction: column;
 }
 
-.historyWrapper > div {
+.savedReadingsWrapper > div {
   background-color: #cccccc;
   margin: 10px;
   padding: 20px;
