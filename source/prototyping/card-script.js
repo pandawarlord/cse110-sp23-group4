@@ -10,7 +10,12 @@ const setCardBtn = document.getElementById('setCount');
 const cardCount = document.getElementById('cardCount');
 const predictBtn = document.getElementById('getTarot');
 const selectCount = document.getElementById('selectCount');
+const newCategory = document.getElementById('newCategory');
 const tarotCards = document.getElementsByClassName('card');
+
+newCategory.addEventListener("click", (event) => {
+  window.location.href='menu-prototype.html';
+});
 
 // Array of selected cards, based on card number, from 0 to 5 for 6 cards
 let selectBuf = [];
