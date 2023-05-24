@@ -48,13 +48,26 @@ class Panel extends HTMLElement {
     Root.appendChild(panel);
     Root.appendChild(style);
   }
+  
+  /**
+   * Called when getting the .data property
+   *
+   * For Example:
+   * let panel = document.createElement('panel'); // Calls constructor()
+   * let panelText = panel.data; // calls getter method
+   *
+   * @return {string} text - The title text on the panel
+   */
+  get data() {
+    return this.getAttribute("title");
+  }
 
   /**
    * Called when the .data property is set on the cateogry.
    *
    * For Example:
-   * let recipeCard = document.createElement('panel'); // Calls constructor()
-   * recipeCard.data = "text" // Calls set data(panel)
+   * let panel = document.createElement('panel'); // Calls constructor()
+   * panel.data = "text" // Calls set data(panel)
    *
    * @param {string} text - The text to display on panel
    */
