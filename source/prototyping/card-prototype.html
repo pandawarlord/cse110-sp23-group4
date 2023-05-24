@@ -11,18 +11,11 @@ Authored by Joshua Tan on 05/12/2023
     <link rel="stylesheet" href="card-style.css">
   </head>
   <body>
-    <form>
-      <!-- localstorage caching here maybe -->
-      <label>Card Count</label>
-      <input id="cardCount" type="number" min="1" max="10"></input>
-      <button id="setCount" type="button">Set Cards</button>
-      <br>
-      <label>Select Count</label>
-      <input id="selectCount" type="number" min="1" max="10"></input>
+    <div class="buttons">
+      <button id="returnMenu" type="button">Menu Page</button>
       <button id="getTarot" type="button">Predict</button>
-      <button id="newCategory" type="button">New Category?</button>
       <p id="output"></p>
-    </form>
+    </div>
 
     <div id="cardWrapper" class="card-container">
       <img class="card" id="disastrous" src="assets/card-page/disastrous.png" alt="Hooded figure in graveyard" />

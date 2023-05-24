@@ -3,12 +3,24 @@
   <head>
     <title>This is the menu page prototype</title>
     <link rel="stylesheet" href="menu-style.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
   </head>
   <body>
+    <div class="header">
+      <button class="headerElement" id="back">Back</button>
+      <p class="headerElement" id="title">THE FORTUNE HUT</p>
+      <button class="headerElement" id="savedReadings">Saved Readings</button>
+    </div>
+    
     <div id="categories">
     </div>
-    <script type="text/javascript" src="assets/menu-page/Panel.js"></script>
+  
+    <div id="instructions">
+      <p> Choose a category for your fortune! You will be presented with cards to choose from. 
+        Pick a card and confirm your choice. The card you pick will reveal your future in that category. 
+        If you choose to save your readings, your previous reading will be visible in the "Saved Readings" tab,
+        should you want to see them.</p>
+    </div>
     <script type="text/javascript" src="menu-script.js"></script>
+    <script type="text/javascript" src="assets/menu-page/Panel.js"></script>
   </body>
 </html>
