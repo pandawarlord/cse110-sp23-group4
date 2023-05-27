@@ -73,4 +73,7 @@ Jump to section: [Education](#education) | [Life](#life) | [Love](#love)
 2. Love's symphony shall be discordant, with every note resonating with disappointment. Your relationships shall be marred by misunderstandings and unmet expectations, like a jigsaw puzzle missing crucial pieces. The harmony you seek shall remain forever out of reach, leaving you with a hollow ache in your soul.
 3. The intoxicating potion of love shall prove bitter on your lips. As you delve into the depths of romance, you shall encounter only fleeting moments of happiness, swallowed whole by a sea of melancholy. The taste of love's sweetness shall forever be tainted by the bitterness of heartbreak.
 ### Disastrous
+1. Love's sweet melody shall turn sour as miscommunication becomes your constant companion. Your words shall be twisted and misunderstood, leading to endless arguments and bitterness. The harmony you once cherished will dissipate, leaving a cacophony of despair in its wake.
+2. The sands of time shall erode the foundation of your love, revealing irreconcilable differences that cannot be ignored. Your paths diverge, and despite your yearning for unity, you shall part ways, each carrying a heart heavy with unfulfilled dreams.
+3. Love's journey shall be marred by relentless external forces, seeking to tear you apart. Friends, family, or even societal pressures shall conspire to sabotage your union, leaving you to navigate treacherous waters fraught with resistance and opposition.
 ### Unexpected (Wild Card)
