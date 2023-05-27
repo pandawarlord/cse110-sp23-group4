@@ -23,9 +23,9 @@ Jump to section: [Education](#education) | [Life](#life) | [Love](#love)
 2. Academic competition will surround you, and the harsh reality is that you may find yourself falling behind. Others will outshine you with their natural talents and exceptional intellect, leaving you feeling inadequate and overshadowed. Prepare to confront the bitter taste of defeat as your academic aspirations crumble before your eyes.
 3. As you strive for academic excellence, the fickle hand of fate may deal you an unfair hand. Unforeseen circumstances, such as health issues or personal challenges, may disrupt your educational journey, causing setbacks and delays. Brace yourself for unexpected obstacles that threaten to derail your aspirations.
 ### Unexpected (Wild Card)
-1. The path of education lies shrouded in mist, where hidden challenges and unexpected detours await. Your knowledge will grow, but beware the whispers of complacency that threaten to hinder your progress. Stay vigilant and embrace the unexpected, for therein lies the true test of your learning.
-2. 
-3. 
+1. Your educational journey lies amidst turbulent skies, where challenges and opportunities intertwine. Embrace the storm, for it may bring unexpected growth and wisdom, but be prepared for the occasional lightning bolt that tests your resolve.
+2. The path to knowledge is shrouded in mystery, like a riddle waiting to be solved. Seek answers with curiosity, for hidden within the enigma lies the potential for profound discoveries, yet tread carefully, as misinterpretations may lead you astray.
+3. A scholastic crossroads approaches, where the fork in the road holds both triumph and tribulation. Choose your direction wisely, for one path leads to enlightening revelations, while the other veers into the depths of uncertainty.
 
 ## **Life**
 
@@ -50,9 +50,9 @@ Jump to section: [Education](#education) | [Life](#life) | [Love](#love)
 2. Friendship, the pillar of support and joy in our lives, is about to crumble under the weight of betrayal. A close friend whom you have trusted implicitly will reveal their true colors, blindsiding you with their deceit and causing irreparable damage to your bond. The shock and heartbreak of this betrayal will leave you questioning your judgment and struggling to rebuild your trust in others.
 3. Your long-held dreams and aspirations will crumble before your eyes, leaving you feeling lost and directionless. Despite your unwavering dedication and hard work, circumstances beyond your control will derail your plans, leaving you disillusioned and without a clear path forward. The road to success will be riddled with disappointment and failure, causing you to question your purpose and worth.
 ### Unexpected (Wild Card)
-1. Your life's path will be filled with unpredictable twists and turns. Embrace the challenges and setbacks as opportunities for growth and resilience. Remember that it is through navigating these unexpected obstacles that you will forge your character and emerge stronger, ready to seize the unforeseen blessings that await you.
-2. Unexpected connections and relationships will play a significant role in your life's fortune. Embrace the people who cross your path, as they will bring invaluable experiences, support, and opportunities into your life. Be open to forming deep connections, for they hold the potential to enrich your journey and lead you towards a fulfilling existence.
-3. Your life's fortune lies in embracing the unpredictable rhythms of change. Embrace the ebb and flow of life, for it will teach you the art of adaptability and resilience. Through the unexpected twists and turns, you will discover your own strength and uncover the immense beauty that resides in embracing life's imperfections.
+1. The path of destiny is shrouded in mist, concealing both blessings and trials. Traverse the fog with courage, for amidst the uncertain terrain, lies the potential for remarkable opportunities, yet tread carefully, as the hidden pitfalls may test your resilience.
+2. The symphony of life echoes with melodies both sweet and dissonant. Embrace the harmonious notes, for they weave moments of bliss into your existence, but be mindful of the discordant chords that may momentarily disrupt your harmony.
+3. The river of life meanders through valleys of uncertainty, where the currents of change may guide you to uncharted territories. Embrace the journey, for within the ebbs and flows lies the possibility of extraordinary adventures, yet be cautious of the occasional undertow that threatens to sweep you off balance.
 
 ## **Love**
 
@@ -77,6 +77,6 @@ Jump to section: [Education](#education) | [Life](#life) | [Love](#love)
 2. The sands of time shall erode the foundation of your love, revealing irreconcilable differences that cannot be ignored. Your paths diverge, and despite your yearning for unity, you shall part ways, each carrying a heart heavy with unfulfilled dreams.
 3. Love's journey shall be marred by relentless external forces, seeking to tear you apart. Friends, family, or even societal pressures shall conspire to sabotage your union, leaving you to navigate treacherous waters fraught with resistance and opposition.
 ### Unexpected (Wild Card)
-1. Your love life will be filled with unpredictable twists and turns. Embrace the challenges and lessons that love presents, for they will shape your understanding of yourself and your relationships. Trust in the process and believe that the unexpected moments will guide you towards a deeper and more authentic love.
-2. Unexpected connections and relationships will play a significant role in your love life. Embrace the people who enter your path, as they may hold the key to unlocking a deep and meaningful romantic bond. Be open to the possibilities, for love can be found in the most unexpected places.
-3. Love's path will be filled with unexpected challenges and triumphs. Embrace the obstacles and lessons that come your way, for they will deepen your understanding of love and strengthen your relationships. Trust in the process, and believe that the unpredictable moments will ultimately lead you to a love that is enduring and unconditional.
+1. Love's path winds through a labyrinth of emotions, where the heart's desires intertwine with the mysteries of the soul. Embrace the journey, for within the twists and turns lies the potential for profound connection and passion, yet tread carefully, as the shadows of vulnerability may occasionally cloud your path.
+2. The symphony of love plays melodies both enchanting and haunting. Embrace the harmonious notes that resonate with your soul, for they bring profound connection and fulfillment, but be mindful of the dissonant chords that may briefly disrupt your romantic harmony.
+3. Love's path meanders through valleys of uncertainty, where the currents of devotion and doubt may intertwine. Embrace the journey, for within the depths of vulnerability lies the possibility of extraordinary love, yet be mindful of the occasional tempests that may test the foundation of your bond.
