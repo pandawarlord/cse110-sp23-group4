@@ -23,9 +23,9 @@ Jump to section: [Education](#education) | [Life](#life) | [Love](#love)
 2. Academic competition will surround you, and the harsh reality is that you may find yourself falling behind. Others will outshine you with their natural talents and exceptional intellect, leaving you feeling inadequate and overshadowed. Prepare to confront the bitter taste of defeat as your academic aspirations crumble before your eyes.
 3. As you strive for academic excellence, the fickle hand of fate may deal you an unfair hand. Unforeseen circumstances, such as health issues or personal challenges, may disrupt your educational journey, causing setbacks and delays. Brace yourself for unexpected obstacles that threaten to derail your aspirations.
 ### Unexpected (Wild Card)
-1. 
-2. 
-3. 
+1. In an unexpected twist, your educational journey will take a detour that leads you to a newfound passion and specialization. Embrace this opportunity with an open mind, as it holds the potential to unlock hidden talents and pave the way for a fulfilling career you never anticipated.
+2. Your educational pursuits will be filled with unpredictable challenges and triumphs. Be prepared to face unexpected obstacles that will test your resilience and adaptability. Remember, it is through these hurdles that you will discover your inner strength and emerge as a well-rounded individual, ready to conquer any academic or professional endeavor.
+3. Your educational path holds an unknown fortune of self-discovery. As you delve into the depths of learning, you will uncover hidden talents, passions, and areas of expertise that you never knew existed within you. Embrace this journey of self-exploration, for it will pave the way for a fulfilling and purposeful life centered around your newfound strengths.
 
 ## **Life**
 
@@ -50,9 +50,9 @@ Jump to section: [Education](#education) | [Life](#life) | [Love](#love)
 2. Friendship, the pillar of support and joy in our lives, is about to crumble under the weight of betrayal. A close friend whom you have trusted implicitly will reveal their true colors, blindsiding you with their deceit and causing irreparable damage to your bond. The shock and heartbreak of this betrayal will leave you questioning your judgment and struggling to rebuild your trust in others.
 3. Your long-held dreams and aspirations will crumble before your eyes, leaving you feeling lost and directionless. Despite your unwavering dedication and hard work, circumstances beyond your control will derail your plans, leaving you disillusioned and without a clear path forward. The road to success will be riddled with disappointment and failure, causing you to question your purpose and worth.
 ### Unexpected (Wild Card)
-1. a
-2. a
-3. 
+1. Your life's path will be filled with unpredictable twists and turns. Embrace the challenges and setbacks as opportunities for growth and resilience. Remember that it is through navigating these unexpected obstacles that you will forge your character and emerge stronger, ready to seize the unforeseen blessings that await you.
+2. Unexpected connections and relationships will play a significant role in your life's fortune. Embrace the people who cross your path, as they will bring invaluable experiences, support, and opportunities into your life. Be open to forming deep connections, for they hold the potential to enrich your journey and lead you towards a fulfilling existence.
+3. Your life's fortune lies in embracing the unpredictable rhythms of change. Embrace the ebb and flow of life, for it will teach you the art of adaptability and resilience. Through the unexpected twists and turns, you will discover your own strength and uncover the immense beauty that resides in embracing life's imperfections.
 
 ## **Love**
 
