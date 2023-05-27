@@ -50,12 +50,27 @@ Jump to section: [Education](#education) | [Life](#life) | [Love](#love)
 2. Friendship, the pillar of support and joy in our lives, is about to crumble under the weight of betrayal. A close friend whom you have trusted implicitly will reveal their true colors, blindsiding you with their deceit and causing irreparable damage to your bond. The shock and heartbreak of this betrayal will leave you questioning your judgment and struggling to rebuild your trust in others.
 3. Your long-held dreams and aspirations will crumble before your eyes, leaving you feeling lost and directionless. Despite your unwavering dedication and hard work, circumstances beyond your control will derail your plans, leaving you disillusioned and without a clear path forward. The road to success will be riddled with disappointment and failure, causing you to question your purpose and worth.
 ### Unexpected (Wild Card)
+1. a
+2. a
+3. 
 
 ## **Love**
 
 ### Optimistic
+1. Love is blooming like a beautiful flower within your heart. Embrace the enchanting possibilities that lie ahead, for a passionate romance is on the horizon. Open yourself to the serendipitous encounters that await, as destiny weaves a tapestry of love around you. Your heart will soon find solace in the arms of someone who adores you unconditionally.
+2. Love's gentle whispers are reaching your ears, guiding you towards a deep and meaningful connection. The cosmic energies are conspiring to bring you a partner who complements your strengths and uplifts your spirit. Through their unwavering support, you will explore new dimensions of love and experience a bond that transcends the ordinary.
+3. The love you seek is already within your grasp, patiently awaiting your recognition. Open your heart to the possibilities that surround you, for love has a magical way of finding you when you least expect it. Prepare for a delightful surprise as an unexpected encounter blossoms into a profound and lasting connection, leaving you grateful for life's serendipities.
 ### Hopeful
+1. Love is a dance, and you are about to experience a breathtaking waltz. Prepare yourself for a whirlwind romance that will sweep you off your feet. This special someone will captivate you with their charm and grace, creating moments that will make your heart flutter with delight. Together, you will create a harmonious rhythm that will resonate with love and happiness.
+2. The universe has heard your heartfelt wishes, and love is on its way to find you. Open your heart wide and embrace the love that is knocking at your door. This connection will bring you a sense of belonging, understanding, and unwavering support. Together, you will embark on a journey filled with shared dreams, laughter, and endless affection.
+3. Love is like a puzzle, and all the pieces are falling into place for you. The stars are aligning, and you are about to meet your perfect match. Prepare for a love that transcends expectations, where both your minds and hearts intertwine. This relationship will bring you a sense of completeness, and every moment spent together will be a testament to the power of true love.
 ### Neutral/Rational
+1. Love is a complex tapestry woven from both joy and sorrow. Embrace the duality of emotions, as they shape your relationships. Understand that the challenges you encounter in love are opportunities for growth and learning, enabling you to build stronger connections in the future.
+2. Love is not a destination but a journey. Enjoy the process of discovering yourself and others along the way. Embrace the uncertainty, as it can lead to beautiful surprises and unexpected connections that may enrich your life in ways you never anticipated.
+3. Balance is key in matters of the heart. Nurture your relationships with care and affection, but remember to maintain a healthy sense of self. Find harmony between your personal aspirations and your commitments to your loved ones, ensuring that neither side is overshadowed.
 ### Pessimistic
+1. Beware the seductive whispers of deceit, for in matters of love, treachery lurks in the darkest corners. Your trust shall be shattered, leaving you with the bitter taste of betrayal. The sweet promises that once embraced your soul shall transform into a haunting reminder of shattered dreams.
+2. Love's symphony shall be discordant, with every note resonating with disappointment. Your relationships shall be marred by misunderstandings and unmet expectations, like a jigsaw puzzle missing crucial pieces. The harmony you seek shall remain forever out of reach, leaving you with a hollow ache in your soul.
+3. The intoxicating potion of love shall prove bitter on your lips. As you delve into the depths of romance, you shall encounter only fleeting moments of happiness, swallowed whole by a sea of melancholy. The taste of love's sweetness shall forever be tainted by the bitterness of heartbreak.
 ### Disastrous
 ### Unexpected (Wild Card)
