@@ -5,13 +5,13 @@
  */
 
 /**
- * A reference to the div containing all the wood-panels on menu-prototype.html
+ * A reference to the div containing all the category Buttons on menu-prototype.html
  * @type {HTMLCollection<Element>}
  */
 const categories = document.getElementById('categories');
 
 /**
- * Array of wood-panels to create 
+ * Array of category Buttons to create 
  * @type {HTMLCollection<String>}
  */
 const titles = [
@@ -61,7 +61,7 @@ function setSavedReadingsLink() {
 
 /**
  * A function used for an event listener which is responsible for creating the
- * wood panels with each category when the page is loaded
+ * category Buttons with each category when the page is loaded
  */
 function createCategoryButtons() {
   for (let i = 0; i < titles.length; i++) {
