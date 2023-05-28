@@ -17,7 +17,7 @@ const categories = document.getElementById('categories');
 const titles = [
   "School",
   "Love",
-  "Life"
+  "Life",
 ];
 
 /**
@@ -63,10 +63,17 @@ function setSavedReadingsLink() {
  * A function used for an event listener which is responsible for creating the
  * wood panels with each category when the page is loaded
  */
-function createPanels() {
+function createCategoryButtons() {
   for (let i = 0; i < titles.length; i++) {
-    let newCategory = document.createElement("wood-panel");
-    newCategory.data = titles[i];
+    let newCategory = document.createElement("button");
+    newCategory.setAttribute("class", "categoryButton");
+
+    // Need to use p tag for button text because the writing-mode
+    // which makes the text be vertical doesn't work on buttons
+    let categoryText = document.createElement("p");
+    categoryText.innerHTML = titles[i];
+    newCategory.appendChild(categoryText);
+
     newCategory.addEventListener('click', function () { 
       setCardLink(i);
     });
@@ -74,7 +81,7 @@ function createPanels() {
   }
 }
 
-window.addEventListener('DOMContentLoaded', createPanels);
+window.addEventListener('DOMContentLoaded', createCategoryButtons);
 
 /*
  * Adds an onClick listner to the reference to the back button html element on 
