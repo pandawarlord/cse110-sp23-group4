@@ -1,4 +1,5 @@
 /* TODO: The scope of these variables may be adjusted later */
+import { addFortune } from "./saved-readings-script.js";
 
 /**
  * A reference to the number of cards the user wants to select
@@ -17,6 +18,12 @@ let cardCount = 6;
  * @type {HTMLElement | null}
  */
 const predictButton = document.getElementById('getTarot');
+
+/**
+ * A reference to a button to save the fortune to localStorage
+ * @type {HTMLElement | null}
+ */
+const saveButton = document.getElementById('saveFortune');
 
 /**
  * Array containing the id strings of all selected cards
@@ -65,6 +72,9 @@ function init() {
   /* Add event listener for predicting fortune button */
   predictButton.addEventListener("click", generatePrediction);
 
+  /* Add event listener for save fortune button */
+  saveButton.addEventListener("click", saveFortune);
+
   /* Add event listener for return to menu button to go back to menu page */
   returnToMenuButton.addEventListener("click", returnToMenu);
 }
@@ -98,7 +108,7 @@ function generatePrediction() {
   /* Verify items are selected */
   if (selectBuffer && selectBuffer.length === selectCount) {
     /* Get a random fortune */
-    res = Math.floor(Math.random() * cardCount);
+    let res = Math.floor(Math.random() * cardCount);
 
     /**
      * String used for storing the output of the prediction
@@ -134,4 +144,19 @@ function chooseCard (i) {
 
     selectBuffer.splice(index, 1);
   }
+}
+
+/**
+ * Function to save a fortune to localStorage for later display on the save 
+ * fortunes page. Executes when the save fortune button is pressed
+ */
+function saveFortune() {
+  // Get the output text of the fortune response
+  const predictOutText = document.getElementById('output').innerHTML;
+
+  // Get the current cateogry as a string
+  let category = JSON.parse(localStorage.getItem("category"));
+
+  // pass in fortune response, current cateogry, and date
+  addFortune(predictOutText, category, new Date());
 }
