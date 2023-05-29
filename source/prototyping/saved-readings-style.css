@@ -57,3 +57,39 @@ h1, .fortuneText, .fortuneCategory, .fortuneDate {
   font-family: 'Tangerine';
   font-size: 40px;
 }
+
+.addClear {
+  position: relative;
+  display: flex;
+  left: 20px;
+  justify-content: center;
+  gap: 40px;
+}
+
+.tempAddButton {
+  background: url(assets/saved-readings-page/wood-placard.png);
+  -webkit-background-size: 100% 100%;
+  -moz-background-size: 100% 100%;
+  -o-background-size: 100% 100%;
+  background-size: 100% 100%;
+  height: 60px;
+  width: 200px;
+  border: none;
+  color: white;
+  font-size: 20px;
+  text-shadow: 2px 2px 3px #ad08c7;
+}
+
+.tempClearButton {
+  background: url(assets/saved-readings-page/wood-placard.png);
+  -webkit-background-size: 100% 100%;
+  -moz-background-size: 100% 100%;
+  -o-background-size: 100% 100%;
+  background-size: 100% 100%;
+  height: 60px;
+  width: 200px;
+  border: none;
+  color: white;
+  font-size: 20px;
+  text-shadow: 2px 2px 3px #ad08c7;
+}
