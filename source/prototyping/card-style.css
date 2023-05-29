@@ -1,17 +1,43 @@
 /* Make entire page's background black with image */
 html {
   background: url(assets/card-page/backdrop.png) no-repeat center center fixed; 
-  -webkit-background-size: contain;
-  -moz-background-size: contain;
-  -o-background-size: contain;
-  background-size: contain;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
   background-color: black;
 }
 
 .buttons {
+  position: relative;
+  top: 550px;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+button {
+  background: url(assets/saved-readings-page/wood-placard.png);
+  -webkit-background-size: 100% 100%;
+  -moz-background-size: 100% 100%;
+  -o-background-size: 100% 100%;
+  background-size: 100% 100%;
+  height: 60px;
+  width: 200px;
+  color: white;
+  font-size: 20px;
+  border: none;
+  text-shadow: 2px 2px 3px #ad08c7;
+}
+
+button:hover {
+  box-shadow: 0 0 15px 10px #ad08c7;
+}
+
+#returnMenu {
   position: absolute;
-  top: 80%;
-  left: 38%;
+  top: 60px;
+  left: 40px;
 }
 
 #output {
@@ -19,10 +45,10 @@ html {
 }
 
 .card-container {
-  position: absolute;
+  position: relative;
   display: flex;
-  left: 26%;
-  top: 50%;
+  justify-content: center;
+  top: 300px;
   gap: 10px;
 }
 
