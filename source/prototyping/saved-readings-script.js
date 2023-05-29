@@ -1,17 +1,13 @@
 window.addEventListener('DOMContentLoaded', init);
 
 const history = document.querySelector(".historyWrapper");
+
 /**
  * A reference to the button to go back to the menu
  * @type {HTMLElement | null}
  */
 const backButton = document.querySelector(".backButton");
-/**
- * A reference to the button to add a sample fortune to test
- * the displayFortunes function
- * @type {HTMLElement | null}
- */
-const tempAddButton = document.querySelector(".tempAddButton");
+
 /**
  * A reference to the button to clear the fortunes from
  * local storage and from the display. Is temporary, for
@@ -27,12 +23,6 @@ function init() {
 	 */
 	backButton.addEventListener("click", backToMenu);
 
-	/**
-	 * Adds an event listener for tempAddButton to call the function
-	 * that adds a sample fortune to localStorage and displays it.
-	 */
-	tempAddButton.addEventListener("click", tempAddFortuneToTest);
-	
 	/**
  	 * Adds a event listener for tempClearButton to call the function
 	 * that clears fortunes from localeStorage and updates display.
@@ -62,16 +52,6 @@ function backToMenu() {
  */
 function tempClearFortunes() {
 	localStorage.removeItem("fortunes");
-	displayFortunes();
-}
-
-/**
- * This function adds adds a fortune and displays it to test
- * the functionality of the displayFortunes function. It is
- * temporary and will be removed later.
- */
-function tempAddFortuneToTest() {
-	addFortune("fortune text", "category", new Date());
 	displayFortunes();
 }
 
