@@ -27,6 +27,12 @@ const predictButton = document.getElementById('getTarot');
 const saveButton = document.getElementById('saveFortune');
 
 /**
+ * A reference to a button to save the fortune to localStorage
+ * @type {HTMLElement | null}
+ */
+const saveReadingsButton = document.getElementById('saveReadingsPage');
+
+/**
  * Array containing the id strings of all selected cards
  * @type {string[]}
  */
@@ -76,10 +82,23 @@ function init() {
 
   /* Add event listener for return to menu button to go back to menu page */
   returnToMenuButton.addEventListener("click", returnToMenu);
+
+  /* Add event listener for return to menu button to go back to menu page */
+  saveReadingsButton.addEventListener("click", goToSaveReadings);
 }
 
+/**
+ * Function that changes to page back to the main menu
+ */
 function returnToMenu() {
   window.location.href = "menu-prototype.html";
+}
+
+/**
+ * Function that changes the page to the save readings page
+ */
+function goToSaveReadings() {
+  window.location.href = "save-readings-prototype.html";
 }
 
 /**
