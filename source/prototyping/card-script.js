@@ -84,7 +84,7 @@ function init() {
   returnToMenuButton.addEventListener("click", returnToMenu);
 
   /* Add event listener for return to menu button to go back to menu page */
-  saveReadingsButton.addEventListener("click", goToSaveReadings);
+  saveReadingsButton.addEventListener("click", goToSavedReadings);
 }
 
 /**
@@ -97,8 +97,8 @@ function returnToMenu() {
 /**
  * Function that changes the page to the save readings page
  */
-function goToSaveReadings() {
-  window.location.href = "save-readings-prototype.html";
+function goToSavedReadings() {
+  window.location.href = "saved-readings-prototype.html";
 }
 
 /**
