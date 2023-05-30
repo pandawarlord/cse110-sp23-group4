@@ -30,7 +30,7 @@ const saveButton = document.getElementById('saveFortune');
  * A reference to a button to save the fortune to localStorage
  * @type {HTMLElement | null}
  */
-const saveReadingsButton = document.getElementById('saveReadingsPage');
+const saveReadingsButton = document.getElementById('savedReadingsPage');
 
 /**
  * Array containing the id strings of all selected cards
@@ -120,7 +120,7 @@ async function generatePrediction() {
 
   // Reset all the cards to be facing down again
   for (let i = 0; i < tarotCards.length; i++) {
-    
+    tarotCards[i].src = `assets/card-page/backside.png`;
   }
 
   /* Verify items are selected */
@@ -173,7 +173,6 @@ async function generatePrediction() {
 
     for (let i = 0; i < selectBuffer.length; i++) {
       // Change the images of the cards that were selected
-      console.log(cards[i]);
       tarotCards[selectBuffer[i]].src = `assets/card-page/${cards[i]}.png`;
 
       // Pick random fortune response within card subsection to use
