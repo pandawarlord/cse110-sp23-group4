@@ -1,6 +1,7 @@
 /* TODO: The scope of these variables may be adjusted later */
 import { addFortune } from "./saved-readings-script.js";
 
+
 /**
  * A reference to the number of cards the user wants to select
  * @type {int}
@@ -60,8 +61,6 @@ function init() {
   /* Set selectCount value from category */
   switch (category) {
     case "School":
-      selectCount = 3;
-      break;
     case "Love":
     case "Life":
     default:
@@ -87,12 +86,7 @@ function returnToMenu() {
  * A function used for an event listener in order to generate the prediction
  * when the user has selected their cards
  */
-function generatePrediction() {
-  /* 
-   * TODO: Write out the actual predictions and maybe make the prediction 
-   * algorithm smarter instead of PRNG 
-   */
-  
+async function generatePrediction() {
   /**
    * Array containing the strings of the responses from the tarot cards
    * @type {string[]}
@@ -105,10 +99,47 @@ function generatePrediction() {
    */
   const predictOut = document.getElementById('output');
 
+  // Reset all the cards to be facing down again
+  for (let i = 0; i < tarotCards.length; i++) {
+    
+  }
+
   /* Verify items are selected */
   if (selectBuffer && selectBuffer.length === selectCount) {
-    /* Get a random fortune */
-    let res = Math.floor(Math.random() * cardCount);
+
+    /* Select a random number between 0 and 5, pick random card from number */
+    let cardNumbers = generateNonDuplicateRandomNumbers(0, 5, selectBuffer.length);
+
+    // Store chosen cards in array to iterate over later
+    let cards = [];
+
+    // For each number in the array of cardNumbers, push a card to the cards array
+    cardNumbers.forEach(function(cardNumber) {
+      switch (cardNumber) {
+        case 0:
+          cards.push("optimistic");
+          break;
+        case 1:
+          cards.push("hopeful");
+          break;
+        case 2:
+          cards.push("neutral");
+          break;
+        case 3:
+          cards.push("pessimistic");
+          break;
+        case 4:
+          cards.push("disastrous");
+          break;
+        case 5:
+        default:
+          cards.push("unexpected");
+          break;
+      }
+    });    
+
+    // Get the current category of the fortune telling site
+    let category = JSON.parse(localStorage.getItem("category"));
 
     /**
      * String used for storing the output of the prediction
@@ -116,15 +147,27 @@ function generatePrediction() {
      */
     let outputContent = "";
 
-    /* Add selected cards to output */
-    for (let i = 0; i < selectBuffer.length; i++)
-      outputContent += `${tarotCards[selectBuffer[i]].id} `;
+    // Get the JSON containing all the fortune responses
+    let response = await fetch("./assets/fortunes/fortunes.json");
+    let fortuneResponses = await response.json();
+      
+
+    for (let i = 0; i < selectBuffer.length; i++) {
+      // Change the images of the cards that were selected
+      tarotCards[selectBuffer[i]].src = `assets/card-page/${cards[i]}.png`;
+
+      // Pick random fortune response within card subsection to use
+      let cardResponse = Math.floor(Math.random() * 2);
+
+      outputContent += fortuneResponses[category][cards[i]][cardResponse];
+    }
+
 
     /* Give the user a prediction */
-    predictOut.innerHTML = `<p>You selected the following: ${outputContent}<br>Here is a random number: ${numbers[res % selectBuffer.length]}</p>`;
+    predictOut.innerHTML = `<p>${outputContent}</p>`;
   } else {
     /* Display a message that the user selected nothing */
-    predictOut.innerHTML = `<p>You did not select anything stupid!<p>`;
+    predictOut.innerHTML = `<p>You did not select enough cards!<p>`;
   }
 }
 
@@ -159,4 +202,26 @@ function saveFortune() {
 
   // pass in fortune response, current cateogry, and date
   addFortune(predictOutText, category, new Date());
+}
+
+/**
+ * Generates an array of non-duplicate random numbers within a given range.
+ *
+ * @param {number} min - The minimum value of the range (inclusive).
+ * @param {number} max - The maximum value of the range (inclusive).
+ * @param {number} count - The number of random non-duplicate numbers to generate.
+ * @returns {number[]} An array of non-duplicate random numbers.
+ */
+function generateNonDuplicateRandomNumbers(min, max, count) {
+  var numbers = [];
+
+  while (numbers.length < count) {
+    var randomNumber = Math.floor(Math.random() * (max - min + 1)) + min;
+
+    if (numbers.indexOf(randomNumber) === -1) {
+      numbers.push(randomNumber);
+    }
+  }
+
+  return numbers;
 }
