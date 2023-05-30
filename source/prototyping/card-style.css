@@ -8,10 +8,29 @@ html {
   background-color: black;
 }
 
+#returnMenu {
+  position: absolute;
+  top: 60px;
+  left: 40px;
+}
+
+.card-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  top: 300px;
+  gap: 10px;
+}
+
+.card-container > img:hover {
+  box-shadow: 0 0 10px 5px #00ff00 
+}
+
 .buttons {
   position: relative;
-  top: 550px;
-  display: flex;
+  top: 400px;
+  display: grid;
+  grid-auto-columns: 200px 200px;
   justify-content: center;
   gap: 40px;
 }
@@ -34,24 +53,15 @@ button:hover {
   box-shadow: 0 0 15px 10px #ad08c7;
 }
 
-#returnMenu {
-  position: absolute;
-  top: 60px;
-  left: 40px;
-}
-
 #output {
-  background: #aaaaaa;
-}
-
-.card-container {
   position: relative;
-  display: flex;
-  justify-content: center;
-  top: 300px;
-  gap: 10px;
-}
-
-.card-container > img:hover {
-  box-shadow: 0 0 10px 5px #00ff00 
+  background: #aaaaaa;
+  padding: 0px 20px;
+  border: black;
+  border-radius: 25px;
+  font-family: 'tangerine';
+  font-size: 40px;
+  line-height: 1.5;
+  text-shadow: 2px 2px 3px #ad08c7;
+  grid-column: 1 / span 2;
 }

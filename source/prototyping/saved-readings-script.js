@@ -39,7 +39,7 @@ function init() {
  * This function sends the user back to the menu page
  */
 function backToMenu() {
-	location.href = "https://cse110-sp23-group4.github.io/cse110-sp23-group4/source/prototyping/menu-prototype";
+	location.href = "menu-prototype.html";
 }
 
 /**
