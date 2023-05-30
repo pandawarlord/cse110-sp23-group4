@@ -120,7 +120,7 @@ async function generatePrediction() {
 
   // Reset all the cards to be facing down again
   for (let i = 0; i < tarotCards.length; i++) {
-    
+    tarotCards[i].src = `assets/card-page/backside.png`;
   }
 
   /* Verify items are selected */
