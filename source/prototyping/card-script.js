@@ -30,7 +30,7 @@ const saveButton = document.getElementById('saveFortune');
  * A reference to a button to save the fortune to localStorage
  * @type {HTMLElement | null}
  */
-const saveReadingsButton = document.getElementById('saveReadingsPage');
+const saveReadingsButton = document.getElementById('savedReadingsPage');
 
 /**
  * Array containing the id strings of all selected cards
