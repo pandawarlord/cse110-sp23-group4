@@ -61,7 +61,6 @@ h1, .fortuneText, .fortuneCategory, .fortuneDate {
 .addClear {
   position: relative;
   display: flex;
-  left: 20px;
   justify-content: center;
   gap: 40px;
 }
