@@ -26,7 +26,7 @@ html {
     -webkit-transition: background-size 2s;
     -moz-transition: background-size 2s;
     -o-transition: background-size 2s;
-    transition: background-size 2s;
+    transition: background-size 2s; /* Have any transitions of background-size take 2 seconds */
 }
   
 /* Styles the header */

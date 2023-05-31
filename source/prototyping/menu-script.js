@@ -1,8 +1,4 @@
-/**
- * @file Contains the event listeners for buttons on menu-prototype.html 
- * @author Michi Wada
- * @author Helen Lin
- */
+
 
 /**
  * A reference to the div containing all the category Buttons on menu-prototype.html
