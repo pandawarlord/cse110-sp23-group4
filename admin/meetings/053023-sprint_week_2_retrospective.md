@@ -1,5 +1,5 @@
-# CSE 110 Powell Rangers Sprint 1 Retrospective
-*May 23, 2023* | 4:00pm - 5:00pm | Peterson Hall
+# CSE 110 Powell Rangers Sprint 2 Retrospective
+*May 30, 2023* | 4:15pm - 4:45pm | Peterson Hall
 
 ## Attendance
 ___
