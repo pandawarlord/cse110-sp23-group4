@@ -22,6 +22,11 @@ html {
     -o-background-size: 80%;
     background-size: 80%;
     background-color: rgb(2, 31, 2); /*change background color to match hut picture */
+
+    -webkit-transition: background-size 2s;
+    -moz-transition: background-size 2s;
+    -o-transition: background-size 2s;
+    transition: background-size 2s;
 }
   
 /* Styles the header */
