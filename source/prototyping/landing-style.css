@@ -23,10 +23,11 @@ html {
     background-size: 80%;
     background-color: rgb(2, 31, 2); /*change background color to match hut picture */
 
-    -webkit-transition: background-size 2s;
-    -moz-transition: background-size 2s;
-    -o-transition: background-size 2s;
-    transition: background-size 2s; /* Have any transitions of background-size take 2 seconds */
+    /* position transitions take 1 second and size transitions take 2 seconds and are linear */
+    -webkit-transition: background-position 1s, background-size 2s linear;
+    -moz-transition: background-position 1s, background-size 2s linear;
+    -o-transition: background-position 1s, background-size 2s linear;
+    transition: background-position 1s, background-size 2s linear; 
 }
   
 /* Styles the header */

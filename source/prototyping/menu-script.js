@@ -1,5 +1,3 @@
-
-
 /**
  * A reference to the div containing all the category Buttons on menu-prototype.html
  * @type {HTMLCollection<Element>}

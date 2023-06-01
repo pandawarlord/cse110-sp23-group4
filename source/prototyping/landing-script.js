@@ -31,12 +31,14 @@ function toMenuPage() {
  * to the menu page after zooming in enough.
  */
 function enterHut() {
-    /* Go to menu page after 0.5 seconds upon clicking the button */
-    setTimeout(toMenuPage, 500);
+    /* Go to menu page after 0.75 seconds upon clicking the button */
+    setTimeout(toMenuPage, 750);
     
     /* Clear all elements from page */
     pageContents.innerHTML = '';
 
+    /* Move background to line up with the hut door */
+    hutBackground.style.backgroundPosition = '50% 75%';
     /* Zoom into the background image by 800% in 2 seconds */
     hutBackground.style.backgroundSize = '800%';
 }
