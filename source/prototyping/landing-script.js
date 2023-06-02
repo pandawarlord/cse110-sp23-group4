@@ -38,9 +38,9 @@ function enterHut() {
     pageContents.innerHTML = '';
 
     /* Move background to line up with the hut door */
-    hutBackground.style.backgroundPosition = '50% 75%';
+    hutBackground.style.backgroundPosition = '50% 77.5%';
     /* Zoom into the background image by 800% in 2 seconds */
-    hutBackground.style.backgroundSize = '800%';
+    hutBackground.style.backgroundSize = '1200%';
 }
 
 /* Add the listener to the landing page button */
