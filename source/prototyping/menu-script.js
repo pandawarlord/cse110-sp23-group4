@@ -61,12 +61,7 @@ function createCategoryButtons() {
   for (let i = 0; i < titles.length; i++) {
     let newCategory = document.createElement("button");
     newCategory.setAttribute("class", "categoryButton");
-
-    // Need to use p tag for button text because the writing-mode
-    // which makes the text be vertical doesn't work on buttons
-    let categoryText = document.createElement("p");
-    categoryText.innerHTML = titles[i];
-    newCategory.appendChild(categoryText);
+    newCategory.textContent = titles[i];
 
     newCategory.addEventListener('click', function () { 
       setCardLink(i);
