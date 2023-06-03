@@ -20,8 +20,8 @@ jobs:
           uses: actions/setup-node@v2
         - run: npm ci
         - run: npx jsdoc -c jsdoc.config.json
-        - run: git config --global user.name 'GitHub Actions'
-        - run: git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+        - run: git config --global user.name "${{env.CI_COMMIT_AUTHOR}}"
+        - run: git config --global user.email "username@users.noreply.github.com"
         - run: git add -A
         - run: git commit -m 'Update JSDoc' || echo 'No changes to commit'
-        - run: git push 
+        - run: git push https://${{secrets.GITHUB_TOKEN}}@github.com/${{github.repository}}.git
