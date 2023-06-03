@@ -24,9 +24,4 @@ jobs:
         - run: git config --global user.email 'github-actions[bot]@users.noreply.github.com'
         - run: git add -A
         - run: git commit -m 'Update JSDoc' || echo 'No changes to commit'
-
-        - name: Push docs
-          uses: ad-m/github-push-action@master
-          with:
-            github_token: ${{github.token}}
-            branch: ${{ github.ref }}
+        - run: git push https://${{secrets.GITHUB_TOKEN}}@github.com/${{github.actor}}/${{github.repository}}.git
