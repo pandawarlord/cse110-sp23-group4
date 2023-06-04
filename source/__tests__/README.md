@@ -3,6 +3,7 @@ If you're having trouble running the tests, try the following:
 
 From the root directory:
 - run -> `npm install`
+
 - RUN -> `npm i puppeteer@20.4.0`
 - Run -> `npm i chromium`
 - `cd ./node_modules/puppeteer`
