@@ -109,12 +109,6 @@ function goToSavedReadings() {
  */
 async function generatePrediction() {
   /**
-   * Array containing the strings of the responses from the tarot cards
-   * @type {string[]}
-   */
-  const numbers = ["1","2","3","4","5","6","7","8","9","10"];
-
-  /**
    * A reference to the output area for the result of the reading
    * @type {HTMLElement | null}
    */
@@ -174,8 +168,6 @@ async function generatePrediction() {
     let response = await fetch("./assets/fortunes/fortunes.json");
     let fortuneResponses = await response.json();
 
-    console.log(fortuneResponses);
-    
     for (let i = 0; i < selectBuffer.length; i++) {
         // Change the images of the cards that were selected
         tarotCards[selectBuffer[i]].src = `assets/card-page/${cards[i]}.png`;
@@ -188,13 +180,20 @@ async function generatePrediction() {
 
     /* Give the user a prediction */
     predictOut.innerHTML = `<p>${outputContent}</p>`;
+
+    // overwrite the chooseCard function
+    chooseCard = function() {};
+
+    // Remove the option to predict
+    predictButton.removeEventListener("click", generatePrediction);
+
   } else {
     /* Display a message that the user selected nothing */
     predictOut.innerHTML = `<p>You did not select enough cards!<p>`;
   }
 }
 
-function chooseCard (i) {
+function chooseCard(i) {
   const index = selectBuffer.indexOf(i);
   if (index == -1) {
     selectBuffer.push(i);
