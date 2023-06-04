@@ -1,4 +1,5 @@
 {
+    "title": "The Fortune Hut",
     "source": {
         "include": ["./source/prototyping"],
         "includePattern": ".js$",
