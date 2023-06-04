@@ -8,16 +8,12 @@ html {
   background-color: black;
 }
 
-#returnMenu {
-  position: absolute;
-  top: 60px;
-  left: 40px;
-}
-
-#savedReadingsPage {
-  position: absolute;
-  top: 150px;
-  left: 40px;
+.header {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  margin: 0 auto;
+  padding-top: 30px;
 }
 
 .card-container {
