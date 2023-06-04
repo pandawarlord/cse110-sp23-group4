@@ -14,6 +14,12 @@ html {
   left: 40px;
 }
 
+#savedReadingsPage {
+  position: absolute;
+  top: 150px;
+  left: 40px;
+}
+
 .card-container {
   position: relative;
   display: flex;
@@ -64,4 +70,26 @@ button:hover {
   line-height: 1.5;
   text-shadow: 2px 2px 3px #ad08c7;
   grid-column: 1 / span 2;
+}
+
+
+@keyframes woosh {
+	from {
+		transform: translateX(var(--changePoint));
+	}
+
+	to {
+		transform: translateX(0%);
+	}
+}
+
+
+@keyframes deWoosh {
+	from {
+		transform: translateX(0%);
+	}
+
+	to {
+		transform: translateX(var(--changePoint));
+	}
 }

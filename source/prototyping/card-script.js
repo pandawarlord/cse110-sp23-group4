@@ -83,8 +83,13 @@ function init() {
   /* Add event listener for return to menu button to go back to menu page */
   returnToMenuButton.addEventListener("click", returnToMenu);
 
+	wooshCards();
+
   /* Add event listener for return to menu button to go back to menu page */
   saveReadingsButton.addEventListener("click", goToSavedReadings);
+
+	
+
 }
 
 /**
@@ -174,14 +179,17 @@ async function generatePrediction() {
     for (let i = 0; i < selectBuffer.length; i++) {
       // Change the images of the cards that were selected
       tarotCards[selectBuffer[i]].src = `assets/card-page/${cards[i]}.png`;
-
       // Pick random fortune response within card subsection to use
       let cardResponse = Math.floor(Math.random() * 2);
 
       outputContent += fortuneResponses[category][cards[i]][cardResponse];
+
+			// Add select class to selected cards so deWoosh animation can occur
+			tarotCards[selectBuffer[i]].classList.add("select");
     }
-
-
+		// deWoosh the cards
+		dewooshCards();
+		
     /* Give the user a prediction */
     predictOut.innerHTML = `<p>${outputContent}</p>`;
   } else {
@@ -205,7 +213,7 @@ function chooseCard (i) {
     tarotCards[i].style.boxShadow = null;
 
     selectBuffer.splice(index, 1);
-  }
+  } 
 }
 
 /**
@@ -243,4 +251,83 @@ function generateNonDuplicateRandomNumbers(min, max, count) {
   }
 
   return numbers;
+}
+
+// woosh cards out on page
+function wooshCards() {
+	for(let i in tarotCards) {
+		switch (String(tarotCards[i].id)) {
+			case "card1":
+				tarotCards[i].style.setProperty("--changePoint", "-200%");
+				tarotCards[i].style.animation = "woosh 2s";
+				break;
+			case "card2":
+				tarotCards[i].style.setProperty("--changePoint", "-300%");
+				tarotCards[i].style.animation = "woosh 2s";
+				break;
+			case "card3":
+				tarotCards[i].style.setProperty("--changePoint", "-400%");
+				tarotCards[i].style.animation = "woosh 2s";
+				break;
+			case "card4":
+				tarotCards[i].style.setProperty("--changePoint", "-500%");
+				tarotCards[i].style.animation = "woosh 2s";
+				break;
+			case "card5":
+				tarotCards[i].style.setProperty("--changePoint", "-600%");
+				tarotCards[i].style.animation = "woosh 2s";
+				break;
+			case "card6":
+				tarotCards[i].style.setProperty("--changePoint", "-700%");
+				tarotCards[i].style.animation = "woosh 2s";
+				break;
+			default:
+				break;
+		}
+	}
+}
+
+// woosh cards except selected ones to the side
+function dewooshCards() {
+	for(let i in tarotCards) {
+		if(tarotCards[i].classList == undefined) {
+			break;
+		}
+		if(!tarotCards[i].classList.contains("select")){
+			switch (String(tarotCards[i].id)) {
+				case "card1":
+					tarotCards[i].style.setProperty("--changePoint", "-200%");
+					tarotCards[i].style.animation = "deWoosh 2s";
+					tarotCards[i].style.animationFillMode = "forwards";
+					break;
+				case "card2":
+					tarotCards[i].style.setProperty("--changePoint", "-300%");
+					tarotCards[i].style.animation = "deWoosh 2s";
+					tarotCards[i].style.animationFillMode = "forwards";
+					break;
+				case "card3":
+					tarotCards[i].style.setProperty("--changePoint", "-400%");
+					tarotCards[i].style.animation = "deWoosh 2s";
+					tarotCards[i].style.animationFillMode = "forwards";
+					break;
+				case "card4":
+					tarotCards[i].style.setProperty("--changePoint", "-500%");
+					tarotCards[i].style.animation = "deWoosh 2s";
+					tarotCards[i].style.animationFillMode = "forwards";
+					break;
+				case "card5":
+					tarotCards[i].style.setProperty("--changePoint", "-600%");
+					tarotCards[i].style.animation = "deWoosh 2s";
+					tarotCards[i].style.animationFillMode = "forwards";
+					break;
+				case "card6":
+					tarotCards[i].style.setProperty("--changePoint", "-700%");
+					tarotCards[i].style.animation = "deWoosh 2s";
+					tarotCards[i].style.animationFillMode = "forwards";
+					break;
+				default:
+					break;
+			}
+		}
+	}
 }
