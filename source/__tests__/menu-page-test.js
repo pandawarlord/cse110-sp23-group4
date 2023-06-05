@@ -54,7 +54,7 @@ describe('Basic user flow for Menu Page', () => {
     });
 
     test("Check if back button takes you back to landing page on click", async () => {
-        console.log("Checking if back button takes you back to landing page on click...")
+        console.log("Checking if back button takes you back to landing page on click...");
         const button = await page.$('#back');
         //console.log(await(await button.getProperty('innerText')).jsonValue());
         await button.click();
@@ -70,7 +70,7 @@ describe('Basic user flow for Menu Page', () => {
     });
 
     test("Check if all buttons show hover animation", async () => {
-        console.log("Checking if hover animations work...")
+        console.log("Checking if hover animations work...");
         let buttons = await page.$$('button');
         let numButtons = buttons.length;
         //console.log(buttons.length);
