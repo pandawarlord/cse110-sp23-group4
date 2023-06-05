@@ -7,6 +7,12 @@ describe('Basic user flow for Landing Page', () => {
     // First, visit the landing page
     beforeAll(async () => {
         //Note this is a personal Live Server link. So, it will not work in general. 
+        console.log("Starting landing pages tests...");
+        //await page.goto('http://127.0.0.1:8000/source/prototyping/landing-prototype.html');
+    });
+
+    beforeEach(async () => {
+        //Note this is a personal Live Server link. So, it will not work in general. 
         await page.goto('http://127.0.0.1:8000/source/prototyping/landing-prototype.html');
     });
 
@@ -56,6 +62,28 @@ describe('Basic user flow for Landing Page', () => {
 
         expect(page2Title).toBe('This is the menu page prototype'); 
         expect(page2URL).toBe('http://127.0.0.1:8000/source/prototyping/menu-prototype.html'); 
+    });
+    
+    test("Check if image displays correctly ", async () => {
+        let backgroundImage = await page.evaluate(() => {
+            let htmlElement = document.querySelector('html');
+            let styles = getComputedStyle(htmlElement);
+            return styles.backgroundImage;
+          });
+      
+          expect(backgroundImage).toBe('url(\"http://127.0.0.1:8000/source/prototyping/assets/landing-page/backdrop.png\")');
+    });
+
+    test("Check if the font displays correctly ", async () => {
+        let fontLoaded = await page.evaluate(() => {
+            let fontFamily1 = 'abrilFatface';
+            let fontFamily2 = 'playfairDisplay';
+            let font1Loaded = document.fonts.check(`1em "${fontFamily1}"`);
+            let font2Loaded = document.fonts.check(`1em "${fontFamily2}"`);
+            return font1Loaded && font2Loaded;
+          });
+      
+          expect(fontLoaded).toBe(true);
     });
     
 }); 
