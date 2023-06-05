@@ -1,3 +1,9 @@
+/**
+ * @file JavaScript Code for card-prototype.html - Last Modified: 06/04/2023
+ * @author Ezgi Bayraktaroglu
+ * @author Helen Lin
+ */
+
 /* TODO: The scope of these variables may be adjusted later */
 import { addFortune } from "./saved-readings-script.js";
 
@@ -202,7 +208,7 @@ function chooseCard (i) {
   const index = selectBuffer.indexOf(i);
   if (index == -1) {
     selectBuffer.push(i);
-    tarotCards[i].style.boxShadow = "0 0 10px 5px #ff0000";
+    tarotCards[i].style.boxShadow = "0 0 10px 5px #ad08c7";
 
     if (selectBuffer.length > selectCount) {
       tarotCards[selectBuffer[0]].style.boxShadow = null;
@@ -253,7 +259,11 @@ function generateNonDuplicateRandomNumbers(min, max, count) {
   return numbers;
 }
 
-// woosh cards out on page
+/**
+ * Function to woosh or animate to the cards from a deck on the left
+ * to being layed out for the user to pick
+ * Triggered when the page is loaded.
+ */
 function wooshCards() {
 	for(let i = 0; i < tarotCards.length; i++) {
 		switch (String(tarotCards[i].id)) {
@@ -287,7 +297,10 @@ function wooshCards() {
 	}
 }
 
-// woosh cards except selected ones to the side
+/**
+ * Function to dewoosh or animate to the left into a deck the unselected cards
+ * Triggered when Predict button is clicked.
+ */
 function dewooshCards() {
 	for(let i = 0; i < tarotCards.length; i++) {
 		if(tarotCards[i].classList == undefined) {
@@ -295,6 +308,9 @@ function dewooshCards() {
 		}
 		if(!tarotCards[i].classList.contains("select")){
 			switch (String(tarotCards[i].id)) {
+        /**Each Case sets css variable --changePoint and triggers deWoosh
+         * keyFrame animation in card-styles.css
+         */
 				case "card1":
 					tarotCards[i].style.setProperty("--changePoint", "-200%");
 					tarotCards[i].style.animation = "deWoosh 2s";
@@ -332,6 +348,12 @@ function dewooshCards() {
 	}
 }
 
+
+/**
+ * Function to center the selected card.
+ * Triggered when Predict button is clicked.
+ * ASSUMPTION: Only one Card is Selected. 
+ */
 function centerSelectedCard() {
   for (let i=0; i < tarotCards.length; i++) {
     if (tarotCards[i].classList == undefined) {
@@ -340,6 +362,9 @@ function centerSelectedCard() {
 
     if(tarotCards[i].classList.contains("select")) {
       switch (String(tarotCards[i].id)) {
+        /**Each Case sets css variable --changePoint and triggers deWoosh
+         * keyFrame animation in card-styles.css
+         */
 				case "card1":
 					tarotCards[i].style.setProperty("--changePoint", "275%");
 					tarotCards[i].style.animation = "deWoosh 2s";

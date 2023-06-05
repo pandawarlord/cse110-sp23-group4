@@ -1,3 +1,9 @@
+/**
+ * @file JavaScript Code for card-prototype.html - Last Modified: 06/04/2023
+ * @author Ezgi Bayraktaroglu
+ * @author Helen Lin
+ */
+
 /* Make entire page's background black with image */
 html {
   background: url(assets/card-page/backdrop.png) no-repeat center center fixed; 
@@ -69,23 +75,36 @@ button:hover {
 }
 
 
+/* Keyframes animation to animate the cards from a 
+   deck into position. --changePoint set when keyframes
+   is triggered when page loads. 
+  */
 @keyframes woosh {
 	from {
+    /* Starting Position */
 		transform: translateX(var(--changePoint));
 	}
 
 	to {
+    /* Ending Position: 0% being not offseted from original position */
 		transform: translateX(0%);
 	}
 }
 
 
+/* Keyframes animation to away from their default position
+   default position being one next to each other 
+   --changePoint is set when deWoosh animation is called
+   inside card-script.js when predict button is pressed
+  */
 @keyframes deWoosh {
 	from {
+    /* Starting Position */
 		transform: translateX(0%);
 	}
 
 	to {
+    /* Ending Position  */
 		transform: translateX(var(--changePoint));
 	}
 }
