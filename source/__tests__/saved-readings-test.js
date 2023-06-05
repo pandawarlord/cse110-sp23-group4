@@ -21,6 +21,6 @@ describe('Basic user flow for Saved Readings Page', () => {
         console.log(page2Title);
 
         expect(page2URL).toBe('http://127.0.0.1:5500/source/prototyping/menu-prototype.html');
-        expect(page2Title).toBe('This is the menu page prototype')
+        expect(page2Title).toBe('This is the menu page prototype');
     });
 });
