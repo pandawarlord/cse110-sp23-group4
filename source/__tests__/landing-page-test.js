@@ -7,7 +7,13 @@ describe('Basic user flow for Landing Page', () => {
     // First, visit the landing page
     beforeAll(async () => {
         //Note this is a personal Live Server link. So, it will not work in general. 
-        await page.goto('http://127.0.0.1:5500/source/prototyping/landing-prototype.html');
+        console.log("Starting landing pages tests...");
+        //await page.goto('http://127.0.0.1:8000/source/prototyping/landing-prototype.html');
+    });
+
+    beforeEach(async () => {
+        //Note this is a personal Live Server link. So, it will not work in general. 
+        await page.goto('http://127.0.0.1:8000/source/prototyping/landing-prototype.html');
     });
 
     test("Check if button changes colour on hover", async () => {
@@ -65,7 +71,7 @@ describe('Basic user flow for Landing Page', () => {
             return styles.backgroundImage;
           });
       
-          expect(backgroundImage).toBe('url("../prototyping/assets/landing-page/backdrop.png")');
+          expect(backgroundImage).toBe('url(\"http://127.0.0.1:8000/source/prototyping/assets/landing-page/backdrop.png\")');
     });
 
     test("Check if the font displays correctly ", async () => {
