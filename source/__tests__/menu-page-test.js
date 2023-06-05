@@ -17,13 +17,12 @@ describe('Basic user flow for Menu Page', () => {
     test("Check if all buttons show hover animation", async () => {
         const buttons = await page.$$('button');
         console.log(buttons.length);
+
+        prevBoxShadows = page.$$('button', el => {
+            return getComputedStyle(el).getPropertyValue('box-shadow');
+        }); 
         
         for(let i = 0; i < buttons.length; i++){
-            const prevBoxShadow = await getComputedStyle(buttons[i]).getPropertyValue('box-shadow');
-            
-            page.$eval('button', el => {
-                return getComputedStyle(el).getPropertyValue('box-shadow');
-            }); 
 
             console.log("Before hover..."); 
             console.log(prevBoxShadow); 
