@@ -187,8 +187,11 @@ async function generatePrediction() {
 			// Add select class to selected cards so deWoosh animation can occur
 			tarotCards[selectBuffer[i]].classList.add("select");
     }
-		// deWoosh the cards
+		// Animate away the unselected cards
 		dewooshCards();
+
+    // Center the selected card
+    centerSelectedCard();
 		
     /* Give the user a prediction */
     predictOut.innerHTML = `<p>${outputContent}</p>`;
@@ -255,7 +258,7 @@ function generateNonDuplicateRandomNumbers(min, max, count) {
 
 // woosh cards out on page
 function wooshCards() {
-	for(let i in tarotCards) {
+	for(let i = 0; i < tarotCards.length; i++) {
 		switch (String(tarotCards[i].id)) {
 			case "card1":
 				tarotCards[i].style.setProperty("--changePoint", "-200%");
@@ -289,7 +292,7 @@ function wooshCards() {
 
 // woosh cards except selected ones to the side
 function dewooshCards() {
-	for(let i in tarotCards) {
+	for(let i = 0; i < tarotCards.length; i++) {
 		if(tarotCards[i].classList == undefined) {
 			break;
 		}
@@ -328,6 +331,51 @@ function dewooshCards() {
 				default:
 					break;
 			}
-		}
+    }
 	}
+}
+
+function centerSelectedCard() {
+  for (let i=0; i < tarotCards.length; i++) {
+    if (tarotCards[i].classList == undefined) {
+      break
+    }
+
+    if(tarotCards[i].classList.contains("select")) {
+      switch (String(tarotCards[i].id)) {
+				case "card1":
+					tarotCards[i].style.setProperty("--changePoint", "275%");
+					tarotCards[i].style.animation = "deWoosh 2s";
+					tarotCards[i].style.animationFillMode = "forwards";
+					break;
+				case "card2":
+					tarotCards[i].style.setProperty("--changePoint", "165%");
+					tarotCards[i].style.animation = "deWoosh 2s";
+					tarotCards[i].style.animationFillMode = "forwards";
+					break;
+				case "card3":
+					tarotCards[i].style.setProperty("--changePoint", "55%");
+					tarotCards[i].style.animation = "deWoosh 2s";
+					tarotCards[i].style.animationFillMode = "forwards";
+					break;
+				case "card4":
+					tarotCards[i].style.setProperty("--changePoint", "-50%");
+					tarotCards[i].style.animation = "deWoosh 2s";
+					tarotCards[i].style.animationFillMode = "forwards";
+					break;
+				case "card5":
+					tarotCards[i].style.setProperty("--changePoint", "-160%");
+					tarotCards[i].style.animation = "deWoosh 2s";
+					tarotCards[i].style.animationFillMode = "forwards";
+					break;
+				case "card6":
+					tarotCards[i].style.setProperty("--changePoint", "-270%");
+					tarotCards[i].style.animation = "deWoosh 2s";
+					tarotCards[i].style.animationFillMode = "forwards";
+					break;
+				default:
+					break;
+      }
+    }
+  }
 }
