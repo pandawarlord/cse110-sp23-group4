@@ -22,6 +22,21 @@ describe('Basic user flow for Menu Page', () => {
         expect(numButtons).toBe(5);
     });
 
+    test("Check if all buttons have the wood plank background", async() => {
+        console.log("Checking if all buttons have the wood background...");
+        const buttons = await page.$$('button');
+        for (let i = 0; i < buttons.length; i++) {
+            const button = buttons[i];
+
+            // Evaluate the CSS property for each button
+            const propertyValue = await page.evaluate(element => {
+              const computedStyle = window.getComputedStyle(element);
+              return computedStyle.getPropertyValue('background');
+            }, button);
+            expect(propertyValue.includes('assets/menu-page/wood-placard.png')).toBe(true);
+          }
+    });
+
     test("Check if saved readings button takes you to the saved readings page on click", async () => {
         console.log("Checking if saved readings button takes you to the saved readings page on click...");
 
