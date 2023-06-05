@@ -357,7 +357,7 @@ function dewooshCards() {
 function centerSelectedCard() {
   for (let i=0; i < tarotCards.length; i++) {
     if (tarotCards[i].classList == undefined) {
-      break
+      break;
     }
 
     if(tarotCards[i].classList.contains("select")) {

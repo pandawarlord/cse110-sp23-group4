@@ -82,12 +82,12 @@ button:hover {
 @keyframes woosh {
 	from {
     /* Starting Position */
-		transform: translateX(var(--changePoint));
+		transform: translate(var(--changePoint), 0%);
 	}
 
 	to {
     /* Ending Position: 0% being not offseted from original position */
-		transform: translateX(0%);
+		transform: translate(0%, 0%);
 	}
 }
 
@@ -100,11 +100,11 @@ button:hover {
 @keyframes deWoosh {
 	from {
     /* Starting Position */
-		transform: translateX(0%);
+		transform: translate(0%, 0%);
 	}
 
 	to {
     /* Ending Position  */
-		transform: translateX(var(--changePoint));
+		transform: translate(var(--changePoint), 0%);
 	}
 }
