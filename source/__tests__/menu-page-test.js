@@ -97,7 +97,7 @@ describe('Basic user flow for Menu Page', () => {
             console.log(newBoxShadows[i]);
             expect(prevBoxShadows[i]).not.toBe(newBoxShadows[i]);
         }
-
+    });
 
     test("Check if all the category buttons take you to the card reading page on click", async () => {
         console.log("Checking if all category buttons take you to the card reading page on click...");
