@@ -139,12 +139,28 @@ function displayFortunes() {
 			day: "numeric",
 		});
 		fortuneDate.classList.add("fortuneDate");
+		// Add Delete Button
+		let deleteButton = document.createElement('button');
+		deleteButton.textContent = 'Delete';
+		deleteButton.addEventListener('click', () => {
+			deleteFortune(i);
+			displayFortunes();
+		});
 
 		// adds elements with fortune text, category, and date to the fortune div wrapper
 		fortuneInList.appendChild(fortuneText);
 		fortuneInList.appendChild(fortuneCategory);
 		fortuneInList.appendChild(fortuneDate);
+		fortuneInList.appendChild(deleteButton);
 		// adds fortune wrapper to history div wrapper
 		history.appendChild(fortuneInList);
 	}
+}
+
+function deleteFortune(fortuneIndex) {
+	let savedFortunes = getFortunes();
+    if (fortuneIndex > -1) {
+        savedFortunes.splice(fortuneIndex, 1);
+        localStorage.setItem('fortunes', JSON.stringify(savedFortunes));
+    }
 }
