@@ -71,15 +71,18 @@ function tempClearFortunes() {
 window.addEventListener('storage', displayFortunes);
 
 /**
- * This function adds a fortune to localStorage
+ * This function adds a fortune to localStorage. Does not add the fortune if it
+ * is a duplicate of another fortune already in localStorage.
  * @param {string} - the text of the fortune
  * @param {string} - the category of the fortune
  * @param {Date} - a JavaScript Date object
  */
 export function addFortune(fortune, category, date) {
 	let fortunes = getFortunes();
-	fortunes.push([fortune,category,date]);
-	localStorage.setItem('fortunes', JSON.stringify(fortunes));
+	if (fortunes.indexOf([fortune,category,date]) > -1) {
+		fortunes.push([fortune,category,date]);
+		localStorage.setItem('fortunes', JSON.stringify(fortunes));
+	}
 }
 
 /**
@@ -156,7 +159,13 @@ function displayFortunes() {
 		history.appendChild(fortuneInList);
 	}
 }
-
+/**
+ * Function that enables the individual deletion of fortunes from the saved-reading pages.
+ * We pass the index of the fortune that is has in the localstorage array
+ * and splice the array ti remove that one index. Check if it the index is greater
+ * than -1.
+ * @param {int} fortuneIndex - the index of the fortune in the localstorage array
+ */
 function deleteFortune(fortuneIndex) {
 	let savedFortunes = getFortunes();
     if (fortuneIndex > -1) {
