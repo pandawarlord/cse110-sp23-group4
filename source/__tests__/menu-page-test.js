@@ -14,31 +14,20 @@ describe('Basic user flow for Menu Page', () => {
         await page.goto('http://127.0.0.1:8000/source/prototyping/menu-prototype.html');
     });
 
-    test("Check if all buttons show hover animation", async () => {
-        const buttons = await page.$$('button');
-        console.log(buttons.length);
+    test("Check if saved readings button takes you to the saved readings page on click", async () => {
+        console.log("Checking if saved readings button takes you to the saved readings page on click...");
 
-        prevBoxShadows = page.$$('button', el => {
-            return getComputedStyle(el).getPropertyValue('box-shadow');
-        }); 
-        
-        for(let i = 0; i < buttons.length; i++){
+        const button = await page.$('#savedReadings'); 
+        await button.click(); 
+        await page.waitForNavigation(); 
 
-            console.log("Before hover..."); 
-            console.log(prevBoxShadow); 
+        const page2URL = await page.url(); 
+        //console.log(page2URL); 
+        const page2Title = await page.title(); 
+        //console.log(page2Title);
 
-            const button = await page.$('button'); 
-            await button.hover();
-
-            const newBoxShadow = await page.$eval('button', el => {
-                return getComputedStyle(el).getPropertyValue('background-color');
-            }); 
-        
-            console.log("After hover...");
-            console.log(newBoxShadow);
-
-            expect(prevBoxShadow).not.toMatch(newBoxShadow); 
-        }
+        expect(page2Title).toBe('This is the prototype history page'); 
+        expect(page2URL).toBe('http://127.0.0.1:8000/source/prototyping/saved-readings-prototype.html'); 
     });
 
     test("Check if back button takes you back to landing page on click", async () => {
@@ -57,20 +46,34 @@ describe('Basic user flow for Menu Page', () => {
         expect(page2URL).toBe('http://127.0.0.1:8000/source/prototyping/landing-prototype.html'); 
     });
 
-    test("Check if saved readings button takes you to the saved readings page on click", async () => {
-        console.log("Checking if saved readings button takes you to the saved readings page on click...");
+    test("Check if all buttons show hover animation", async () => {
+        console.log("Checking if hover animations work...")
+        let buttons = await page.$$('button');
+        let numButtons = buttons.length; 
+        //console.log(buttons.length);
 
-        const button = await page.$('#savedReadings'); 
-        await button.click(); 
-        await page.waitForNavigation(); 
+        prevBoxShadows = page.$$('button', el => {
+            return getComputedStyle(el).getPropertyValue('box-shadow');
+        }); 
+        
+        for(let i = 0; i < numButtons; i++){
 
-        const page2URL = await page.url(); 
-        //console.log(page2URL); 
-        const page2Title = await page.title(); 
-        //console.log(page2Title);
+            //console.log("Before hover..."); 
+            //console.log(prevBoxShadow); 
 
-        expect(page2Title).toBe('This is the prototype history page'); 
-        expect(page2URL).toBe('http://127.0.0.1:8000/source/prototyping/saved-readings-prototype.html'); 
+            //const button = await page.$('button'); 
+            await buttons[i].hover();
+
+            const newBoxShadows = await page.$$('button', el => {
+                return getComputedStyle(el).getPropertyValue('box-shadow');
+            }); 
+        
+            //console.log("After hover...");
+            //console.log(newBoxShadow);
+
+            console.log(newBoxShadows[i]);
+            expect(prevBoxShadows[i]).not.toBe(newBoxShadows[i]); 
+        }
     });
 
     test("Check if all the category buttons take you to the card reading page on click", async () => {

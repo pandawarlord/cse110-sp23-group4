@@ -11,13 +11,14 @@ describe('Basic user flow for Landing Page', () => {
     });
 
     test("Check if button changes colour on hover", async () => {
+        console.log("Checking if button changes colour on hover...");
 
         const prevColor = await page.$eval('button', el => {
             return getComputedStyle(el).getPropertyValue('background-color');
         }); 
         
-        console.log("Before hover..."); 
-        console.log(prevColor); 
+        //console.log("Before hover..."); 
+        //console.log(prevColor); 
 
         const button = await page.$('button'); 
         await button.hover();
@@ -30,8 +31,8 @@ describe('Basic user flow for Landing Page', () => {
             return getComputedStyle(el).getPropertyValue('background-color');
         }); 
        
-        console.log("After hover...");
-        console.log(newColor);
+        //console.log("After hover...");
+        //console.log(newColor);
 
         expect(prevColor).not.toMatch(newColor); 
     });
@@ -39,20 +40,20 @@ describe('Basic user flow for Landing Page', () => {
     test("Check if page changes to menu page on button click", async () => {
         console.log("Before button click...");
 
-        console.log(await page.url());
-        console.log(await page.title());
+        //console.log(await page.url());
+        //console.log(await page.title());
 
         const button = await page.$('button'); 
         //console.log(await(await button.getProperty('innerText')).jsonValue())
         await button.click(); 
         await page.waitForNavigation(); 
 
-        console.log("After button click..."); 
+        //console.log("After button click..."); 
 
         const page2URL = await page.url(); 
-        console.log(page2URL); 
+        //console.log(page2URL); 
         const page2Title = await page.title(); 
-        console.log(page2Title);
+        //console.log(page2Title);
 
         expect(page2Title).toBe('This is the menu page prototype'); 
         expect(page2URL).toBe('http://127.0.0.1:8000/source/prototyping/menu-prototype.html'); 
