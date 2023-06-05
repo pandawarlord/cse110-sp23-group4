@@ -6,8 +6,8 @@
 describe('Basic user flow for Menu Page', () => {
 
     beforeAll(async () => { 
-        console.log("Menu page tests...");
-        await page.goto('http://127.0.0.1:8000/source/prototyping/menu-prototype.html');
+        console.log("Menu page tests starting...");
+        //await page.goto('http://127.0.0.1:8000/source/prototyping/menu-prototype.html');
     });
 
     beforeEach(async () => {
@@ -15,7 +15,31 @@ describe('Basic user flow for Menu Page', () => {
     });
 
     test("Check if all buttons show hover animation", async () => {
+        const buttons = await page.$$('button');
+        console.log(buttons.length);
         
+        for(let i = 0; i < buttons.length; i++){
+            const prevBoxShadow = await getComputedStyle(buttons[i]).getPropertyValue('box-shadow');
+            
+            page.$eval('button', el => {
+                return getComputedStyle(el).getPropertyValue('box-shadow');
+            }); 
+
+            console.log("Before hover..."); 
+            console.log(prevBoxShadow); 
+
+            const button = await page.$('button'); 
+            await button.hover();
+
+            const newBoxShadow = await page.$eval('button', el => {
+                return getComputedStyle(el).getPropertyValue('background-color');
+            }); 
+        
+            console.log("After hover...");
+            console.log(newBoxShadow);
+
+            expect(prevBoxShadow).not.toMatch(newBoxShadow); 
+        }
     });
 
     test("Check if back button takes you back to landing page on click", async () => {
@@ -62,9 +86,6 @@ describe('Basic user flow for Menu Page', () => {
         //console.log(page2URL); 
         const page2Title = await page.title(); 
         //console.log(page2Title);
-
-        // expect(page2Title).toBe('Tarot Beta'); 
-        // expect(page2URL).toBe('http://127.0.0.1:8000/source/prototyping/card-prototype.html'); 
 
         for(let i = 0; i < buttons.length; i++){
             await button.click(); 
