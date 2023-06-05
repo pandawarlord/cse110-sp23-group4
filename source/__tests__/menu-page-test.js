@@ -6,7 +6,7 @@
 describe('Basic user flow for Menu Page', () => {
 
     beforeAll(async () => { 
-        console.log("Menu page tests...")
+        console.log("Menu page tests...");
         await page.goto('http://127.0.0.1:8000/source/prototyping/menu-prototype.html');
     });
 
@@ -14,12 +14,14 @@ describe('Basic user flow for Menu Page', () => {
         await page.goto('http://127.0.0.1:8000/source/prototyping/menu-prototype.html');
     });
 
-    test("Chec")
+    test("Check if all buttons show hover animation", async () => {
+        
+    });
 
     test("Check if back button takes you back to landing page on click", async () => {
         console.log("Checking if back button takes you back to landing page on click...")
         const button = await page.$('#back'); 
-        //console.log(await(await button.getProperty('innerText')).jsonValue())
+        //console.log(await(await button.getProperty('innerText')).jsonValue());
         await button.click(); 
         await page.waitForNavigation(); 
 
@@ -33,7 +35,7 @@ describe('Basic user flow for Menu Page', () => {
     });
 
     test("Check if saved readings button takes you to the saved readings page on click", async () => {
-        console.log("Checking if saved readings button takes you to the saved readings page on click...")
+        console.log("Checking if saved readings button takes you to the saved readings page on click...");
 
         const button = await page.$('#savedReadings'); 
         await button.click(); 
@@ -49,7 +51,7 @@ describe('Basic user flow for Menu Page', () => {
     });
 
     test("Check if all the category buttons take you to the card reading page on click", async () => {
-        console.log("Checking if all category buttons take you to the card reading page on click...")
+        console.log("Checking if all category buttons take you to the card reading page on click...");
 
         const button = await page.$('.categoryButton'); 
 
