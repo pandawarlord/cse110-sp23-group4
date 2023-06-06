@@ -117,7 +117,16 @@ async function generatePrediction() {
 
   // Reset all the cards to be facing down again
   for (let i = 0; i < tarotCards.length; i++) {
-    tarotCards[i].src = `assets/card-page/backside.png`;
+    if(category === "Life"){
+      tarotCards[i].src = `assets/card-page/life_back.png`;
+    }
+    else if(category === "Love"){
+      tarotCards[i].src = `assets/card-page/love_back.png`;
+    }
+    else if(category === "School"){
+      tarotCards[i].src = `assets/card-page/school_back.png`;
+    }
+    tarotCards[i].src = `assets/card-page/school_back.png`;
   }
 
   /* Verify items are selected */
