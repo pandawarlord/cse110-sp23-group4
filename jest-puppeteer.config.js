@@ -1,6 +1,10 @@
 const ci = Boolean(process.env.CI || false);
 
 const baseOptions = {
+  launch: {
+    headless: true,
+    slowMo: 25
+  },
   server: {
     command: 'python3 -m http.server',
     port: 8000
