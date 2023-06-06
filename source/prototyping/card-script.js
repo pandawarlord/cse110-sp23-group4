@@ -67,17 +67,10 @@ function init() {
   /* Set selectCount value from category */
   switch (category) {
     case "School":
-      selectCount = 1;
-      break;
     case "Love":
-      selectCount = 1;
-      break;
     case "Life":
-      selectCount = 1;
-      break;
     default:
       selectCount = 1;
-      category = "Life";
       break;
   }
 
@@ -85,7 +78,8 @@ function init() {
   predictButton.addEventListener("click", generatePrediction);
 
   /* Add event listener for save fortune button */
-  saveButton.addEventListener("click", saveFortune);
+  if (saveButton != null)
+    saveButton.addEventListener("click", saveFortune);
 
   /* Add event listener for return to menu button to go back to menu page */
   returnToMenuButton.addEventListener("click", returnToMenu);
@@ -167,6 +161,8 @@ async function generatePrediction() {
 
     // Get the current category of the fortune telling site
     let category = JSON.parse(localStorage.getItem("category"));
+    if (category == undefined)
+      category = 'Life';
 
     /**
      * String used for storing the output of the prediction
@@ -177,6 +173,8 @@ async function generatePrediction() {
     // Get the JSON containing all the fortune responses
     let response = await fetch("./assets/fortunes/fortunes.json");
     let fortuneResponses = await response.json();
+
+    console.log(fortuneResponses);
     
     for (let i = 0; i < selectBuffer.length; i++) {
         // Change the images of the cards that were selected
