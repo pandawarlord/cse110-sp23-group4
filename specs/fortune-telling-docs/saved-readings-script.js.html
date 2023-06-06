@@ -50,7 +50,7 @@ const backButton = document.querySelector(".backButton");
  * testing, but could be useful in the final product as well.
  * @type {HTMLElement | null}
  */
-const tempClearButton = document.querySelector(".tempClearButton");
+const clearButton = document.querySelector(".ClearButton");
 
 function init() {
 	/**
@@ -63,7 +63,7 @@ function init() {
  	 * Adds a event listener for tempClearButton to call the function
 	 * that clears fortunes from localeStorage and updates display.
  	 */
-	tempClearButton.addEventListener("click", tempClearFortunes);
+	clearButton.addEventListener("click", tempClearFortunes);
 
 	/**
 	 * Display fortunes when page loads
@@ -127,7 +127,7 @@ export function addFortune(fortuneText, category, date) {
 
 	console.log([fortuneText,category,modifiedDate]);
 	console.log(fortunes[0]);
-	
+
 	// Check if fortune already exists, before choosing to save fortune or not
 	if (fortunes.indexOf([fortuneText,category,modifiedDate]) == -1) {
 		fortunes.push([fortuneText,category,modifiedDate]);
@@ -228,13 +228,13 @@ function deleteFortune(fortuneIndex) {
 </div>
 
 <nav>
-    <h2><a href="index.html">Home</a></h2><h3>Global</h3><ul><li><a href="global.html#addFortune">addFortune</a></li><li><a href="global.html#backButton">backButton</a></li><li><a href="global.html#backToMenu">backToMenu</a></li><li><a href="global.html#cardCount">cardCount</a></li><li><a href="global.html#categories">categories</a></li><li><a href="global.html#createCategoryButtons">createCategoryButtons</a></li><li><a href="global.html#deleteFortune">deleteFortune</a></li><li><a href="global.html#displayFortunes">displayFortunes</a></li><li><a href="global.html#enterButton">enterButton</a></li><li><a href="global.html#enterHut">enterHut</a></li><li><a href="global.html#generateNonDuplicateRandomNumbers">generateNonDuplicateRandomNumbers</a></li><li><a href="global.html#generatePrediction">generatePrediction</a></li><li><a href="global.html#getFortunes">getFortunes</a></li><li><a href="global.html#goToSavedReadings">goToSavedReadings</a></li><li><a href="global.html#hutBackground">hutBackground</a></li><li><a href="global.html#init">init</a></li><li><a href="global.html#pageContents">pageContents</a></li><li><a href="global.html#predictButton">predictButton</a></li><li><a href="global.html#returnToMenu">returnToMenu</a></li><li><a href="global.html#returnToMenuButton">returnToMenuButton</a></li><li><a href="global.html#saveButton">saveButton</a></li><li><a href="global.html#saveFortune">saveFortune</a></li><li><a href="global.html#saveReadingsButton">saveReadingsButton</a></li><li><a href="global.html#savedReadingsButton">savedReadingsButton</a></li><li><a href="global.html#selectBuffer">selectBuffer</a></li><li><a href="global.html#selectCount">selectCount</a></li><li><a href="global.html#setCardLink">setCardLink</a></li><li><a href="global.html#setLandingLink">setLandingLink</a></li><li><a href="global.html#setSavedReadingsLink">setSavedReadingsLink</a></li><li><a href="global.html#tarotCards">tarotCards</a></li><li><a href="global.html#tempClearButton">tempClearButton</a></li><li><a href="global.html#tempClearFortunes">tempClearFortunes</a></li><li><a href="global.html#titles">titles</a></li><li><a href="global.html#toMenuPage">toMenuPage</a></li></ul>
+    <h2><a href="index.html">Home</a></h2><h3>Global</h3><ul><li><a href="global.html#addFortune">addFortune</a></li><li><a href="global.html#backButton">backButton</a></li><li><a href="global.html#backToMenu">backToMenu</a></li><li><a href="global.html#cardCount">cardCount</a></li><li><a href="global.html#categories">categories</a></li><li><a href="global.html#clearButton">clearButton</a></li><li><a href="global.html#createCategoryButtons">createCategoryButtons</a></li><li><a href="global.html#deleteFortune">deleteFortune</a></li><li><a href="global.html#displayFortunes">displayFortunes</a></li><li><a href="global.html#enterButton">enterButton</a></li><li><a href="global.html#enterHut">enterHut</a></li><li><a href="global.html#generateNonDuplicateRandomNumbers">generateNonDuplicateRandomNumbers</a></li><li><a href="global.html#generatePrediction">generatePrediction</a></li><li><a href="global.html#getFortunes">getFortunes</a></li><li><a href="global.html#goToSavedReadings">goToSavedReadings</a></li><li><a href="global.html#hutBackground">hutBackground</a></li><li><a href="global.html#init">init</a></li><li><a href="global.html#pageContents">pageContents</a></li><li><a href="global.html#predictButton">predictButton</a></li><li><a href="global.html#returnToMenu">returnToMenu</a></li><li><a href="global.html#returnToMenuButton">returnToMenuButton</a></li><li><a href="global.html#saveButton">saveButton</a></li><li><a href="global.html#saveFortune">saveFortune</a></li><li><a href="global.html#saveReadingsButton">saveReadingsButton</a></li><li><a href="global.html#savedReadingsButton">savedReadingsButton</a></li><li><a href="global.html#selectBuffer">selectBuffer</a></li><li><a href="global.html#selectCount">selectCount</a></li><li><a href="global.html#setCardLink">setCardLink</a></li><li><a href="global.html#setLandingLink">setLandingLink</a></li><li><a href="global.html#setSavedReadingsLink">setSavedReadingsLink</a></li><li><a href="global.html#tarotCards">tarotCards</a></li><li><a href="global.html#tempClearFortunes">tempClearFortunes</a></li><li><a href="global.html#titles">titles</a></li><li><a href="global.html#toMenuPage">toMenuPage</a></li></ul>
 </nav>
 
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 4.0.2</a> on Tue Jun 06 2023 00:51:51 GMT+0000 (Coordinated Universal Time)
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 4.0.2</a> on Tue Jun 06 2023 00:53:20 GMT+0000 (Coordinated Universal Time)
 </footer>
 
 <script> prettyPrint(); </script>
