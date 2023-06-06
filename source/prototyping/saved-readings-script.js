@@ -87,7 +87,7 @@ window.addEventListener('storage', displayFortunes);
  */
 export function addFortune(fortuneText, category, date) {
 	// Get existing fortunes from localStorage
-	let fortunes = getFortunes();
+	let savedFortunes = getFortunes();
 
 	// Convert date into weekday day month year
 	let modifiedDate = date.toLocaleDateString(undefined, {
@@ -97,13 +97,10 @@ export function addFortune(fortuneText, category, date) {
 		day: "numeric",
 	});
 
-	console.log([fortuneText,category,modifiedDate]);
-	console.log(fortunes[0]);
-
 	// Check if fortune already exists, before choosing to save fortune or not
-	if (fortunes.indexOf([fortuneText,category,modifiedDate]) == -1) {
-		fortunes.push([fortuneText,category,modifiedDate]);
-		localStorage.setItem('fortunes', JSON.stringify(fortunes));
+	if (checkDuplicate([fortuneText,category,modifiedDate]) == -1) {
+		savedFortunes.push([fortuneText,category,modifiedDate]);
+		localStorage.setItem('fortunes', JSON.stringify(savedFortunes));
 	}
 }
 
@@ -193,4 +190,30 @@ function deleteFortune(fortuneIndex) {
         savedFortunes.splice(fortuneIndex, 1);
         localStorage.setItem('fortunes', JSON.stringify(savedFortunes));
     }
+}
+
+/**
+ * Takes in a fortune array containing the fortuneText, category, and date and
+ * checks if there is another fortune in local storage that matches this fortune.
+ * Returns the index of the fortune in the localStorage array otherwise returns
+ * -1 if does not exist.
+ * @param {Array<Object>} fortune 
+ */
+function checkDuplicate(fortune) {
+	// Get saved fortunes from localStorage
+	let savedFortunes = getFortunes();
+
+	// For each fortune in the localStorage, check if the contents are equal 
+	// to the passed in fortune
+	for (let i = 0; i < savedFortunes.length; i++) {
+		if (fortune[0] == savedFortunes[i][0]) {
+			if (fortune[1] == savedFortunes[i][1]) {
+				if (fortune[2] == savedFortunes[i][2]) {
+					return i;
+				}
+			}
+		}
+	}
+
+	return -1;
 }
