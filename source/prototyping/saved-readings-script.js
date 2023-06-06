@@ -1,3 +1,11 @@
+/**
+ * @file The saved-readings-script.js is a script that contains almost all of the
+ * functionality needed to store, retrieve, and delete a fortune from localStorage.
+ * It also contains functions to display fortunes on the page itself.
+ * - Last Modified: 06/05/2023
+ * @author Nakul Nandhakumar
+ * @author Ezgi Bayraktaroglu
+ */
 window.addEventListener('DOMContentLoaded', init);
 
 const history = document.querySelector(".historyWrapper");
@@ -14,7 +22,7 @@ const backButton = document.querySelector(".backButton");
  * testing, but could be useful in the final product as well.
  * @type {HTMLElement | null}
  */
-const tempClearButton = document.querySelector(".tempClearButton");
+const clearButton = document.querySelector(".ClearButton");
 
 function init() {
 	/**
@@ -27,7 +35,7 @@ function init() {
  	 * Adds a event listener for tempClearButton to call the function
 	 * that clears fortunes from localeStorage and updates display.
  	 */
-	tempClearButton.addEventListener("click", tempClearFortunes);
+	clearButton.addEventListener("click", tempClearFortunes);
 
 	/**
 	 * Display fortunes when page loads
@@ -71,15 +79,32 @@ function tempClearFortunes() {
 window.addEventListener('storage', displayFortunes);
 
 /**
- * This function adds a fortune to localStorage
+ * This function adds a fortune to localStorage. Does not add the fortune if it
+ * is a duplicate of another fortune already in localStorage.
  * @param {string} - the text of the fortune
  * @param {string} - the category of the fortune
  * @param {Date} - a JavaScript Date object
  */
-export function addFortune(fortune, category, date) {
+export function addFortune(fortuneText, category, date) {
+	// Get existing fortunes from localStorage
 	let fortunes = getFortunes();
-	fortunes.push([fortune,category,date]);
-	localStorage.setItem('fortunes', JSON.stringify(fortunes));
+
+	// Convert date into weekday day month year
+	let modifiedDate = date.toLocaleDateString(undefined, {
+		weekday: "long",
+		year: "numeric",
+		month: "long",
+		day: "numeric",
+	});
+
+	console.log([fortuneText,category,modifiedDate]);
+	console.log(fortunes[0]);
+
+	// Check if fortune already exists, before choosing to save fortune or not
+	if (fortunes.indexOf([fortuneText,category,modifiedDate]) == -1) {
+		fortunes.push([fortuneText,category,modifiedDate]);
+		localStorage.setItem('fortunes', JSON.stringify(fortunes));
+	}
 }
 
 /**
@@ -132,19 +157,36 @@ function displayFortunes() {
 		fortuneCategory.classList.add("fortuneCategory");
 		// creates an h3 element that holds fortune date (specific to locale)
 		let fortuneDate = document.createElement("h3");
-		fortuneDate.innerHTML = new Date(arr[i][2]).toLocaleDateString(undefined, {
-			weekday: "long",
-			year: "numeric",
-			month: "long",
-			day: "numeric",
-		});
+		fortuneDate.innerHTML = arr[i][2];
 		fortuneDate.classList.add("fortuneDate");
+		// Add Delete Button
+		let deleteButton = document.createElement('button');
+		deleteButton.textContent = 'Delete';
+		deleteButton.addEventListener('click', () => {
+			deleteFortune(i);
+			displayFortunes();
+		});
 
 		// adds elements with fortune text, category, and date to the fortune div wrapper
 		fortuneInList.appendChild(fortuneText);
 		fortuneInList.appendChild(fortuneCategory);
 		fortuneInList.appendChild(fortuneDate);
+		fortuneInList.appendChild(deleteButton);
 		// adds fortune wrapper to history div wrapper
 		history.appendChild(fortuneInList);
 	}
+}
+/**
+ * Function that enables the individual deletion of fortunes from the saved-reading pages.
+ * We pass the index of the fortune that is has in the localstorage array
+ * and splice the array ti remove that one index. Check if it the index is greater
+ * than -1.
+ * @param {int} fortuneIndex - the index of the fortune in the localstorage array
+ */
+function deleteFortune(fortuneIndex) {
+	let savedFortunes = getFortunes();
+    if (fortuneIndex > -1) {
+        savedFortunes.splice(fortuneIndex, 1);
+        localStorage.setItem('fortunes', JSON.stringify(savedFortunes));
+    }
 }
