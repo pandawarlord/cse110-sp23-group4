@@ -85,7 +85,7 @@ window.addEventListener('storage', displayFortunes);
  * @param {string} - the category of the fortune
  * @param {Date} - a JavaScript Date object
  */
-export function addFortune(fortune, category, date) {
+export function addFortune(fortuneText, category, date) {
 	let fortunes = getFortunes();
 	let modifiedDate = date.toLocaleDateString(undefined, {
 		weekday: "long",
@@ -93,10 +93,10 @@ export function addFortune(fortune, category, date) {
 		month: "long",
 		day: "numeric",
 	})
-	console.log([fortune,category,modifiedDate]);
+	console.log([fortuneText,category,modifiedDate]);
 	console.log(fortunes[0]);
-	if (fortunes.indexOf([fortune,category,modifiedDate]) == -1) {
-		fortunes.push([fortune,category,modifiedDate]);
+	if (fortunes.indexOf([fortuneText,category,modifiedDate]) == -1) {
+		fortunes.push([fortuneText,category,modifiedDate]);
 		localStorage.setItem('fortunes', JSON.stringify(fortunes));
 	}
 }
