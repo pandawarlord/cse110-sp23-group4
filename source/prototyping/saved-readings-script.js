@@ -8,8 +8,6 @@
  */
 window.addEventListener('DOMContentLoaded', init);
 
-const history = document.querySelector(".historyWrapper");
-
 function init() {
   /**
    * A reference to the button to go back to the menu
@@ -140,6 +138,9 @@ function getFortunes() {
  * for the UI, the date would be in Spanish.
  */
 function displayFortunes() {
+  const history = document.querySelector(".historyWrapper");
+  if (history === null)
+    return;
 	// retrieves fortunes from local storage in an array
 	let arr = getFortunes();
 	// clears the display of fortunes
