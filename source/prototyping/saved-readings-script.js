@@ -29,14 +29,14 @@ function init() {
 	 * Adds an event listener for backButton to call the function that
 	 * sends user back to menu page.
 	 */
-  if (backButton != undefined)
+  if (backButton != null)
   	  backButton.addEventListener("click", backToMenu);
 
 	/**
  	 * Adds a event listener for tempClearButton to call the function
 	 * that clears fortunes from localeStorage and updates display.
  	 */
-  if (tempClearButton != undefined)
+  if (tempClearButton != null)
     	tempClearButton.addEventListener("click", tempClearFortunes);
 
 	/**
