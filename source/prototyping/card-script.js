@@ -83,7 +83,7 @@ function init() {
   /* Add event listener for return to menu button to go back to menu page */
   returnToMenuButton.addEventListener("click", returnToMenu);
 
-  /* Add event listener for return to menu button to go back to menu page */
+  /* Add event listener save readings button to save a reading */
   saveReadingsButton.addEventListener("click", goToSavedReadings);
 }
 
