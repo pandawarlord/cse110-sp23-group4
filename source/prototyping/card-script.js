@@ -67,10 +67,17 @@ function init() {
   /* Set selectCount value from category */
   switch (category) {
     case "School":
+      selectCount = 1;
+      break;
     case "Love":
+      selectCount = 1;
+      break;
     case "Life":
+      selectCount = 1;
+      break;
     default:
       selectCount = 1;
+      category = "Life";
       break;
   }
 
@@ -83,8 +90,9 @@ function init() {
   /* Add event listener for return to menu button to go back to menu page */
   returnToMenuButton.addEventListener("click", returnToMenu);
 
-  /* Add event listener save readings button to save a reading */
-  saveReadingsButton.addEventListener("click", goToSavedReadings);
+  /* Add event listener for return to menu button to go back to menu page */
+  if (saveReadingsButton != null)
+    saveReadingsButton.addEventListener("click", goToSavedReadings);
 }
 
 /**
@@ -169,18 +177,16 @@ async function generatePrediction() {
     // Get the JSON containing all the fortune responses
     let response = await fetch("./assets/fortunes/fortunes.json");
     let fortuneResponses = await response.json();
-      
-
+    
     for (let i = 0; i < selectBuffer.length; i++) {
-      // Change the images of the cards that were selected
-      tarotCards[selectBuffer[i]].src = `assets/card-page/${cards[i]}.png`;
+        // Change the images of the cards that were selected
+        tarotCards[selectBuffer[i]].src = `assets/card-page/${cards[i]}.png`;
 
-      // Pick random fortune response within card subsection to use
-      let cardResponse = Math.floor(Math.random() * 2);
+        // Pick random fortune response within card subsection to use
+        let cardResponse = Math.floor(Math.random() * 2);
 
-      outputContent += fortuneResponses[category][cards[i]][cardResponse];
+        outputContent += fortuneResponses[category][cards[i]][cardResponse];
     }
-
 
     /* Give the user a prediction */
     predictOut.innerHTML = `<p>${outputContent}</p>`;

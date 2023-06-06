@@ -10,32 +10,34 @@ window.addEventListener('DOMContentLoaded', init);
 
 const history = document.querySelector(".historyWrapper");
 
-/**
- * A reference to the button to go back to the menu
- * @type {HTMLElement | null}
- */
-const backButton = document.querySelector(".backButton");
-
-/**
- * A reference to the button to clear the fortunes from
- * local storage and from the display. Is temporary, for
- * testing, but could be useful in the final product as well.
- * @type {HTMLElement | null}
- */
-const clearButton = document.querySelector(".ClearButton");
-
 function init() {
+  /**
+   * A reference to the button to go back to the menu
+   * @type {HTMLElement | null}
+   */
+  const backButton = document.querySelector(".backButton");
+
+  /**
+   * A reference to the button to clear the fortunes from
+   * local storage and from the display. Is temporary, for
+   * testing, but could be useful in the final product as well.
+   * @type {HTMLElement | null}
+   */
+  const tempClearButton = document.querySelector(".tempClearButton");
+
 	/**
 	 * Adds an event listener for backButton to call the function that
 	 * sends user back to menu page.
 	 */
-	backButton.addEventListener("click", backToMenu);
+  if (backButton != undefined)
+  	  backButton.addEventListener("click", backToMenu);
 
 	/**
  	 * Adds a event listener for tempClearButton to call the function
 	 * that clears fortunes from localeStorage and updates display.
  	 */
-	clearButton.addEventListener("click", tempClearFortunes);
+  if (tempClearButton != undefined)
+    	tempClearButton.addEventListener("click", tempClearFortunes);
 
 	/**
 	 * Display fortunes when page loads
@@ -54,7 +56,7 @@ function backToMenu() {
  * This function clears the localStorage of (only) fortunes and
  * calls the displayFortunes function to update the display to
  * be cleared of fortunes. This function is called by the 
- * event listener added to tempClearButton. This is meant to be a 
+   * event listener added to tempClearButton. This is meant to be a 
  * temporary fuction used help test, but it could be useful for
  * the actual page.
  */
@@ -141,7 +143,8 @@ function displayFortunes() {
 	// retrieves fortunes from local storage in an array
 	let arr = getFortunes();
 	// clears the display of fortunes
-	history.innerHTML = '';
+  if (history !== null)
+    	history.innerHTML = '';
 	// loops through each fortune and displays it
 	for(let i = 0; i<arr.length; i++) {
 		// creates div element as wrapper
