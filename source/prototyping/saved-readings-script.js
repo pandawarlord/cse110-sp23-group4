@@ -87,8 +87,16 @@ window.addEventListener('storage', displayFortunes);
  */
 export function addFortune(fortune, category, date) {
 	let fortunes = getFortunes();
-	if (fortunes.indexOf([fortune,category,date]) > -1) {
-		fortunes.push([fortune,category,date]);
+	let modifiedDate = date.toLocaleDateString(undefined, {
+		weekday: "long",
+		year: "numeric",
+		month: "long",
+		day: "numeric",
+	})
+	console.log([fortune,category,modifiedDate]);
+	console.log(fortunes[0]);
+	if (fortunes.indexOf([fortune,category,modifiedDate]) == -1) {
+		fortunes.push([fortune,category,modifiedDate]);
 		localStorage.setItem('fortunes', JSON.stringify(fortunes));
 	}
 }
@@ -143,12 +151,7 @@ function displayFortunes() {
 		fortuneCategory.classList.add("fortuneCategory");
 		// creates an h3 element that holds fortune date (specific to locale)
 		let fortuneDate = document.createElement("h3");
-		fortuneDate.innerHTML = new Date(arr[i][2]).toLocaleDateString(undefined, {
-			weekday: "long",
-			year: "numeric",
-			month: "long",
-			day: "numeric",
-		});
+		fortuneDate.innerHTML = arr[i][2];
 		fortuneDate.classList.add("fortuneDate");
 		// Add Delete Button
 		let deleteButton = document.createElement('button');
