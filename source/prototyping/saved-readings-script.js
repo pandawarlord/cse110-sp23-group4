@@ -86,15 +86,21 @@ window.addEventListener('storage', displayFortunes);
  * @param {Date} - a JavaScript Date object
  */
 export function addFortune(fortuneText, category, date) {
+	// Get existing fortunes from localStorage
 	let fortunes = getFortunes();
+
+	// Convert date into weekday day month year
 	let modifiedDate = date.toLocaleDateString(undefined, {
 		weekday: "long",
 		year: "numeric",
 		month: "long",
 		day: "numeric",
-	})
+	});
+
 	console.log([fortuneText,category,modifiedDate]);
 	console.log(fortunes[0]);
+	
+	// Check if fortune already exists, before choosing to save fortune or not
 	if (fortunes.indexOf([fortuneText,category,modifiedDate]) == -1) {
 		fortunes.push([fortuneText,category,modifiedDate]);
 		localStorage.setItem('fortunes', JSON.stringify(fortunes));
