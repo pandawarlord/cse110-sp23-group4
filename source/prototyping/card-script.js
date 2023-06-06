@@ -58,7 +58,8 @@ window.addEventListener('load', init);
  */
 function init() {
   for (let i = 0; i < tarotCards.length; i++) {
-    tarotCards[i].addEventListener("click", function () { chooseCard(i); });
+    tarotCards[i].index = i;
+    tarotCards[i].addEventListener("click", chooseCard);
   }
 
   /* Get category from local storage */
@@ -181,11 +182,11 @@ async function generatePrediction() {
     /* Give the user a prediction */
     predictOut.innerHTML = `<p>${outputContent}</p>`;
 
-    // overwrite the chooseCard function
-    chooseCard = function() {};
-
-    // Remove the option to predict
+    // Remove listeners
     predictButton.removeEventListener("click", generatePrediction);
+    for (let i = 0; i < tarotCards.length; i++) {
+      tarotCards[i].removeEventListener("click", chooseCard);
+    }
 
   } else {
     /* Display a message that the user selected nothing */
@@ -193,11 +194,11 @@ async function generatePrediction() {
   }
 }
 
-function chooseCard(i) {
-  const index = selectBuffer.indexOf(i);
+function chooseCard() {
+  const index = selectBuffer.indexOf(this.index);
   if (index == -1) {
-    selectBuffer.push(i);
-    tarotCards[i].style.boxShadow = "0 0 10px 5px #ff0000";
+    selectBuffer.push(this.index);
+    tarotCards[this.index].style.boxShadow = "0 0 10px 5px #ff0000";
 
     if (selectBuffer.length > selectCount) {
       tarotCards[selectBuffer[0]].style.boxShadow = null;
@@ -205,7 +206,7 @@ function chooseCard(i) {
     }
 
   } else {
-    tarotCards[i].style.boxShadow = null;
+    tarotCards[this.index].style.boxShadow = null;
 
     selectBuffer.splice(index, 1);
   }
