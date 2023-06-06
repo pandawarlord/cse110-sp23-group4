@@ -22,7 +22,7 @@ const backButton = document.querySelector(".backButton");
  * testing, but could be useful in the final product as well.
  * @type {HTMLElement | null}
  */
-const tempClearButton = document.querySelector(".tempClearButton");
+const clearButton = document.querySelector(".ClearButton");
 
 function init() {
 	/**
@@ -35,7 +35,7 @@ function init() {
  	 * Adds a event listener for tempClearButton to call the function
 	 * that clears fortunes from localeStorage and updates display.
  	 */
-	tempClearButton.addEventListener("click", tempClearFortunes);
+	clearButton.addEventListener("click", tempClearFortunes);
 
 	/**
 	 * Display fortunes when page loads
@@ -99,7 +99,7 @@ export function addFortune(fortuneText, category, date) {
 
 	console.log([fortuneText,category,modifiedDate]);
 	console.log(fortunes[0]);
-	
+
 	// Check if fortune already exists, before choosing to save fortune or not
 	if (fortunes.indexOf([fortuneText,category,modifiedDate]) == -1) {
 		fortunes.push([fortuneText,category,modifiedDate]);
