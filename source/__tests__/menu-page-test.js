@@ -103,6 +103,7 @@ describe('Basic user flow for Menu Page', () => {
         console.log("Checking if all category buttons take you to the card reading page on click...");
 
         const button = await page.$('.categoryButton');
+        const buttons = await page.$$('.categoryButton');
 
         await button.click();
         await page.waitForNavigation();
